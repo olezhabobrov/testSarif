@@ -13,22 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 38
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 9
+                                                        "startLine": 11
                                                     }
                                                 }
                                             }
@@ -43,18 +31,18 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "lib/assertion_failures.c"
+                                    "uri": "lib/linked-list/tree.c"
                                 },
                                 "region": {
-                                    "startLine": 9
+                                    "startLine": 11
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "ASSERTION FAIL: a != 42"
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
                     },
-                    "ruleId": "assert.err"
+                    "ruleId": "undefined_behavior.err"
                 },
                 {
                     "codeFlows": [
@@ -66,22 +54,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 43
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 19
+                                                        "startLine": 11
                                                     }
                                                 }
                                             }
@@ -96,18 +72,18 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "lib/assertion_failures.c"
+                                    "uri": "lib/linked-list/tree.c"
                                 },
                                 "region": {
-                                    "startLine": 19
+                                    "startLine": 11
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "ASSERTION FAIL: a < 7"
+                        "text": "memory error: out of bound pointer"
                     },
-                    "ruleId": "assert.err"
+                    "ruleId": "ptr.err"
                 },
                 {
                     "codeFlows": [
@@ -119,22 +95,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 48
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 18
+                                                        "startLine": 11
                                                     }
                                                 }
                                             }
@@ -149,18 +113,18 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "lib/assertion_failures.c"
+                                    "uri": "lib/linked-list/tree.c"
                                 },
                                 "region": {
-                                    "startLine": 18
+                                    "startLine": 11
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "ASSERTION FAIL: a == 7"
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
                     },
-                    "ruleId": "assert.err"
+                    "ruleId": "undefined_behavior.err"
                 },
                 {
                     "codeFlows": [
@@ -172,22 +136,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 53
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 24
+                                                        "startLine": 11
                                                     }
                                                 }
                                             }
@@ -202,18 +154,18 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "lib/assertion_failures.c"
+                                    "uri": "lib/linked-list/tree.c"
                                 },
                                 "region": {
-                                    "startLine": 24
+                                    "startLine": 11
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "ASSERTION FAIL: a < 1"
+                        "text": "invalid usage of null pointer"
                     },
-                    "ruleId": "assert.err"
+                    "ruleId": "undefined_behavior.err"
                 }
             ],
             "tool": {
