@@ -14,8 +14,8 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, c_strcmp_test_1)
 {
-    char a[] = "cbcaacccac";
-    char b[] = "cjccccbccc";
+    char a[] = "ciccccaccc";
+    char b[] = "cacbcacacc";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(0, actual);
 }
@@ -30,8 +30,8 @@ TEST(regression, c_strcmp_test_2)
 
 TEST(regression, c_strcmp_test_3)
 {
-    char a[] = "bccaacccab";
-    char b[] = "ccccccbccc";
+    char a[] = "bbccccaccb";
+    char b[] = "cccbcacacc";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(0, actual);
 }
@@ -53,7 +53,7 @@ TEST(regression, ishello_test_2)
 
 TEST(regression, ishello_test_3)
 {
-    char a[] = "cccccccbcc";
+    char a[] = "bccccccbcb";
     int actual = ishello(a);
     EXPECT_EQ(0, actual);
 }
@@ -61,7 +61,7 @@ TEST(regression, ishello_test_3)
 
 TEST(regression, isworld_test_1)
 {
-    unsigned char a = 98;
+    unsigned char a = 99;
     int actual = isworld(&a);
     EXPECT_EQ(0, actual);
 }

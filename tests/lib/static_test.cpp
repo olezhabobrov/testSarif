@@ -44,7 +44,7 @@ TEST(regression, static_simple_test_3)
 
 TEST(regression, static_accept_local_struct_test_1)
 {
-    int actual = static_accept_local_struct({0, 0}, 8);
+    int actual = static_accept_local_struct({0, 0}, 4);
     EXPECT_EQ(0, actual);
 }
 

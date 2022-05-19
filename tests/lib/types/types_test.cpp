@@ -20,7 +20,7 @@ TEST(regression, a_or_b_test_1)
 
 TEST(regression, a_or_b_test_2)
 {
-    char actual = a_or_b('p', 'b');
+    char actual = a_or_b('c', 'b');
     EXPECT_EQ('b', actual);
 }
 
@@ -84,8 +84,8 @@ TEST(regression, some_func_test_1)
 
 TEST(regression, some_func_test_2)
 {
-    signed char actual = some_func('c', 99);
-    EXPECT_EQ('c', actual);
+    signed char actual = some_func('c', 120);
+    EXPECT_EQ('x', actual);
 }
 
 TEST(regression, some_func_test_3)
@@ -97,14 +97,14 @@ TEST(regression, some_func_test_3)
 
 TEST(regression, fun_that_accept_bools_test_1)
 {
-    int actual = fun_that_accept_bools(true, false);
-    EXPECT_EQ(2, actual);
+    int actual = fun_that_accept_bools(false, true);
+    EXPECT_EQ(3, actual);
 }
 
 TEST(regression, fun_that_accept_bools_test_2)
 {
-    int actual = fun_that_accept_bools(false, true);
-    EXPECT_EQ(3, actual);
+    int actual = fun_that_accept_bools(true, false);
+    EXPECT_EQ(2, actual);
 }
 
 TEST(regression, fun_that_accept_bools_test_3)
@@ -236,7 +236,7 @@ TEST(regression, structWithUnion_test_2)
 
 TEST(regression, structWithConstPointerReturnPointer_test_1)
 {
-    const struct SupportedStruct4 actual = *structWithConstPointerReturnPointer(1);
+    const struct SupportedStruct4 actual = *structWithConstPointerReturnPointer(2);
     struct SupportedStruct4 expected = {NULL};
 }
 
@@ -261,7 +261,7 @@ TEST(regression, structWithConstPointerParam_test_2)
 
 TEST(regression, structWithConstFields_test_1)
 {
-    int actual = structWithConstFields({0, 1, 'c'});
+    int actual = structWithConstFields({0, 2, 'c'});
     EXPECT_EQ(2, actual);
 }
 

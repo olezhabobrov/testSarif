@@ -204,47 +204,6 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 22
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/structures/structs/structs_with_pointers.c"
-                                },
-                                "region": {
-                                    "startLine": 22
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
                         "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
@@ -328,59 +287,6 @@
                     ],
                     "message": {
                         "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 29
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 22
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/structures/structs/structs_with_pointers.c"
-                                },
-                                "region": {
-                                    "startLine": 22
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
                     },
                     "ruleId": "undefined_behavior.err"
                 },
@@ -973,47 +879,6 @@
                         }
                     ],
                     "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/tree.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 11
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/tree.c"
-                                },
-                                "region": {
-                                    "startLine": 11
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
                         "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
                     },
                     "ruleId": "undefined_behavior.err"
@@ -1055,9 +920,9 @@
                         }
                     ],
                     "message": {
-                        "text": "invalid usage of null pointer"
+                        "text": "memory error: out of bound pointer"
                     },
-                    "ruleId": "undefined_behavior.err"
+                    "ruleId": "ptr.err"
                 },
                 {
                     "codeFlows": [
@@ -1069,14 +934,43 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 649
+                                                        "startLine": 11
                                                     }
                                                 }
                                             }
-                                        },
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/tree.c"
+                                },
+                                "region": {
+                                    "startLine": 11
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -1118,177 +1012,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 657
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 14
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 14
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "invalid usage of null pointer"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 667
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 17
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 17
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "invalid usage of null pointer"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 677
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 17
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 17
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 685
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -1334,14 +1057,125 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 693
+                                                        "startLine": 17
                                                     }
                                                 }
                                             }
-                                        },
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 17
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 17
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 17
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 14
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 14
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -1387,18 +1221,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 701
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -1440,10 +1262,227 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 711
+                                                        "startLine": 43
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 43
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 42
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xfb or invalid usage of address 0xfb with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 42
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 42
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 49
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 42
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 49
                                                     }
                                                 }
                                             }
@@ -1493,124 +1532,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 721
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 42
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 42
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 729
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 42
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 42
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 739
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -1664,213 +1585,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 749
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 49
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 43
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 43
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "invalid usage of null pointer"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 761
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 49
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 42
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 42
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xdf or invalid usage of address 0xdf with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 771
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 49
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 42
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 42
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xf7 or invalid usage of address 0xf7 with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 779
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -1924,18 +1638,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 787
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -1977,18 +1679,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 798
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -2026,18 +1716,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 809
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -2083,18 +1761,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 818
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -2132,18 +1798,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 828
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -2189,18 +1843,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 838
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -2238,18 +1880,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 848
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -2295,18 +1925,6 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 856
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
@@ -2348,10 +1966,133 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 866
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 124
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 124
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 124
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 132
                                                     }
                                                 }
                                             }
@@ -2401,10 +2142,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 874
+                                                        "startLine": 132
                                                     }
                                                 }
                                             }
@@ -2450,201 +2191,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 882
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 892
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 132
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 900
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 132
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 910
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -2702,10 +2248,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
+                                                        "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 918
+                                                        "startLine": 132
                                                     }
                                                 }
                                             }
@@ -2717,7 +2263,101 @@
                                                         "uri": "lib/linked-list/linked-list.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 132
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 124
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 163
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 124
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 163
                                                     }
                                                 }
                                             }
@@ -2763,18 +2403,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 928
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -2828,213 +2456,6 @@
                             "threadFlows": [
                                 {
                                     "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 936
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 163
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "invalid usage of null pointer"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 948
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 163
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xfd or invalid usage of address 0xfd with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 958
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 163
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 124
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 124
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xef or invalid usage of address 0xef with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 966
-                                                    }
-                                                }
-                                            }
-                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -3381,34 +2802,6 @@
                         {
                             "threadFlows": [
                                 {
-                                    "locations": []
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "tmp/utbot-AB8X/lib/keywords/keywords_klee.c"
-                                },
-                                "region": {
-                                    "startLine": 30
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "execution reached an unreachable program point"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
                                     "locations": [
                                         {
                                             "location": {
@@ -3573,34 +2966,6 @@
                         {
                             "threadFlows": [
                                 {
-                                    "locations": []
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "tmp/utbot-AB8X/lib/memory_klee.c"
-                                },
-                                "region": {
-                                    "startLine": 93
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
                                     "locations": [
                                         {
                                             "location": {
@@ -3718,170 +3083,6 @@
                         "text": "free of alloca"
                     },
                     "ruleId": "free.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
-                                },
-                                "region": {
-                                    "startLine": 66
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
-                                },
-                                "region": {
-                                    "startLine": 105
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
-                                },
-                                "region": {
-                                    "startLine": 70
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
-                                },
-                                "region": {
-                                    "startLine": 62
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
                 }
             ],
             "tool": {

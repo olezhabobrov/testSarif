@@ -23,29 +23,7 @@ TEST(regression, deep_test_1)
 TEST(regression, deep_test_2)
 {
     struct Tree root = {NULL, NULL};
-    struct Tree utbotInnerVar1 = {(struct Tree *) 16782920098433788136, NULL};
-    root.left = &utbotInnerVar1;
-    root.right = &utbotInnerVar1;
-    utbotInnerVar1.right = &utbotInnerVar1;
-    int actual = deep(&root);
-    EXPECT_EQ(-1, actual);
-    struct Tree expected_root = {NULL, NULL};
-}
-
-TEST(regression, deep_test_3)
-{
-    struct Tree root = {NULL, (struct Tree *) 255};
-    struct Tree utbotInnerVar1 = {NULL, NULL};
-    root.left = &utbotInnerVar1;
-    int actual = deep(&root);
-    EXPECT_EQ(-1, actual);
-    struct Tree expected_root = {NULL, NULL};
-}
-
-TEST(regression, deep_test_4)
-{
-    struct Tree root = {NULL, NULL};
-    struct Tree utbotInnerVar1 = {(struct Tree *) 1085102592571150095, NULL};
+    struct Tree utbotInnerVar1 = {(struct Tree *) 9259542123273814144, NULL};
     struct Tree utbotInnerVar2 = {NULL, NULL};
     root.left = &utbotInnerVar1;
     root.right = &utbotInnerVar2;
@@ -56,7 +34,7 @@ TEST(regression, deep_test_4)
     struct Tree expected_root = {NULL, NULL};
 }
 
-TEST(regression, deep_test_5)
+TEST(regression, deep_test_3)
 {
     struct Tree root = {NULL, NULL};
     struct Tree utbotInnerVar1 = {NULL, NULL};
@@ -66,6 +44,29 @@ TEST(regression, deep_test_5)
     utbotInnerVar1.right = &utbotInnerVar1;
     int actual = deep(&root);
     EXPECT_EQ(1, actual);
+    struct Tree expected_root = {NULL, NULL};
+}
+
+TEST(regression, deep_test_4)
+{
+    struct Tree root = {NULL, NULL};
+    struct Tree utbotInnerVar1 = {(struct Tree *) 6944656592455360608, NULL};
+    struct Tree utbotInnerVar2 = {NULL, NULL};
+    root.left = &utbotInnerVar1;
+    root.right = &utbotInnerVar2;
+    utbotInnerVar1.right = &utbotInnerVar2;
+    int actual = deep(&root);
+    EXPECT_EQ(-1, actual);
+    struct Tree expected_root = {NULL, NULL};
+}
+
+TEST(regression, deep_test_5)
+{
+    struct Tree root = {NULL, (struct Tree *) 255};
+    struct Tree utbotInnerVar1 = {NULL, NULL};
+    root.left = &utbotInnerVar1;
+    int actual = deep(&root);
+    EXPECT_EQ(-1, actual);
     struct Tree expected_root = {NULL, NULL};
 }
 
@@ -88,8 +89,8 @@ TEST(error, deep_test_7)
 
 TEST(error, deep_test_8)
 {
-    struct Tree root = {NULL, (struct Tree *) 9223488908394037368};
-    struct Tree utbotInnerVar1 = {(struct Tree *) 9259542123273814144, (struct Tree *) 9223488908394037368};
+    struct Tree root = {NULL, (struct Tree *) 255};
+    struct Tree utbotInnerVar1 = {NULL, (struct Tree *) 255};
     root.left = &utbotInnerVar1;
     deep(&root);
     struct Tree expected_root = {NULL, NULL};
@@ -97,8 +98,8 @@ TEST(error, deep_test_8)
 
 TEST(error, deep_test_9)
 {
-    struct Tree root = {NULL, (struct Tree *) 255};
-    struct Tree utbotInnerVar1 = {NULL, (struct Tree *) 255};
+    struct Tree root = {NULL, (struct Tree *) 9511602413006487616};
+    struct Tree utbotInnerVar1 = {(struct Tree *) 9548902814626120836, (struct Tree *) 9511602413006487616};
     root.left = &utbotInnerVar1;
     deep(&root);
     struct Tree expected_root = {NULL, NULL};

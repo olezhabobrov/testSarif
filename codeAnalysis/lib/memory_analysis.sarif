@@ -172,34 +172,6 @@
                         {
                             "threadFlows": [
                                 {
-                                    "locations": []
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "tmp/utbot-AB8X/lib/memory_klee.c"
-                                },
-                                "region": {
-                                    "startLine": 93
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "memory error: out of bound pointer"
-                    },
-                    "ruleId": "ptr.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
                                     "locations": [
                                         {
                                             "location": {

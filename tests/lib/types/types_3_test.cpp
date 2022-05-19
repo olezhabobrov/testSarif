@@ -97,7 +97,7 @@ TEST(regression, check_option_test_1)
 #pragma region error
 TEST(error, mul_of_test_3)
 {
-    mul_of({8, {0, 0}});
+    mul_of({3, {0, 0}});
 }
 
 #pragma endregion

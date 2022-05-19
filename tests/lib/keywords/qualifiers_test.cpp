@@ -14,24 +14,24 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, c_strcmp_2_test_1)
 {
+    char a[] = "cpcccacccc";
+    char b[] = "ctaccbcccc";
+    int actual = c_strcmp_2(a, b);
+    EXPECT_EQ(0, actual);
+}
+
+TEST(regression, c_strcmp_2_test_2)
+{
     char a[] = "";
     char b[] = "";
     int actual = c_strcmp_2(a, b);
     EXPECT_EQ(1, actual);
 }
 
-TEST(regression, c_strcmp_2_test_2)
-{
-    char a[] = "cjbcaccccc";
-    char b[] = "chcccbbbcc";
-    int actual = c_strcmp_2(a, b);
-    EXPECT_EQ(0, actual);
-}
-
 TEST(regression, c_strcmp_2_test_3)
 {
-    char a[] = "bbbcaccccb";
-    char b[] = "cccccbbbcc";
+    char a[] = "bccccacccb";
+    char b[] = "jcaccbcccj";
     int actual = c_strcmp_2(a, b);
     EXPECT_EQ(0, actual);
 }
@@ -39,10 +39,10 @@ TEST(regression, c_strcmp_2_test_3)
 
 TEST(regression, ishello_2_test_1)
 {
-    char a[] = "hcccccabch";
+    char a[] = "hccccbccch";
     int actual = ishello_2(a);
     EXPECT_EQ(0, actual);
-    char expected_a[] = {'h', 'c', 'c', 'c', 'c', 'c', 'a', 'b', 'c', '\0'};
+    char expected_a[] = {'h', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_a[it_1_0], a[it_1_0]);
     }
@@ -53,7 +53,7 @@ TEST(regression, ishello_2_test_2)
     char a[] = "hello";
     int actual = ishello_2(a);
     EXPECT_EQ(1, actual);
-    char expected_a[] = {'h', 'e', 'l', 'l', 'o', '\0', 'a', 'b', 'c', '\0'};
+    char expected_a[] = {'h', 'e', 'l', 'l', 'o', '\0', 'c', 'c', 'c', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_a[it_1_0], a[it_1_0]);
     }
@@ -61,10 +61,10 @@ TEST(regression, ishello_2_test_2)
 
 TEST(regression, ishello_2_test_3)
 {
-    char a[] = "bcccccabcb";
+    char a[] = "bccccbcccb";
     int actual = ishello_2(a);
     EXPECT_EQ(0, actual);
-    char expected_a[] = {'b', 'c', 'c', 'c', 'c', 'c', 'a', 'b', 'c', '\0'};
+    char expected_a[] = {'b', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_a[it_1_0], a[it_1_0]);
     }
@@ -105,14 +105,14 @@ TEST(regression, foo___test_3)
 
 TEST(regression, foo_bar_test_1)
 {
-    const char actual = *foo_bar(2);
-    EXPECT_EQ('1', actual);
+    const char actual = *foo_bar(0);
+    EXPECT_EQ('0', actual);
 }
 
 TEST(regression, foo_bar_test_2)
 {
-    const char actual = *foo_bar(0);
-    EXPECT_EQ('0', actual);
+    const char actual = *foo_bar(1);
+    EXPECT_EQ('1', actual);
 }
 
 TEST(regression, foo_bar_test_3)

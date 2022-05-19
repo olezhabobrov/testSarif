@@ -33,7 +33,7 @@ TEST(regression, enumSignToInt_test_3)
 
 TEST(regression, intToSign_test_1)
 {
-    enum Sign actual = intToSign(1);
+    enum Sign actual = intToSign(2);
     EXPECT_EQ(POSITIVE, actual);
 }
 
@@ -77,8 +77,8 @@ TEST(regression, sumSignArray_test_1)
 
 TEST(regression, sumSignArray_test_2)
 {
-    int actual = sumSignArray({{ZERO, POSITIVE, ZERO, ZERO, ZERO}});
-    EXPECT_EQ(1, actual);
+    int actual = sumSignArray({{ZERO, ZERO, ZERO, ZERO, ZERO}});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, sumSignArray_test_3)
@@ -89,8 +89,14 @@ TEST(regression, sumSignArray_test_3)
 
 TEST(regression, sumSignArray_test_4)
 {
-    int actual = sumSignArray({{ZERO, ZERO, ZERO, ZERO, ZERO}});
-    EXPECT_EQ(0, actual);
+    int actual = sumSignArray({{ZERO, ZERO, ZERO, ZERO, POSITIVE}});
+    EXPECT_EQ(1, actual);
+}
+
+TEST(regression, sumSignArray_test_5)
+{
+    int actual = sumSignArray({{ZERO, POSITIVE, ZERO, ZERO, ZERO}});
+    EXPECT_EQ(1, actual);
 }
 
 
@@ -124,13 +130,13 @@ TEST(regression, enumSignPointerToInt_test_3)
 
 TEST(regression, intToSignPointer_test_1)
 {
-    enum Sign actual = *intToSignPointer(-5);
+    enum Sign actual = *intToSignPointer(-9);
     EXPECT_EQ(NEGATIVE, actual);
 }
 
 TEST(regression, intToSignPointer_test_2)
 {
-    enum Sign actual = *intToSignPointer(1);
+    enum Sign actual = *intToSignPointer(2);
     EXPECT_EQ(POSITIVE, actual);
 }
 
@@ -143,27 +149,27 @@ TEST(regression, intToSignPointer_test_3)
 
 TEST(regression, getSignValue_test_1)
 {
+    int actual = getSignValue(NEGATIVE);
+    EXPECT_EQ(0, actual);
+}
+
+TEST(regression, getSignValue_test_2)
+{
     int actual = getSignValue(ZERO);
     EXPECT_EQ(1, actual);
 }
 
-TEST(regression, getSignValue_test_2)
+TEST(regression, getSignValue_test_3)
 {
     int actual = getSignValue(POSITIVE);
     EXPECT_EQ(2, actual);
 }
 
-TEST(regression, getSignValue_test_3)
-{
-    int actual = getSignValue(NEGATIVE);
-    EXPECT_EQ(0, actual);
-}
-
 
 TEST(regression, enumWithinRecord_test_1)
 {
-    int actual = enumWithinRecord({EnumWithinRecord::CLOSED});
-    EXPECT_EQ(-1, actual);
+    int actual = enumWithinRecord({EnumWithinRecord::OPEN});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, enumWithinRecord_test_2)
@@ -174,8 +180,8 @@ TEST(regression, enumWithinRecord_test_2)
 
 TEST(regression, enumWithinRecord_test_3)
 {
-    int actual = enumWithinRecord({EnumWithinRecord::OPEN});
-    EXPECT_EQ(1, actual);
+    int actual = enumWithinRecord({EnumWithinRecord::CLOSED});
+    EXPECT_EQ(-1, actual);
 }
 
 #pragma endregion

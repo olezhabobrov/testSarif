@@ -81,9 +81,9 @@
                         }
                     ],
                     "message": {
-                        "text": "memory error: out of bound pointer"
+                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
                     },
-                    "ruleId": "ptr.err"
+                    "ruleId": "undefined_behavior.err"
                 },
                 {
                     "codeFlows": [
@@ -122,9 +122,9 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                        "text": "memory error: out of bound pointer"
                     },
-                    "ruleId": "undefined_behavior.err"
+                    "ruleId": "ptr.err"
                 },
                 {
                     "codeFlows": [

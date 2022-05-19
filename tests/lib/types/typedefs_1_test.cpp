@@ -14,14 +14,14 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, gid_to_name_test_1)
 {
-    int actual = gid_to_name(0U);
-    EXPECT_EQ(3, actual);
+    int actual = gid_to_name(2U);
+    EXPECT_EQ(2, actual);
 }
 
 TEST(regression, gid_to_name_test_2)
 {
-    int actual = gid_to_name(2U);
-    EXPECT_EQ(2, actual);
+    int actual = gid_to_name(0U);
+    EXPECT_EQ(3, actual);
 }
 
 

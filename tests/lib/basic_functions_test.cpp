@@ -53,7 +53,7 @@ TEST(regression, sqr_positive_test_2)
 
 TEST(regression, simple_loop_test_1)
 {
-    int actual = simple_loop(1132284479U);
+    int actual = simple_loop(104923167U);
     EXPECT_EQ(1, actual);
 }
 

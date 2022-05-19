@@ -76,10 +76,10 @@ TEST(regression, length_of_linked_list2_test_1)
 TEST(regression, length_of_linked_list2_test_2)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 65280};
     head.next = &utbotInnerVar1;
     int actual = length_of_linked_list2(&head);
-    EXPECT_EQ(2, actual);
+    EXPECT_EQ(-1, actual);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -87,10 +87,10 @@ TEST(regression, length_of_linked_list2_test_2)
 TEST(regression, length_of_linked_list2_test_3)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 16711680};
+    struct Node utbotInnerVar1 = {0, NULL};
     head.next = &utbotInnerVar1;
     int actual = length_of_linked_list2(&head);
-    EXPECT_EQ(-1, actual);
+    EXPECT_EQ(2, actual);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -116,13 +116,23 @@ TEST(regression, sum_list_test_1)
 }
 
 
+TEST(regression, sign_sum_test_1)
+{
+    struct Node head = {1, NULL};
+    int actual = sign_sum(&head);
+    EXPECT_EQ(1, actual);
+    struct Node expected_head = {1, NULL};
+    EXPECT_EQ(expected_head.x, head.x);
+}
+
+
 TEST(regression, hard_length2_test_1)
 {
     struct HardNode head = {{0, {NULL, 0}, 0.000000e+00}, 'c', (struct HardNode *) 17940362863843014904};
-    struct HardNode utbotInnerVar1 = {{0, {NULL, 0}, 0.000000e+00}, '\0', NULL};
+    struct HardNode utbotInnerVar1 = {{0, {(struct HardNode *) 18374686479671623680, 0}, 0.000000e+00}, '\0', NULL};
     head.in.superIn.next = &utbotInnerVar1;
     int actual = hard_length2(&head);
-    EXPECT_EQ(2, actual);
+    EXPECT_EQ(-1, actual);
     struct HardNode expected_head = {{0, {NULL, 0}, 0.000000e+00}, 'c', NULL};
     EXPECT_EQ(expected_head.in.x, head.in.x);
     EXPECT_EQ(expected_head.in.superIn.step, head.in.superIn.step);
@@ -133,10 +143,10 @@ TEST(regression, hard_length2_test_1)
 TEST(regression, hard_length2_test_2)
 {
     struct HardNode head = {{0, {NULL, 0}, 0.000000e+00}, 'c', (struct HardNode *) 17940362863843014904};
-    struct HardNode utbotInnerVar1 = {{0, {(struct HardNode *) 71776119061217280, 0}, 0.000000e+00}, '\0', NULL};
+    struct HardNode utbotInnerVar1 = {{0, {NULL, 0}, 0.000000e+00}, '\0', NULL};
     head.in.superIn.next = &utbotInnerVar1;
     int actual = hard_length2(&head);
-    EXPECT_EQ(-1, actual);
+    EXPECT_EQ(2, actual);
     struct HardNode expected_head = {{0, {NULL, 0}, 0.000000e+00}, 'c', NULL};
     EXPECT_EQ(expected_head.in.x, head.in.x);
     EXPECT_EQ(expected_head.in.superIn.step, head.in.superIn.step);
@@ -160,10 +170,10 @@ TEST(regression, hard_length2_test_3)
 TEST(regression, middle_length2_test_1)
 {
     struct Kuku head = {{NULL, 'c'}, 0};
-    struct Kuku utbotInnerVar1 = {{NULL, '\0'}, 0};
+    struct Kuku utbotInnerVar1 = {{(struct Kuku *) 255, '\0'}, 0};
     head.in.next = &utbotInnerVar1;
     int actual = middle_length2(&head);
-    EXPECT_EQ(2, actual);
+    EXPECT_EQ(-1, actual);
     struct Kuku expected_head = {{(struct Kuku *) 7161677110969590627, 'c'}, 0};
     EXPECT_EQ(expected_head.in.letter, head.in.letter);
     EXPECT_EQ(expected_head.x, head.x);
@@ -182,10 +192,10 @@ TEST(regression, middle_length2_test_2)
 TEST(regression, middle_length2_test_3)
 {
     struct Kuku head = {{NULL, 'c'}, 0};
-    struct Kuku utbotInnerVar1 = {{(struct Kuku *) 71776119061217280, '\0'}, 0};
+    struct Kuku utbotInnerVar1 = {{NULL, '\0'}, 0};
     head.in.next = &utbotInnerVar1;
     int actual = middle_length2(&head);
-    EXPECT_EQ(-1, actual);
+    EXPECT_EQ(2, actual);
     struct Kuku expected_head = {{(struct Kuku *) 7161677110969590627, 'c'}, 0};
     EXPECT_EQ(expected_head.in.letter, head.in.letter);
     EXPECT_EQ(expected_head.x, head.x);
@@ -204,7 +214,7 @@ TEST(regression, cycle_list3_test_1)
 TEST(regression, cycle_list3_test_2)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {538976288, NULL};
+    struct Node utbotInnerVar1 = {-1, NULL};
     struct Node utbotInnerVar2 = {0, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
@@ -240,7 +250,7 @@ TEST(regression, cycle_list3_test_4)
 TEST(regression, cycle_list3_test_5)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {538976288, NULL};
+    struct Node utbotInnerVar1 = {-1, NULL};
     struct Node utbotInnerVar2 = {0, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
@@ -254,8 +264,8 @@ TEST(regression, cycle_list3_test_5)
 TEST(regression, cycle_list3_test_6)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {269488144, NULL};
-    struct Node utbotInnerVar2 = {808464432, NULL};
+    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar2 = {-404232217, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     utbotInnerVar2.next = &utbotInnerVar1;
@@ -268,8 +278,8 @@ TEST(regression, cycle_list3_test_6)
 TEST(regression, cycle_list3_test_7)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {791621423, NULL};
-    struct Node utbotInnerVar2 = {791621423, NULL};
+    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar2 = {101058054, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     utbotInnerVar2.next = &utbotInnerVar2;
@@ -283,7 +293,7 @@ TEST(regression, cycle_list3_test_8)
 {
     struct Node head = {0, NULL};
     struct Node utbotInnerVar1 = {0, NULL};
-    struct Node utbotInnerVar2 = {0, (struct Node *) 144396663052566532};
+    struct Node utbotInnerVar2 = {0, (struct Node *) 1125899906842628};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     int actual = cycle_list3(&head);
@@ -363,6 +373,36 @@ TEST(regression, sort_list_test_2)
 
 TEST(regression, sort_list_test_3)
 {
+    struct Node head = {0, NULL};
+    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar2 = {0, NULL};
+    struct Node utbotInnerVar3 = {0, NULL};
+    head.next = &utbotInnerVar1;
+    utbotInnerVar1.next = &utbotInnerVar2;
+    utbotInnerVar2.next = &utbotInnerVar3;
+    int actual = sort_list(&head);
+    EXPECT_EQ(1, actual);
+    struct Node expected_head = {0, NULL};
+    EXPECT_EQ(expected_head.x, head.x);
+}
+
+TEST(regression, sort_list_test_4)
+{
+    struct Node head = {1, NULL};
+    struct Node utbotInnerVar1 = {1610612735, NULL};
+    struct Node utbotInnerVar2 = {2147483647, NULL};
+    struct Node utbotInnerVar3 = {0, NULL};
+    head.next = &utbotInnerVar1;
+    utbotInnerVar1.next = &utbotInnerVar2;
+    utbotInnerVar2.next = &utbotInnerVar3;
+    int actual = sort_list(&head);
+    EXPECT_EQ(-1, actual);
+    struct Node expected_head = {1, NULL};
+    EXPECT_EQ(expected_head.x, head.x);
+}
+
+TEST(regression, sort_list_test_5)
+{
     struct Node head = {10, NULL};
     struct Node utbotInnerVar1 = {9, NULL};
     struct Node utbotInnerVar2 = {-2147483648, NULL};
@@ -376,22 +416,7 @@ TEST(regression, sort_list_test_3)
     EXPECT_EQ(expected_head.x, head.x);
 }
 
-TEST(regression, sort_list_test_4)
-{
-    struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {2143289342, NULL};
-    struct Node utbotInnerVar2 = {-8388610, NULL};
-    struct Node utbotInnerVar3 = {2143289342, NULL};
-    head.next = &utbotInnerVar1;
-    utbotInnerVar1.next = &utbotInnerVar2;
-    utbotInnerVar2.next = &utbotInnerVar3;
-    int actual = sort_list(&head);
-    EXPECT_EQ(1, actual);
-    struct Node expected_head = {-8388610, (struct Node *) 18446744073709551615};
-    EXPECT_EQ(expected_head.x, head.x);
-}
-
-TEST(regression, sort_list_test_5)
+TEST(regression, sort_list_test_6)
 {
     struct Node head = {0, NULL};
     struct Node utbotInnerVar1 = {-1, NULL};
@@ -406,7 +431,7 @@ TEST(regression, sort_list_test_5)
     EXPECT_EQ(expected_head.x, head.x);
 }
 
-TEST(regression, sort_list_test_6)
+TEST(regression, sort_list_test_7)
 {
     struct Node head = {0, NULL};
     int actual = sort_list(&head);
@@ -439,13 +464,13 @@ int _sort_list_with_comparator_cmp_stub(int param1, int param2) {
 TEST(regression, sort_list_with_comparator_test_1)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {555819297, NULL};
-    struct Node utbotInnerVar2 = {1077952576, NULL};
+    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar2 = {-1869574000, NULL};
     struct Node utbotInnerVar3 = {0, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     utbotInnerVar2.next = &utbotInnerVar3;
-    int cmp_symbolic_buffer[10] = {1, 1, -1, 2, 2, 2, 2, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {0, 1, 1, 1, 2, 2, 1, 1, 1, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
     EXPECT_EQ(1, actual);
@@ -456,16 +481,11 @@ TEST(regression, sort_list_with_comparator_test_1)
 TEST(regression, sort_list_with_comparator_test_2)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {555819297, NULL};
-    struct Node utbotInnerVar2 = {1077952576, NULL};
-    struct Node utbotInnerVar3 = {0, NULL};
+    struct Node utbotInnerVar1 = {0, NULL};
     head.next = &utbotInnerVar1;
-    utbotInnerVar1.next = &utbotInnerVar2;
-    utbotInnerVar2.next = &utbotInnerVar3;
-    int cmp_symbolic_buffer[10] = {1, 1, -1, 2, 2, 2, 2, 1, 0, 0};
-    memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
+    utbotInnerVar1.next = &utbotInnerVar1;
     int actual = sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
-    EXPECT_EQ(-1, actual);
+    EXPECT_EQ(0, actual);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -473,16 +493,16 @@ TEST(regression, sort_list_with_comparator_test_2)
 TEST(regression, sort_list_with_comparator_test_3)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, NULL};
-    struct Node utbotInnerVar2 = {1077952576, NULL};
+    struct Node utbotInnerVar1 = {-1717986919, NULL};
+    struct Node utbotInnerVar2 = {-1869574000, NULL};
     struct Node utbotInnerVar3 = {0, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     utbotInnerVar2.next = &utbotInnerVar3;
-    int cmp_symbolic_buffer[10] = {0, 1, -1, 2, 2, 2, 2, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {1, 1, 1, 1, 2, 2, 0, 1, 1, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
-    EXPECT_EQ(1, actual);
+    EXPECT_EQ(-1, actual);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -490,13 +510,13 @@ TEST(regression, sort_list_with_comparator_test_3)
 TEST(regression, sort_list_with_comparator_test_4)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {555819297, NULL};
-    struct Node utbotInnerVar2 = {1077952576, NULL};
+    struct Node utbotInnerVar1 = {-1717986919, NULL};
+    struct Node utbotInnerVar2 = {-1869574000, NULL};
     struct Node utbotInnerVar3 = {0, NULL};
     head.next = &utbotInnerVar1;
     utbotInnerVar1.next = &utbotInnerVar2;
     utbotInnerVar2.next = &utbotInnerVar3;
-    int cmp_symbolic_buffer[10] = {1, 1, -1, 2, 2, 2, 0, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {1, 1, 1, 1, 2, 2, 1, 1, 0, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
     EXPECT_EQ(-1, actual);
@@ -507,11 +527,16 @@ TEST(regression, sort_list_with_comparator_test_4)
 TEST(regression, sort_list_with_comparator_test_5)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar1 = {-1717986919, NULL};
+    struct Node utbotInnerVar2 = {-1869574000, NULL};
+    struct Node utbotInnerVar3 = {0, NULL};
     head.next = &utbotInnerVar1;
-    utbotInnerVar1.next = &utbotInnerVar1;
+    utbotInnerVar1.next = &utbotInnerVar2;
+    utbotInnerVar2.next = &utbotInnerVar3;
+    int cmp_symbolic_buffer[10] = {1, 1, 1, 1, 2, 2, 1, 1, 1, 0};
+    memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
-    EXPECT_EQ(0, actual);
+    EXPECT_EQ(1, actual);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -548,7 +573,7 @@ int _find_maximum_compare_stub(int param1, int param2) {
 
 TEST(regression, find_maximum_test_1)
 {
-    int compare_symbolic_buffer[10] = {2, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int compare_symbolic_buffer[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) compare_symbolic, compare_symbolic_buffer, sizeof(compare_symbolic_buffer));
     int actual = find_maximum(0, 0, _find_maximum_compare_stub);
     EXPECT_EQ(0, actual);
@@ -585,7 +610,7 @@ char _vowel_consonant_vowel_stub(char param1) {
 
 TEST(regression, vowel_consonant_test_1)
 {
-    char vowel_symbolic_buffer[] = {'o', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'o', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
@@ -593,7 +618,7 @@ TEST(regression, vowel_consonant_test_1)
 
 TEST(regression, vowel_consonant_test_2)
 {
-    char vowel_symbolic_buffer[] = {'e', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'e', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
@@ -601,7 +626,7 @@ TEST(regression, vowel_consonant_test_2)
 
 TEST(regression, vowel_consonant_test_3)
 {
-    char vowel_symbolic_buffer[] = {'y', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'u', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
@@ -609,23 +634,23 @@ TEST(regression, vowel_consonant_test_3)
 
 TEST(regression, vowel_consonant_test_4)
 {
-    char vowel_symbolic_buffer[] = {'p', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
-    memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
-    int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
-    EXPECT_EQ(-1, actual);
-}
-
-TEST(regression, vowel_consonant_test_5)
-{
-    char vowel_symbolic_buffer[] = {'u', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'y', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
 }
 
+TEST(regression, vowel_consonant_test_5)
+{
+    char vowel_symbolic_buffer[] = {'g', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
+    memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
+    int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
+    EXPECT_EQ(-1, actual);
+}
+
 TEST(regression, vowel_consonant_test_6)
 {
-    char vowel_symbolic_buffer[] = {'i', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'i', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
@@ -633,7 +658,7 @@ TEST(regression, vowel_consonant_test_6)
 
 TEST(regression, vowel_consonant_test_7)
 {
-    char vowel_symbolic_buffer[] = {'a', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c'};
+    char vowel_symbolic_buffer[] = {'a', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'a', 'c'};
     memcpy((void *) vowel_symbolic, vowel_symbolic_buffer, sizeof(vowel_symbolic_buffer));
     int actual = vowel_consonant('c', _vowel_consonant_vowel_stub);
     EXPECT_EQ(1, actual);
@@ -653,7 +678,7 @@ TEST(error, length_of_linked_list3_test_5)
 
 TEST(error, length_of_linked_list3_test_6)
 {
-    struct Node head = {0, (struct Node *) 18446744073709551608};
+    struct Node head = {0, (struct Node *) 255};
     length_of_linked_list3(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -672,7 +697,7 @@ TEST(error, length_of_linked_list3_test_7)
 TEST(error, length_of_linked_list3_test_8)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 1125899906842632};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 16777224};
     head.next = &utbotInnerVar1;
     length_of_linked_list3(&head);
     struct Node expected_head = {0, NULL};
@@ -681,7 +706,7 @@ TEST(error, length_of_linked_list3_test_8)
 
 TEST(error, length_of_linked_list3_test_9)
 {
-    struct Node head = {0, (struct Node *) 255};
+    struct Node head = {0, (struct Node *) 18446744073709551608};
     length_of_linked_list3(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -716,8 +741,10 @@ TEST(error, sum_list_test_2)
 TEST(error, sum_list_test_3)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 1099511627784};
+    struct Node utbotInnerVar1 = {-1869574000, NULL};
+    struct Node utbotInnerVar2 = {0, (struct Node *) 251};
     head.next = &utbotInnerVar1;
+    utbotInnerVar1.next = &utbotInnerVar2;
     sum_list(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -725,18 +752,18 @@ TEST(error, sum_list_test_3)
 
 TEST(error, sum_list_test_4)
 {
-    struct Node head = {0, (struct Node *) 255};
+    struct Node head = {0, NULL};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 72};
+    head.next = &utbotInnerVar1;
     sum_list(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
 
-TEST(error, sign_sum_test_1)
+TEST(error, sum_list_test_5)
 {
-    struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 4398046511112};
-    head.next = &utbotInnerVar1;
-    sign_sum(&head);
+    struct Node head = {0, (struct Node *) 255};
+    sum_list(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
@@ -744,7 +771,7 @@ TEST(error, sign_sum_test_1)
 TEST(error, sign_sum_test_2)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, NULL};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 191};
     head.next = &utbotInnerVar1;
     sign_sum(&head);
     struct Node expected_head = {0, NULL};
@@ -754,10 +781,8 @@ TEST(error, sign_sum_test_2)
 TEST(error, sign_sum_test_3)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {2105376125, NULL};
-    struct Node utbotInnerVar2 = {0, (struct Node *) 223};
+    struct Node utbotInnerVar1 = {0, NULL};
     head.next = &utbotInnerVar1;
-    utbotInnerVar1.next = &utbotInnerVar2;
     sign_sum(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -766,7 +791,7 @@ TEST(error, sign_sum_test_3)
 TEST(error, sign_sum_test_4)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 247};
+    struct Node utbotInnerVar1 = {134744072, (struct Node *) 35184372088840};
     head.next = &utbotInnerVar1;
     sign_sum(&head);
     struct Node expected_head = {0, NULL};
@@ -805,7 +830,7 @@ TEST(error, hard_length2_test_5)
 
 TEST(error, middle_length2_test_4)
 {
-    struct Kuku head = {{(struct Kuku *) 255, 'c'}, 0};
+    struct Kuku head = {{(struct Kuku *) 255, 'b'}, 0};
     middle_length2(&head);
     struct Kuku expected_head = {{NULL, '\0'}, 0};
     EXPECT_EQ(expected_head.in.letter, head.in.letter);
@@ -833,7 +858,7 @@ TEST(error, cycle_list3_test_12)
 TEST(error, cycle_list3_test_13)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {471604252, (struct Node *) 17176332177383593480};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 2056};
     head.next = &utbotInnerVar1;
     cycle_list3(&head);
     struct Node expected_head = {0, NULL};
@@ -860,9 +885,7 @@ TEST(error, cycle_list3_test_15)
 
 TEST(error, len_bound_test_3)
 {
-    struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 9007199254741000};
-    head.next = &utbotInnerVar1;
+    struct Node head = {0, (struct Node *) 18446744073709551608};
     len_bound(&head, 8);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -870,7 +893,7 @@ TEST(error, len_bound_test_3)
 
 TEST(error, len_bound_test_4)
 {
-    struct Node head = {0, (struct Node *) 18446744073709551608};
+    struct Node head = {0, (struct Node *) 255};
     len_bound(&head, 8);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -878,31 +901,33 @@ TEST(error, len_bound_test_4)
 
 TEST(error, len_bound_test_5)
 {
-    struct Node head = {0, (struct Node *) 255};
-    len_bound(&head, 8);
-    struct Node expected_head = {0, NULL};
-    EXPECT_EQ(expected_head.x, head.x);
-}
-
-TEST(error, sort_list_test_7)
-{
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 2251799813685256};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 1152921504606846984};
     head.next = &utbotInnerVar1;
-    sort_list(&head);
+    len_bound(&head, 8);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
 
 TEST(error, sort_list_test_8)
 {
-    struct Node head = {0, (struct Node *) 255};
+    struct Node head = {0, NULL};
+    struct Node utbotInnerVar1 = {1077952576, (struct Node *) 64};
+    head.next = &utbotInnerVar1;
     sort_list(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
 
 TEST(error, sort_list_test_9)
+{
+    struct Node head = {0, (struct Node *) 18446744073709551608};
+    sort_list(&head);
+    struct Node expected_head = {0, NULL};
+    EXPECT_EQ(expected_head.x, head.x);
+}
+
+TEST(error, sort_list_test_10)
 {
     struct Node head = {0, NULL};
     struct Node utbotInnerVar1 = {0, (struct Node *) 253};
@@ -912,9 +937,9 @@ TEST(error, sort_list_test_9)
     EXPECT_EQ(expected_head.x, head.x);
 }
 
-TEST(error, sort_list_test_10)
+TEST(error, sort_list_test_11)
 {
-    struct Node head = {0, (struct Node *) 18446744073709551608};
+    struct Node head = {0, (struct Node *) 255};
     sort_list(&head);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -923,8 +948,10 @@ TEST(error, sort_list_test_10)
 TEST(error, sort_list_with_comparator_test_7)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {134744072, (struct Node *) 131080};
+    struct Node utbotInnerVar1 = {-1330597712, NULL};
+    struct Node utbotInnerVar2 = {0, (struct Node *) 191};
     head.next = &utbotInnerVar1;
+    utbotInnerVar1.next = &utbotInnerVar2;
     sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
@@ -941,26 +968,14 @@ TEST(error, sort_list_with_comparator_test_8)
 TEST(error, sort_list_with_comparator_test_9)
 {
     struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, NULL};
-    struct Node utbotInnerVar2 = {0, (struct Node *) 253};
+    struct Node utbotInnerVar1 = {0, (struct Node *) 1099511627784};
     head.next = &utbotInnerVar1;
-    utbotInnerVar1.next = &utbotInnerVar2;
     sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
     struct Node expected_head = {0, NULL};
     EXPECT_EQ(expected_head.x, head.x);
 }
 
 TEST(error, sort_list_with_comparator_test_10)
-{
-    struct Node head = {0, NULL};
-    struct Node utbotInnerVar1 = {0, (struct Node *) 239};
-    head.next = &utbotInnerVar1;
-    sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);
-    struct Node expected_head = {0, NULL};
-    EXPECT_EQ(expected_head.x, head.x);
-}
-
-TEST(error, sort_list_with_comparator_test_11)
 {
     struct Node head = {0, (struct Node *) 255};
     sort_list_with_comparator(&head, _sort_list_with_comparator_cmp_stub);

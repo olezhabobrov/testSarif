@@ -14,7 +14,7 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, print_sign_test_1)
 {
-    print_sign(2);
+    print_sign(1);
 }
 
 TEST(regression, print_sign_test_2)
@@ -46,7 +46,7 @@ TEST(regression, print_signs_for_two_structs_test_3)
 
 TEST(regression, print_value_test_1)
 {
-    print_value(24);
+    print_value(22);
 }
 
 TEST(regression, print_value_test_2)

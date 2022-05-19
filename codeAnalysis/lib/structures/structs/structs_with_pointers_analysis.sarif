@@ -40,47 +40,6 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 22
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/structures/structs/structs_with_pointers.c"
-                                },
-                                "region": {
-                                    "startLine": 22
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
                         "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
@@ -164,59 +123,6 @@
                     ],
                     "message": {
                         "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 29
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 22
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/structures/structs/structs_with_pointers.c"
-                                },
-                                "region": {
-                                    "startLine": 22
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xbf or invalid usage of address 0xbf with insufficient space"
                     },
                     "ruleId": "undefined_behavior.err"
                 },

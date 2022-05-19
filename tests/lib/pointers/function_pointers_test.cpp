@@ -193,7 +193,7 @@ extern "C" int f_symbolic;
 TEST(regression, structParam_test_1)
 {
     f_symbolic = 0;
-    char s[] = "acccccccca";
+    char s[] = "accccacaca";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -203,7 +203,7 @@ TEST(regression, structParam_test_1)
 TEST(regression, structParam_test_2)
 {
     f_symbolic = 0;
-    char s[] = "xccccccccx";
+    char s[] = "hccccacach";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -213,7 +213,7 @@ TEST(regression, structParam_test_2)
 TEST(regression, structParam_test_3)
 {
     f_symbolic = 0;
-    char s[] = "zccccccccz";
+    char s[] = "zccccacacz";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -392,9 +392,9 @@ int _get_chain_get_chain_return_stub(int param1, int param2) {
 
 TEST(regression, get_chain_test_1)
 {
-    char c[] = "+********+";
+    char c[] = "a********a";
     *(unsigned char *)get_chain(c);
-    char expected_c[] = {'+', '*', '*', '*', '*', '*', '*', '*', '*', '\0'};
+    char expected_c[] = {'a', '*', '*', '*', '*', '*', '*', '*', '*', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
     }
@@ -412,19 +412,9 @@ TEST(regression, get_chain_test_2)
 
 TEST(regression, get_chain_test_3)
 {
-    char c[] = "c********c";
+    char c[] = "*--*******";
     *(unsigned char *)get_chain(c);
-    char expected_c[] = {'c', '*', '*', '*', '*', '*', '*', '*', '*', '\0'};
-    for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
-        EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
-    }
-}
-
-TEST(regression, get_chain_test_4)
-{
-    char c[] = "+-+******+";
-    *(unsigned char *)get_chain(c);
-    char expected_c[] = {'+', '-', '+', '*', '*', '*', '*', '*', '*', '\0'};
+    char expected_c[] = {'*', '-', '-', '*', '*', '*', '*', '*', '*', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
     }

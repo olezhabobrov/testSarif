@@ -20,19 +20,19 @@ TEST(regression, struct_has_alphabet_test_1)
 
 TEST(regression, struct_has_alphabet_test_2)
 {
-    int actual = struct_has_alphabet({0, {'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c'}});
+    int actual = struct_has_alphabet({0, {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'a', 'c'}});
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, struct_has_alphabet_test_3)
 {
-    int actual = struct_has_alphabet({0, {'A', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c'}});
+    int actual = struct_has_alphabet({0, {'A', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'a', 'c'}});
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, struct_has_alphabet_test_4)
 {
-    int actual = struct_has_alphabet({2, {'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c'}});
+    int actual = struct_has_alphabet({1, {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'a', 'c'}});
     EXPECT_EQ(0, actual);
 }
 
@@ -45,7 +45,7 @@ TEST(regression, arrays_in_inner_structs_test_1)
 
 TEST(regression, arrays_in_inner_structs_test_2)
 {
-    char actual = arrays_in_inner_structs({{'p', 'c'}, 2, {{0, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'k', 'c'}, 2, {{0, 0, 0, 0, 0}}});
     EXPECT_EQ('1', actual);
 }
 

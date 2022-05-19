@@ -20,25 +20,25 @@ TEST(regression, check_password_test_1)
 
 TEST(regression, check_password_test_2)
 {
-    int actual = check_password(-1);
+    int actual = check_password(1024);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, check_password_test_3)
 {
-    char stdin_buf[] = "hell\0""";
+    char stdin_buf[] = "hello";
     int utbot_redirect_stdin_status = 0;
     utbot_redirect_stdin(stdin_buf, utbot_redirect_stdin_status);
     if (utbot_redirect_stdin_status != 0) {
         FAIL() << "Unable to redirect stdin.";
     }
     int actual = check_password(0);
-    EXPECT_EQ(0, actual);
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, check_password_test_4)
 {
-    char stdin_buf[] = "he\0""hh";
+    char stdin_buf[] = "he\0""ee";
     int utbot_redirect_stdin_status = 0;
     utbot_redirect_stdin(stdin_buf, utbot_redirect_stdin_status);
     if (utbot_redirect_stdin_status != 0) {
@@ -50,14 +50,14 @@ TEST(regression, check_password_test_4)
 
 TEST(regression, check_password_test_5)
 {
-    char stdin_buf[] = "hello";
+    char stdin_buf[] = "hell\0""";
     int utbot_redirect_stdin_status = 0;
     utbot_redirect_stdin(stdin_buf, utbot_redirect_stdin_status);
     if (utbot_redirect_stdin_status != 0) {
         FAIL() << "Unable to redirect stdin.";
     }
     int actual = check_password(0);
-    EXPECT_EQ(1, actual);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, check_password_test_6)
@@ -92,7 +92,7 @@ TEST(regression, check_password_test_8)
 
 TEST(regression, check_password_test_9)
 {
-    int actual = check_password(1024);
+    int actual = check_password(-1);
     EXPECT_EQ(0, actual);
 }
 

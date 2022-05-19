@@ -33,8 +33,8 @@ TEST(regression, get_sign_struct_test_3)
 
 TEST(regression, calculate_something_test_1)
 {
-    int actual = calculate_something({0, 0, 0LL});
-    EXPECT_EQ(0, actual);
+    int actual = calculate_something({1, 1, 0LL});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, calculate_something_test_2)
@@ -45,7 +45,7 @@ TEST(regression, calculate_something_test_2)
 
 TEST(regression, calculate_something_test_3)
 {
-    int actual = calculate_something({1, 1, 0LL});
+    int actual = calculate_something({7, 1, 2020LL});
     EXPECT_EQ(1, actual);
 }
 
@@ -63,8 +63,8 @@ TEST(regression, calculate_something_test_5)
 
 TEST(regression, calculate_something_test_6)
 {
-    int actual = calculate_something({7, 1, 2020LL});
-    EXPECT_EQ(1, actual);
+    int actual = calculate_something({0, 0, 0LL});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, calculate_something_test_7)
@@ -76,7 +76,7 @@ TEST(regression, calculate_something_test_7)
 
 TEST(regression, get_symbol_by_struct_test_1)
 {
-    char actual = get_symbol_by_struct({'c', 'a', 99, 1});
+    char actual = get_symbol_by_struct({'c', 'g', 99, 1});
     EXPECT_EQ('1', actual);
 }
 
@@ -88,13 +88,13 @@ TEST(regression, get_symbol_by_struct_test_2)
 
 TEST(regression, get_symbol_by_struct_test_3)
 {
-    char actual = get_symbol_by_struct({'c', 'a', 99, 0});
+    char actual = get_symbol_by_struct({'c', 'g', 99, 0});
     EXPECT_EQ('0', actual);
 }
 
 TEST(regression, get_symbol_by_struct_test_4)
 {
-    char actual = get_symbol_by_struct({'c', 'a', 117, 0});
+    char actual = get_symbol_by_struct({'c', 'g', 117, 0});
     EXPECT_EQ('u', actual);
 }
 
@@ -107,14 +107,14 @@ TEST(regression, get_symbol_by_struct_test_5)
 
 TEST(regression, operate_with_inner_structs_test_1)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 15}, 5, 101LL});
-    EXPECT_EQ('c', actual);
+    signed char actual = operate_with_inner_structs({{'a', {0U, 0LL}, 0}, 5, 0LL});
+    EXPECT_EQ('e', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_2)
 {
-    signed char actual = operate_with_inner_structs({{'c', {1U, 0LL}, 0}, 0, 0LL});
-    EXPECT_EQ('g', actual);
+    signed char actual = operate_with_inner_structs({{'a', {3U, 9LL}, 0}, 0, 0LL});
+    EXPECT_EQ('o', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_3)
@@ -125,7 +125,7 @@ TEST(regression, operate_with_inner_structs_test_3)
 
 TEST(regression, operate_with_inner_structs_test_4)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 0}, 5, 5LL});
+    signed char actual = operate_with_inner_structs({{'a', {0U, 0LL}, 0}, 5, 5LL});
     EXPECT_EQ('e', actual);
 }
 
@@ -143,31 +143,31 @@ TEST(regression, operate_with_inner_structs_test_6)
 
 TEST(regression, operate_with_inner_structs_test_7)
 {
-    signed char actual = operate_with_inner_structs({{'5', {6U, 5LL}, 5}, 5, 5LL});
+    signed char actual = operate_with_inner_structs({{'5', {8U, 5LL}, 5}, 5, 5LL});
     EXPECT_EQ('g', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_8)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 0}, 5, 101LL});
+    signed char actual = operate_with_inner_structs({{'a', {0U, 0LL}, 0}, 5, 101LL});
     EXPECT_EQ('e', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_9)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 0}, 5, 0LL});
-    EXPECT_EQ('e', actual);
+    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 15}, 5, 101LL});
+    EXPECT_EQ('c', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_10)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 1LL}, 0}, 0, 0LL});
-    EXPECT_EQ('o', actual);
+    signed char actual = operate_with_inner_structs({{'a', {8U, 0LL}, 0}, 0, 0LL});
+    EXPECT_EQ('g', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_11)
 {
-    signed char actual = operate_with_inner_structs({{'c', {0U, 0LL}, 0}, 0, 0LL});
+    signed char actual = operate_with_inner_structs({{'a', {0U, 0LL}, 0}, 0, 0LL});
     EXPECT_EQ('e', actual);
 }
 
@@ -186,7 +186,7 @@ TEST(regression, struct_as_return_type_test_1)
 
 TEST(regression, struct_as_return_type_test_2)
 {
-    struct MainStruct actual = struct_as_return_type(9);
+    struct MainStruct actual = struct_as_return_type(2);
     struct MainStruct expected = {{'2', {2U, 2LL}, 2}, 2, 2LL};
     EXPECT_EQ(actual.inner.c, expected.inner.c);
     EXPECT_EQ(actual.inner.ininner.u, expected.inner.ininner.u);
