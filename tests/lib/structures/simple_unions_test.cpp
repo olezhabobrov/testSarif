@@ -14,13 +14,13 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, get_sign_union_test_1)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({98, 98, 97, -128}));
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 104, 97, -128}));
     EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, get_sign_union_test_2)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 97, 112, 97}));
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({98, 104, 97, 112}));
     EXPECT_EQ(1, actual);
 }
 
@@ -70,8 +70,8 @@ TEST(regression, calculate_something_union_test_3)
 
 TEST(regression, calculate_something_union_test_4)
 {
-    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 0, 0, -2, -1, -1, -1}));
-    EXPECT_EQ(0, actual);
+    int actual = calculate_something_union(from_bytes<Heterogeneous>({-1, -1, -1, -1, 0, 0, 0, -128}));
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, calculate_something_union_test_5)
@@ -176,7 +176,7 @@ TEST(regression, union_as_return_type_test_1)
 
 TEST(regression, union_as_return_type_test_2)
 {
-    union MainUnion actual = union_as_return_type(2);
+    union MainUnion actual = union_as_return_type(8);
     union MainUnion expected = from_bytes<MainUnion>({2, 0, 0, 0, 0, 0, 0, 0});
 //    EXPECT_EQ(actual.inner.c, expected.inner.c);
 //    EXPECT_EQ(actual.inner.ininner.u, expected.inner.ininner.u);
@@ -201,10 +201,10 @@ TEST(regression, union_as_return_type_test_3)
 
 TEST(regression, sumOfUnionArray_test_1)
 {
-    __attribute__ ((aligned(1))) union IntBytesUnion u[10] = {from_bytes<IntBytesUnion>({97, 97, 97, 97}), from_bytes<IntBytesUnion>({97, 112, 97, 98}), from_bytes<IntBytesUnion>({98, 112, 112, 104}), from_bytes<IntBytesUnion>({112, 97, 97, 112}), from_bytes<IntBytesUnion>({97, 112, 97, 97}), from_bytes<IntBytesUnion>({97, 112, 104, 98}), from_bytes<IntBytesUnion>({97, 104, 97, 104}), from_bytes<IntBytesUnion>({104, 104, 112, 104}), from_bytes<IntBytesUnion>({98, 112, 104, 104}), from_bytes<IntBytesUnion>({98, 99, 112, 98})};
+    __attribute__ ((aligned(1))) union IntBytesUnion u[10] = {from_bytes<IntBytesUnion>({98, 98, 104, 97}), from_bytes<IntBytesUnion>({104, 97, 97, 104}), from_bytes<IntBytesUnion>({104, 97, 104, 104}), from_bytes<IntBytesUnion>({98, 97, 98, 98}), from_bytes<IntBytesUnion>({108, 121, 107, 107}), from_bytes<IntBytesUnion>({98, 104, 97, 98}), from_bytes<IntBytesUnion>({97, 98, 104, 97}), from_bytes<IntBytesUnion>({97, 112, 97, 104}), from_bytes<IntBytesUnion>({98, 104, 98, 104}), from_bytes<IntBytesUnion>({112, 98, 104, 97})};
     int actual = sumOfUnionArray(u);
-    EXPECT_EQ(-34204683, actual);
-    union IntBytesUnion expected_u[10] = {from_bytes<IntBytesUnion>({97, 97, 97, 97}), from_bytes<IntBytesUnion>({97, 112, 97, 98}), from_bytes<IntBytesUnion>({98, 112, 112, 104}), from_bytes<IntBytesUnion>({112, 97, 97, 112}), from_bytes<IntBytesUnion>({97, 112, 97, 97}), from_bytes<IntBytesUnion>({97, 112, 104, 98}), from_bytes<IntBytesUnion>({97, 104, 97, 104}), from_bytes<IntBytesUnion>({104, 104, 112, 104}), from_bytes<IntBytesUnion>({98, 112, 104, 104}), from_bytes<IntBytesUnion>({98, 99, 112, 98})};
+    EXPECT_EQ(0, actual);
+    union IntBytesUnion expected_u[10] = {from_bytes<IntBytesUnion>({98, 98, 104, 97}), from_bytes<IntBytesUnion>({104, 97, 97, 104}), from_bytes<IntBytesUnion>({104, 97, 104, 104}), from_bytes<IntBytesUnion>({98, 97, 98, 98}), from_bytes<IntBytesUnion>({108, 121, 107, 107}), from_bytes<IntBytesUnion>({98, 104, 97, 98}), from_bytes<IntBytesUnion>({97, 98, 104, 97}), from_bytes<IntBytesUnion>({97, 112, 97, 104}), from_bytes<IntBytesUnion>({98, 104, 98, 104}), from_bytes<IntBytesUnion>({112, 98, 104, 97})};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         for (int it_15_0 = 0; it_15_0 < 4; it_15_0 ++) {
             EXPECT_EQ(expected_u[it_1_0].bytes[it_15_0], u[it_1_0].bytes[it_15_0]);

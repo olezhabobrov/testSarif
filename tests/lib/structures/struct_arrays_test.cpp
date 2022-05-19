@@ -16,10 +16,10 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, index_of_needed_struct_test_1)
 {
-    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'c', 0}, {'c', 128}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'c', 0}, {'c', 128}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     int actual = index_of_needed_struct(arr);
     EXPECT_EQ(1, actual);
-    struct CharAndInt expected_arr[10] = {{'c', 0}, {'c', 128}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    struct CharAndInt expected_arr[10] = {{'c', 0}, {'c', 128}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0].c, arr[it_3_0].c);
         EXPECT_EQ(expected_arr[it_3_0].x, arr[it_3_0].x);
@@ -28,10 +28,10 @@ TEST(regression, index_of_needed_struct_test_1)
 
 TEST(regression, index_of_needed_struct_test_2)
 {
-    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'g', 0}, {'c', 128}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'s', 0}, {'c', 128}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     int actual = index_of_needed_struct(arr);
     EXPECT_EQ(1, actual);
-    struct CharAndInt expected_arr[10] = {{'g', 0}, {'c', 128}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    struct CharAndInt expected_arr[10] = {{'s', 0}, {'c', 128}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0].c, arr[it_3_0].c);
         EXPECT_EQ(expected_arr[it_3_0].x, arr[it_3_0].x);
@@ -40,10 +40,10 @@ TEST(regression, index_of_needed_struct_test_2)
 
 TEST(regression, index_of_needed_struct_test_3)
 {
-    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'g', 0}, {'k', 0}, {'h', 0}, {'c', 0}, {'h', 0}, {'p', 0}, {'h', 0}, {'b', 0}, {'b', 0}, {'g', 0}};
+    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'s', 0}, {'k', 0}, {'g', 0}, {'a', 0}, {'k', 0}, {'g', 0}, {'p', 0}, {'a', 0}, {'k', 0}, {'b', 0}};
     int actual = index_of_needed_struct(arr);
     EXPECT_EQ(-1, actual);
-    struct CharAndInt expected_arr[10] = {{'g', 0}, {'k', 0}, {'h', 0}, {'c', 0}, {'h', 0}, {'p', 0}, {'h', 0}, {'b', 0}, {'b', 0}, {'g', 0}};
+    struct CharAndInt expected_arr[10] = {{'s', 0}, {'k', 0}, {'g', 0}, {'a', 0}, {'k', 0}, {'g', 0}, {'p', 0}, {'a', 0}, {'k', 0}, {'b', 0}};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0].c, arr[it_3_0].c);
         EXPECT_EQ(expected_arr[it_3_0].x, arr[it_3_0].x);
@@ -52,10 +52,10 @@ TEST(regression, index_of_needed_struct_test_3)
 
 TEST(regression, index_of_needed_struct_test_4)
 {
-    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'c', 128}, {'c', 0}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'c', 128}, {'c', 0}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     int actual = index_of_needed_struct(arr);
     EXPECT_EQ(0, actual);
-    struct CharAndInt expected_arr[10] = {{'c', 128}, {'c', 0}, {'c', 0}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    struct CharAndInt expected_arr[10] = {{'c', 128}, {'c', 0}, {'c', 0}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0].c, arr[it_3_0].c);
         EXPECT_EQ(expected_arr[it_3_0].x, arr[it_3_0].x);
@@ -64,10 +64,10 @@ TEST(regression, index_of_needed_struct_test_4)
 
 TEST(regression, index_of_needed_struct_test_5)
 {
-    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'g', 0}, {'k', 0}, {'c', 128}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    __attribute__ ((aligned(1))) struct CharAndInt arr[10] = {{'s', 0}, {'k', 0}, {'c', 128}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     int actual = index_of_needed_struct(arr);
     EXPECT_EQ(2, actual);
-    struct CharAndInt expected_arr[10] = {{'g', 0}, {'k', 0}, {'c', 128}, {'b', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}};
+    struct CharAndInt expected_arr[10] = {{'s', 0}, {'k', 0}, {'c', 128}, {'a', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'c', 0}, {'b', 0}};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0].c, arr[it_3_0].c);
         EXPECT_EQ(expected_arr[it_3_0].x, arr[it_3_0].x);

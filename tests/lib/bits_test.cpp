@@ -27,10 +27,10 @@ TEST(regression, NSE_BITS_CLZ64_test_2)
 
 TEST(regression, foo1_test_1)
 {
-    __attribute__ ((aligned(1))) struct tagFOO_ATTRIBUTE attrib[10] = {{0U, 0U, 8U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}};
+    __attribute__ ((aligned(1))) struct tagFOO_ATTRIBUTE attrib[10] = {{0U, 0U, 0U}, {0U, 0U, 1U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}, {0U, 0U, 0U}};
     unsigned int offset = 0U;
     unsigned int len = 0U;
-    unsigned int actual = foo1(attrib, 4U, 0U, &offset, &len);
+    unsigned int actual = foo1(attrib, 2U, 1U, &offset, &len);
     EXPECT_EQ(0U, actual);
     unsigned int expected_offset = 0U;
     EXPECT_EQ(expected_offset, offset);

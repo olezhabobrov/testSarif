@@ -29,14 +29,14 @@ TEST(regression, median_test_1)
 
 TEST(regression, median_test_2)
 {
-    int actual = median(7, 10, 10);
-    EXPECT_EQ(10, actual);
+    int actual = median(-3, 7, 7);
+    EXPECT_EQ(7, actual);
 }
 
 TEST(regression, median_test_3)
 {
-    int actual = median(10, 8, 1);
-    EXPECT_EQ(8, actual);
+    int actual = median(-5, -4, -3);
+    EXPECT_EQ(-4, actual);
 }
 
 #pragma endregion

@@ -24,20 +24,20 @@ TEST(regression, handle_struct_with_char_ptr_test_1)
 
 TEST(regression, handle_struct_with_char_ptr_test_2)
 {
-    int actual = handle_struct_with_char_ptr({0, (char *) 255});
-    EXPECT_EQ(0, actual);
+    int actual = handle_struct_with_char_ptr({-8, (char *) 18446744073709551615});
+    EXPECT_EQ(2, actual);
 }
 
 TEST(regression, handle_struct_with_char_ptr_test_3)
 {
-    int actual = handle_struct_with_char_ptr({1, NULL});
+    int actual = handle_struct_with_char_ptr({2, NULL});
     EXPECT_EQ(1, actual);
 }
 
 TEST(regression, handle_struct_with_char_ptr_test_4)
 {
-    int actual = handle_struct_with_char_ptr({-9, (char *) 18446744073709551615});
-    EXPECT_EQ(2, actual);
+    int actual = handle_struct_with_char_ptr({0, (char *) 255});
+    EXPECT_EQ(0, actual);
 }
 
 
@@ -65,8 +65,8 @@ TEST(regression, unsafe_next_value_test_1)
 
 TEST(regression, sum_of_all_fields_or_mult_test_1)
 {
-    long long actual = sum_of_all_fields_or_mult({-4LL, 8, {-7, (char *) 18446744073709551615}}, -322);
-    EXPECT_EQ(-3LL, actual);
+    long long actual = sum_of_all_fields_or_mult({10LL, 10, {8, (char *) 578721382704613384}}, -322);
+    EXPECT_EQ(28LL, actual);
 }
 
 TEST(regression, sum_of_all_fields_or_mult_test_2)
@@ -77,26 +77,26 @@ TEST(regression, sum_of_all_fields_or_mult_test_2)
 
 TEST(regression, sum_of_all_fields_or_mult_test_3)
 {
-    long long actual = sum_of_all_fields_or_mult({3LL, 9, {0, NULL}}, -322);
-    EXPECT_EQ(3LL, actual);
+    long long actual = sum_of_all_fields_or_mult({1LL, 0, {2, NULL}}, -322);
+    EXPECT_EQ(1LL, actual);
 }
 
 TEST(regression, sum_of_all_fields_or_mult_test_4)
 {
-    long long actual = sum_of_all_fields_or_mult({3LL, 9, {0, NULL}}, 0);
-    EXPECT_EQ(3LL, actual);
+    long long actual = sum_of_all_fields_or_mult({1LL, 0, {2, NULL}}, 0);
+    EXPECT_EQ(1LL, actual);
 }
 
 TEST(regression, sum_of_all_fields_or_mult_test_5)
 {
-    long long actual = sum_of_all_fields_or_mult({9LL, 5, {-8, NULL}}, 0);
+    long long actual = sum_of_all_fields_or_mult({7LL, 1, {-4, (char *) 18229723555195321596}}, 0);
     EXPECT_EQ(11LL, actual);
 }
 
 
 TEST(regression, some_calc_test_1)
 {
-    struct StructWithPointerInField actual = some_calc(-7, 6);
+    struct StructWithPointerInField actual = some_calc(-7, 9);
     struct StructWithPointerInField expected = {33333LL, 33, {3, NULL}};
     EXPECT_EQ(actual.ll, expected.ll);
     EXPECT_EQ(actual.sh, expected.sh);
@@ -114,7 +114,7 @@ TEST(regression, some_calc_test_2)
 
 TEST(regression, some_calc_test_3)
 {
-    struct StructWithPointerInField actual = some_calc(1, -8);
+    struct StructWithPointerInField actual = some_calc(7, -1);
     struct StructWithPointerInField expected = {33333LL, 33, {3, NULL}};
     EXPECT_EQ(actual.ll, expected.ll);
     EXPECT_EQ(actual.sh, expected.sh);
@@ -143,7 +143,9 @@ TEST(regression, some_calc_test_5)
 #pragma region error
 TEST(error, list_sum_test_2)
 {
-    struct List head = {(struct List *) 18446744073709551608, 0};
+    struct List head = {NULL, 0};
+    struct List utbotInnerVar1 = {(struct List *) 191, 0};
+    head.next = &utbotInnerVar1;
     list_sum(&head);
     struct List expected_head = {NULL, 0};
     EXPECT_EQ(expected_head.val, head.val);
@@ -151,15 +153,23 @@ TEST(error, list_sum_test_2)
 
 TEST(error, list_sum_test_3)
 {
-    struct List head = {NULL, 0};
-    struct List utbotInnerVar1 = {(struct List *) 2305843009213693960, 0};
-    head.next = &utbotInnerVar1;
+    struct List head = {(struct List *) 18446744073709551608, 0};
     list_sum(&head);
     struct List expected_head = {NULL, 0};
     EXPECT_EQ(expected_head.val, head.val);
 }
 
 TEST(error, list_sum_test_4)
+{
+    struct List head = {NULL, 0};
+    struct List utbotInnerVar1 = {(struct List *) 16777224, 0};
+    head.next = &utbotInnerVar1;
+    list_sum(&head);
+    struct List expected_head = {NULL, 0};
+    EXPECT_EQ(expected_head.val, head.val);
+}
+
+TEST(error, list_sum_test_5)
 {
     struct List head = {(struct List *) 255, 0};
     list_sum(&head);
@@ -169,7 +179,9 @@ TEST(error, list_sum_test_4)
 
 TEST(error, list_sum_sign_test_1)
 {
-    struct List head = {(struct List *) 18446744073709551608, 0};
+    struct List head = {NULL, 0};
+    struct List utbotInnerVar1 = {(struct List *) 140737488355336, 134744072};
+    head.next = &utbotInnerVar1;
     list_sum_sign(&head);
     struct List expected_head = {NULL, 0};
     EXPECT_EQ(expected_head.val, head.val);
@@ -177,15 +189,23 @@ TEST(error, list_sum_sign_test_1)
 
 TEST(error, list_sum_sign_test_2)
 {
-    struct List head = {NULL, 0};
-    struct List utbotInnerVar1 = {(struct List *) 1073741832, 1077952576};
-    head.next = &utbotInnerVar1;
+    struct List head = {(struct List *) 18446744073709551608, 0};
     list_sum_sign(&head);
     struct List expected_head = {NULL, 0};
     EXPECT_EQ(expected_head.val, head.val);
 }
 
 TEST(error, list_sum_sign_test_3)
+{
+    struct List head = {NULL, 0};
+    struct List utbotInnerVar1 = {(struct List *) 191, 0};
+    head.next = &utbotInnerVar1;
+    list_sum_sign(&head);
+    struct List expected_head = {NULL, 0};
+    EXPECT_EQ(expected_head.val, head.val);
+}
+
+TEST(error, list_sum_sign_test_4)
 {
     struct List head = {(struct List *) 255, 0};
     list_sum_sign(&head);

@@ -41,10 +41,10 @@ TEST(regression, out_of_bound_access_to_globals_test_1)
 
 TEST(regression, passthrough_test_1)
 {
-    char p[] = "ccccccccac";
+    char p[] = "cccccccbac";
     char actual = *passthrough(p);
     EXPECT_EQ('c', actual);
-    char expected_p[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', '\0'};
+    char expected_p[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'a', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_p[it_1_0], p[it_1_0]);
     }
@@ -66,7 +66,7 @@ TEST(error, out_of_bound_access_to_heap_test_2)
 
 TEST(error, out_of_bound_access_to_stack_test_2)
 {
-    out_of_bound_access_to_stack(5);
+    out_of_bound_access_to_stack(8);
 }
 
 TEST(error, out_of_bound_access_to_globals_test_2)

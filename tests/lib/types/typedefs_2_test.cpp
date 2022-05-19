@@ -33,13 +33,13 @@ TEST(regression, enumSign1ToInt_test_3)
 
 TEST(regression, intToSign1_test_1)
 {
-    enum __Sign actual = intToSign1(2);
+    enum __Sign actual = intToSign1(1);
     EXPECT_EQ(POS1, actual);
 }
 
 TEST(regression, intToSign1_test_2)
 {
-    enum __Sign actual = intToSign1(-10);
+    enum __Sign actual = intToSign1(-9);
     EXPECT_EQ(NEG1, actual);
 }
 
@@ -71,13 +71,13 @@ TEST(regression, enumSign2ToInt_test_3)
 
 TEST(regression, intToSign2_test_1)
 {
-    Sign2 actual = intToSign2(2);
+    Sign2 actual = intToSign2(1);
     EXPECT_EQ(POS2, actual);
 }
 
 TEST(regression, intToSign2_test_2)
 {
-    Sign2 actual = intToSign2(-10);
+    Sign2 actual = intToSign2(-9);
     EXPECT_EQ(NEG2, actual);
 }
 

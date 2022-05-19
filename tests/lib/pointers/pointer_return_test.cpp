@@ -67,7 +67,7 @@ TEST(regression, returns_struct_with_min_max_test_2)
 
 TEST(regression, return_const_char_test_1)
 {
-    const char actual = *return_const_char(2);
+    const char actual = *return_const_char(1);
     EXPECT_EQ('b', actual);
 }
 
@@ -80,7 +80,7 @@ TEST(regression, return_const_char_test_2)
 
 TEST(regression, return_char_const_pointer_test_1)
 {
-    const char actual = *return_char_const_pointer(2);
+    const char actual = *return_char_const_pointer(1);
     EXPECT_EQ('b', actual);
 }
 
@@ -123,10 +123,10 @@ TEST(regression, void_pointer_return_int_usage_test_2)
 
 TEST(regression, void_pointer_return_char_usage_test_1)
 {
-    char a[] = "ccccccaccc";
+    char a[] = "cccccccccc";
     unsigned char actual = *(unsigned char *)void_pointer_return_char_usage(a);
     EXPECT_EQ(99, actual);
-    char expected_a[] = {'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', '\0'};
+    char expected_a[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_a[it_1_0], a[it_1_0]);
     }

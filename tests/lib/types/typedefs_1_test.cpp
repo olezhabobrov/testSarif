@@ -116,13 +116,13 @@ TEST(regression, min_size_t_test_2)
 
 TEST(regression, min_size_t_alias_test_1)
 {
-    unsigned long actual = min_size_t_alias(0UL, 1UL);
+    unsigned long actual = min_size_t_alias(0UL, 0UL);
     EXPECT_EQ(0UL, actual);
 }
 
 TEST(regression, min_size_t_alias_test_2)
 {
-    unsigned long actual = min_size_t_alias(0UL, 0UL);
+    unsigned long actual = min_size_t_alias(0UL, 1UL);
     EXPECT_EQ(0UL, actual);
 }
 

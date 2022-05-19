@@ -28,10 +28,10 @@ TEST(regression, kek_test_1)
 
 TEST(regression, sumSign_test_1)
 {
-    __attribute__ ((aligned(1))) int a[2][2] = {{2, 0}, {1, 1}};
+    __attribute__ ((aligned(1))) int a[2][2] = {{0, 10}, {5, 1}};
     int actual = sumSign(a);
     EXPECT_EQ(1, actual);
-    int expected_a[2][2] = {2, 0, 1, 1};
+    int expected_a[2][2] = {0, 10, 5, 1};
     for (int it_1_0 = 0; it_1_0 < 2; it_1_0 ++) {
         for (int it_1_1 = 0; it_1_1 < 2; it_1_1 ++) {
             EXPECT_EQ(expected_a[it_1_0][it_1_1], a[it_1_0][it_1_1]);
@@ -41,10 +41,10 @@ TEST(regression, sumSign_test_1)
 
 TEST(regression, sumSign_test_2)
 {
-    __attribute__ ((aligned(1))) int a[2][2] = {{0, -5}, {1, 0}};
+    __attribute__ ((aligned(1))) int a[2][2] = {{0, -10}, {0, 1}};
     int actual = sumSign(a);
     EXPECT_EQ(-1, actual);
-    int expected_a[2][2] = {0, -5, 1, 0};
+    int expected_a[2][2] = {0, -10, 0, 1};
     for (int it_1_0 = 0; it_1_0 < 2; it_1_0 ++) {
         for (int it_1_1 = 0; it_1_1 < 2; it_1_1 ++) {
             EXPECT_EQ(expected_a[it_1_0][it_1_1], a[it_1_0][it_1_1]);
@@ -253,7 +253,7 @@ TEST(regression, return_sign_sum_test_1)
 
 TEST(regression, return_sign_sum_test_2)
 {
-    int actual = return_sign_sum({{{{-6, 8}, {0, 8}, {-2, 8}}, {{0, -9}, {5, -10}, {-4, 1}}}});
+    int actual = return_sign_sum({{{{8, -5}, {-2, -4}, {-8, 7}}, {{-2, -1}, {-10, -10}, {-2, 5}}}});
     EXPECT_EQ(-1, actual);
 }
 
@@ -452,25 +452,25 @@ TEST(regression, sum_matrix_test_2)
 {
     int matrix_c_buffer[3][2] = {0, 0, 0, 0, 0, 0};
     memcpy((void *) matrix_c, matrix_c_buffer, sizeof(matrix_c_buffer));
-    int matrix_a_buffer[3][2] = {8, -3, 7, -4, -1, -1};
+    int matrix_a_buffer[3][2] = {9, 10, -1, -2, -1, -2};
     memcpy((void *) matrix_a, matrix_a_buffer, sizeof(matrix_a_buffer));
-    int matrix_b_buffer[3][2] = {-2, -1, -1, -1, -1, 3};
+    int matrix_b_buffer[3][2] = {-2, -1, -2, -2, -1, 3};
     memcpy((void *) matrix_b, matrix_b_buffer, sizeof(matrix_b_buffer));
     int actual = sum_matrix();
-    EXPECT_EQ(3, actual);
-    int expected_matrix_c[3][2] = {6, -4, 6, -5, -2, 2};
+    EXPECT_EQ(8, actual);
+    int expected_matrix_c[3][2] = {7, 9, -3, -4, -2, 1};
     for (int it_8_0 = 0; it_8_0 < 3; it_8_0 ++) {
         for (int it_8_1 = 0; it_8_1 < 2; it_8_1 ++) {
             EXPECT_EQ(expected_matrix_c[it_8_0][it_8_1], matrix_c[it_8_0][it_8_1]);
         }
     }
-    int expected_matrix_a[3][2] = {8, -3, 7, -4, -1, -1};
+    int expected_matrix_a[3][2] = {9, 10, -1, -2, -1, -2};
     for (int it_8_0 = 0; it_8_0 < 3; it_8_0 ++) {
         for (int it_8_1 = 0; it_8_1 < 2; it_8_1 ++) {
             EXPECT_EQ(expected_matrix_a[it_8_0][it_8_1], matrix_a[it_8_0][it_8_1]);
         }
     }
-    int expected_matrix_b[3][2] = {-2, -1, -1, -1, -1, 3};
+    int expected_matrix_b[3][2] = {-2, -1, -2, -2, -1, 3};
     for (int it_8_0 = 0; it_8_0 < 3; it_8_0 ++) {
         for (int it_8_1 = 0; it_8_1 < 2; it_8_1 ++) {
             EXPECT_EQ(expected_matrix_b[it_8_0][it_8_1], matrix_b[it_8_0][it_8_1]);
@@ -541,7 +541,7 @@ TEST(error, count_dashes_test_3)
 {
     char argv_buffer[2][2] = {{'-', 'c'}, {'-', 'c'}};
     memcpy((void *) argv, argv_buffer, sizeof(argv_buffer));
-    argc = 3;
+    argc = 4;
     count_dashes();
     char expected_argv = '\0';
     EXPECT_EQ(expected_argv, (**argv));

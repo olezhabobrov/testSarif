@@ -40,7 +40,7 @@ TEST(regression, is_close_test_1)
 
 TEST(regression, is_close_test_2)
 {
-    int actual = is_close(-1.000062e+00, 0);
+    int actual = is_close(4.000000e+00, 0);
     EXPECT_EQ(0, actual);
 }
 
@@ -66,6 +66,50 @@ TEST(regression, long_double_arith_test_2)
 
 TEST(regression, array_max_test_1)
 {
+    __attribute__ ((aligned(1))) float arr[10] = {1.879931e-04, 4.738856e-38, 4.738856e-38, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    int actual = array_max(arr);
+    EXPECT_EQ(1, actual);
+    float expected_arr[10] = {1.879931e-04, 4.738856e-38, 4.738856e-38, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
+    }
+}
+
+TEST(regression, array_max_test_2)
+{
+    __attribute__ ((aligned(1))) float arr[10] = {-4.031273e+00, -4.031739e+00, -3.242499e-05, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    int actual = array_max(arr);
+    EXPECT_EQ(-1, actual);
+    float expected_arr[10] = {-4.031273e+00, -4.031739e+00, -3.242499e-05, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
+    }
+}
+
+TEST(regression, array_max_test_3)
+{
+    __attribute__ ((aligned(1))) float arr[10] = {-5.493313e-04, -2.031312e+00, -2.125001e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    int actual = array_max(arr);
+    EXPECT_EQ(-1, actual);
+    float expected_arr[10] = {-5.493313e-04, -2.031312e+00, -2.125001e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
+    }
+}
+
+TEST(regression, array_max_test_4)
+{
+    __attribute__ ((aligned(1))) float arr[10] = {1.469942e-38, -4.995996e-38, 6.024553e-38, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    int actual = array_max(arr);
+    EXPECT_EQ(0, actual);
+    float expected_arr[10] = {1.469942e-38, -4.995996e-38, 6.024553e-38, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
+    }
+}
+
+TEST(regression, array_max_test_5)
+{
     __attribute__ ((aligned(1))) float arr[10] = {0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
     int actual = array_max(arr);
     EXPECT_EQ(0, actual);
@@ -75,45 +119,23 @@ TEST(regression, array_max_test_1)
     }
 }
 
-TEST(regression, array_max_test_2)
+TEST(regression, array_max_test_6)
 {
-    __attribute__ ((aligned(1))) float arr[10] = {-4.031739e+00, -4.250123e+00, -2.031250e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
-    int actual = array_max(arr);
-    EXPECT_EQ(-1, actual);
-    float expected_arr[10] = {-4.031739e+00, -4.250123e+00, -2.031250e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
-    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
-        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
-    }
-}
-
-TEST(regression, array_max_test_3)
-{
-    __attribute__ ((aligned(1))) float arr[10] = {-3.814698e-06, -7.689002e-06, -2.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
-    int actual = array_max(arr);
-    EXPECT_EQ(-1, actual);
-    float expected_arr[10] = {-3.814698e-06, -7.689002e-06, -2.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
-    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
-        EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
-    }
-}
-
-TEST(regression, array_max_test_4)
-{
-    __attribute__ ((aligned(1))) float arr[10] = {2.000061e+00, 4.702122e-38, -0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    __attribute__ ((aligned(1))) float arr[10] = {3.000245e+00, 2.015869e+00, 5.000245e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
     int actual = array_max(arr);
     EXPECT_EQ(1, actual);
-    float expected_arr[10] = {2.000061e+00, 4.702122e-38, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    float expected_arr[10] = {3.000245e+00, 2.015869e+00, 5.000245e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
     }
 }
 
-TEST(regression, array_max_test_5)
+TEST(regression, array_max_test_7)
 {
-    __attribute__ ((aligned(1))) float arr[10] = {-3.171068e-05, -7.927666e-06, -1.922486e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    __attribute__ ((aligned(1))) float arr[10] = {-4.031739e+00, -2.015869e+00, -5.728521e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
     int actual = array_max(arr);
     EXPECT_EQ(-1, actual);
-    float expected_arr[10] = {-3.171068e-05, -7.927666e-06, -1.922486e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
+    float expected_arr[10] = {-4.031739e+00, -2.015869e+00, -5.728521e-06, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00, 0.000000e+00};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_NEAR(expected_arr[it_3_0], arr[it_3_0], utbot_abs_error);
     }

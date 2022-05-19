@@ -14,13 +14,13 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, get_sign_packedStruct1_test_1)
 {
-    int actual = get_sign_packedStruct1({0, 2});
+    int actual = get_sign_packedStruct1({0, 1});
     EXPECT_EQ(1, actual);
 }
 
 TEST(regression, get_sign_packedStruct1_test_2)
 {
-    int actual = get_sign_packedStruct1({0, -5});
+    int actual = get_sign_packedStruct1({0, -10});
     EXPECT_EQ(-1, actual);
 }
 
@@ -39,7 +39,7 @@ TEST(regression, get_val_by_packedStruct2_test_1)
 
 TEST(regression, get_val_by_packedStruct2_test_2)
 {
-    char actual = get_val_by_packedStruct2({'a', 0, {'i', 4}});
+    char actual = get_val_by_packedStruct2({'b', 0, {'j', 4}});
     EXPECT_EQ('4', actual);
 }
 
@@ -51,33 +51,33 @@ TEST(regression, get_val_by_packedStruct2_test_3)
 
 TEST(regression, get_val_by_packedStruct2_test_4)
 {
-    char actual = get_val_by_packedStruct2({'a', 0, {'i', 0}});
+    char actual = get_val_by_packedStruct2({'b', 0, {'j', 0}});
     EXPECT_EQ('3', actual);
 }
 
 
 TEST(regression, get_val_by_otherPackedStruct_test_1)
 {
-    short actual = get_val_by_otherPackedStruct({'c', {'c', 0, {'c', 0}}, 'c', 0});
+    short actual = get_val_by_otherPackedStruct({'c', {'!', 0, {'c', 0}}, 'c', 0});
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, get_val_by_otherPackedStruct_test_2)
 {
-    short actual = get_val_by_otherPackedStruct({'b', {'c', 0, {'c', 0}}, 'j', 0});
+    short actual = get_val_by_otherPackedStruct({'b', {'c', 0, {'c', 0}}, 'c', 0});
     EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, get_val_by_otherPackedStruct_test_3)
 {
-    short actual = get_val_by_otherPackedStruct({'c', {'!', 0, {'c', 0}}, 'c', 0});
-    EXPECT_EQ(0, actual);
+    short actual = get_val_by_otherPackedStruct({'b', {'S', 0, {'c', 0}}, 'c', 0});
+    EXPECT_EQ(5, actual);
 }
 
 TEST(regression, get_val_by_otherPackedStruct_test_4)
 {
-    short actual = get_val_by_otherPackedStruct({'b', {'S', 0, {'c', 0}}, 'j', 0});
-    EXPECT_EQ(5, actual);
+    short actual = get_val_by_otherPackedStruct({'c', {'c', 0, {'c', 0}}, 'c', 0});
+    EXPECT_EQ(0, actual);
 }
 
 #pragma endregion

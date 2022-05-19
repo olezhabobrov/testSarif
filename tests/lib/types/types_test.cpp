@@ -20,13 +20,13 @@ TEST(regression, a_or_b_test_1)
 
 TEST(regression, a_or_b_test_2)
 {
-    char actual = a_or_b('c', 'b');
+    char actual = a_or_b('b', 'b');
     EXPECT_EQ('b', actual);
 }
 
 TEST(regression, a_or_b_test_3)
 {
-    char actual = a_or_b('b', 'n');
+    char actual = a_or_b('i', 'n');
     EXPECT_EQ('n', actual);
 }
 
@@ -78,8 +78,8 @@ TEST(regression, min_divided_by_2_test_2)
 
 TEST(regression, some_func_test_1)
 {
-    signed char actual = some_func('{', 122);
-    EXPECT_EQ('{', actual);
+    signed char actual = some_func('c', 122);
+    EXPECT_EQ('0', actual);
 }
 
 TEST(regression, some_func_test_2)
@@ -90,8 +90,8 @@ TEST(regression, some_func_test_2)
 
 TEST(regression, some_func_test_3)
 {
-    signed char actual = some_func('c', 122);
-    EXPECT_EQ('0', actual);
+    signed char actual = some_func('{', 122);
+    EXPECT_EQ('{', actual);
 }
 
 
@@ -122,14 +122,14 @@ TEST(regression, fun_that_accept_bools_test_4)
 
 TEST(regression, is_positive_test_1)
 {
-    _Bool actual = is_positive(0);
-    EXPECT_EQ(false, actual);
+    _Bool actual = is_positive(1);
+    EXPECT_EQ(true, actual);
 }
 
 TEST(regression, is_positive_test_2)
 {
-    _Bool actual = is_positive(1);
-    EXPECT_EQ(true, actual);
+    _Bool actual = is_positive(0);
+    EXPECT_EQ(false, actual);
 }
 
 
@@ -248,26 +248,26 @@ TEST(regression, structWithConstPointerReturnPointer_test_2)
 
 TEST(regression, structWithConstPointerParam_test_1)
 {
-    int actual = structWithConstPointerParam({NULL});
-    EXPECT_EQ(0, actual);
+    int actual = structWithConstPointerParam({(char *) 255});
+    EXPECT_EQ(2, actual);
 }
 
 TEST(regression, structWithConstPointerParam_test_2)
 {
-    int actual = structWithConstPointerParam({(char *) 255});
-    EXPECT_EQ(2, actual);
+    int actual = structWithConstPointerParam({NULL});
+    EXPECT_EQ(0, actual);
 }
 
 
 TEST(regression, structWithConstFields_test_1)
 {
-    int actual = structWithConstFields({0, 2, 'c'});
+    int actual = structWithConstFields({0, 1, 'b'});
     EXPECT_EQ(2, actual);
 }
 
 TEST(regression, structWithConstFields_test_2)
 {
-    int actual = structWithConstFields({0, 0, 'c'});
+    int actual = structWithConstFields({0, 0, 'b'});
     EXPECT_EQ(1, actual);
 }
 

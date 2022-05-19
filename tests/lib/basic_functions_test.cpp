@@ -27,33 +27,33 @@ TEST(regression, max__test_2)
 
 TEST(regression, min_test_1)
 {
-    int actual = min(0, 1);
+    int actual = min(0, 0);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, min_test_2)
 {
-    int actual = min(0, 0);
+    int actual = min(0, 1);
     EXPECT_EQ(0, actual);
 }
 
 
 TEST(regression, sqr_positive_test_1)
 {
-    int actual = sqr_positive(0);
-    EXPECT_EQ(0, actual);
+    int actual = sqr_positive(-1);
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, sqr_positive_test_2)
 {
-    int actual = sqr_positive(-1);
-    EXPECT_EQ(-1, actual);
+    int actual = sqr_positive(0);
+    EXPECT_EQ(0, actual);
 }
 
 
 TEST(regression, simple_loop_test_1)
 {
-    int actual = simple_loop(104923167U);
+    int actual = simple_loop(1132284479U);
     EXPECT_EQ(1, actual);
 }
 

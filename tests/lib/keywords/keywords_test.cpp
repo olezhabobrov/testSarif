@@ -14,7 +14,7 @@ static const float utbot_abs_error = 1e-6;
 
 TEST(regression, get_size_of_data_test_1)
 {
-    int actual = get_size_of_data({'c', {'b', 'c', 'c', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'a', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c'}});
+    int actual = get_size_of_data({'c', {'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'b', 'b', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c'}});
     EXPECT_EQ(256, actual);
 }
 
@@ -41,15 +41,15 @@ TEST(regression, using_test_1)
 
 TEST(regression, different_test_1)
 {
-    char old[] = "cccacbcccc";
-    char new_[] = "cbccccbccc";
+    char old[] = "ccccccbccc";
+    char new_[] = "ccaccccacc";
     _Bool actual = different(old, new_);
     EXPECT_EQ(true, actual);
-    char expected_old[] = {'c', 'c', 'c', 'a', 'c', 'b', 'c', 'c', 'c', '\0'};
+    char expected_old[] = {'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', '\0'};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_old[it_3_0], old[it_3_0]);
     }
-    char expected_new_[] = {'c', 'b', 'c', 'c', 'c', 'c', 'b', 'c', 'c', '\0'};
+    char expected_new_[] = {'c', 'c', 'a', 'c', 'c', 'c', 'c', 'a', 'c', '\0'};
     for (int it_4_0 = 0; it_4_0 < 10; it_4_0 ++) {
         EXPECT_EQ(expected_new_[it_4_0], new_[it_4_0]);
     }

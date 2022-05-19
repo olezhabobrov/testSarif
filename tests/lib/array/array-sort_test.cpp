@@ -25,6 +25,17 @@ TEST(regression, sort_array_test_1)
 
 TEST(regression, sort_array_test_2)
 {
+    __attribute__ ((aligned(1))) int arr[10] = {1, 1, 0, 1, 0, 0, 0, 0, 0, 0};
+    int actual = sort_array(arr, 4);
+    EXPECT_EQ(1, actual);
+    int expected_arr[10] = {0, 1, 1, 1, 0, 0, 0, 0, 0, 0};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);
+    }
+}
+
+TEST(regression, sort_array_test_3)
+{
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int actual = sort_array(arr, 4);
     EXPECT_EQ(1, actual);
@@ -34,7 +45,7 @@ TEST(regression, sort_array_test_2)
     }
 }
 
-TEST(regression, sort_array_test_3)
+TEST(regression, sort_array_test_4)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int actual = sort_array(arr, 0);
@@ -69,7 +80,7 @@ int _sort_array_with_comparator_cmp_stub(int param1, int param2) {
 TEST(regression, sort_array_with_comparator_test_1)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cmp_symbolic_buffer[10] = {1, 2, 1, 2, 2, -1, 2, 1, 2, 2};
+    int cmp_symbolic_buffer[10] = {1, -1, 2, 2, 1, 7, 2, 1, 1, 2};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_array_with_comparator(arr, 5, _sort_array_with_comparator_cmp_stub);
     EXPECT_EQ(1, actual);
@@ -82,8 +93,10 @@ TEST(regression, sort_array_with_comparator_test_1)
 TEST(regression, sort_array_with_comparator_test_2)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int actual = sort_array_with_comparator(arr, 0, _sort_array_with_comparator_cmp_stub);
-    EXPECT_EQ(0, actual);
+    int cmp_symbolic_buffer[10] = {1, -1, 2, 2, 1, 7, 2, 1, 0, 0};
+    memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
+    int actual = sort_array_with_comparator(arr, 4, _sort_array_with_comparator_cmp_stub);
+    EXPECT_EQ(-1, actual);
     int expected_arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);
@@ -93,7 +106,7 @@ TEST(regression, sort_array_with_comparator_test_2)
 TEST(regression, sort_array_with_comparator_test_3)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cmp_symbolic_buffer[10] = {1, 2, 1, 2, 2, -1, 0, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {1, -1, 2, 2, 1, 7, 0, 1, 1, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_array_with_comparator(arr, 4, _sort_array_with_comparator_cmp_stub);
     EXPECT_EQ(-1, actual);
@@ -106,20 +119,7 @@ TEST(regression, sort_array_with_comparator_test_3)
 TEST(regression, sort_array_with_comparator_test_4)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cmp_symbolic_buffer[10] = {1, 2, 1, 2, 2, -1, 2, 1, 0, 0};
-    memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
-    int actual = sort_array_with_comparator(arr, 4, _sort_array_with_comparator_cmp_stub);
-    EXPECT_EQ(-1, actual);
-    int expected_arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
-        EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);
-    }
-}
-
-TEST(regression, sort_array_with_comparator_test_5)
-{
-    __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cmp_symbolic_buffer[10] = {1, 2, 1, 2, 2, -1, 2, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {1, -1, 2, 2, 1, 7, 2, 1, 1, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
     int actual = sort_array_with_comparator(arr, 4, _sort_array_with_comparator_cmp_stub);
     EXPECT_EQ(1, actual);
@@ -129,12 +129,23 @@ TEST(regression, sort_array_with_comparator_test_5)
     }
 }
 
+TEST(regression, sort_array_with_comparator_test_5)
+{
+    __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int actual = sort_array_with_comparator(arr, 0, _sort_array_with_comparator_cmp_stub);
+    EXPECT_EQ(0, actual);
+    int expected_arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
+        EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);
+    }
+}
+
 #pragma endregion
 #pragma region error
-TEST(error, sort_array_test_4)
+TEST(error, sort_array_test_5)
 {
-    __attribute__ ((aligned(1))) int arr[10] = {0, -1, -1, -1, -1, -1, -1, -1, -1, -1};
-    sort_array(arr, 525312);
+    __attribute__ ((aligned(1))) int arr[10] = {0, 0, 6, 5, 5, 5, 5, 5, 5, 5};
+    sort_array(arr, 1048576);
     int expected_arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);
@@ -144,9 +155,9 @@ TEST(error, sort_array_test_4)
 TEST(error, sort_array_with_comparator_test_6)
 {
     __attribute__ ((aligned(1))) int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    int cmp_symbolic_buffer[10] = {1, 2, 1, 2, 2, -1, 2, 1, 2, 0};
+    int cmp_symbolic_buffer[10] = {1, -1, 2, 2, 1, 7, 2, 1, 1, 0};
     memcpy((void *) cmp_symbolic, cmp_symbolic_buffer, sizeof(cmp_symbolic_buffer));
-    sort_array_with_comparator(arr, 268435456, _sort_array_with_comparator_cmp_stub);
+    sort_array_with_comparator(arr, 407115648, _sort_array_with_comparator_cmp_stub);
     int expected_arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
         EXPECT_EQ(expected_arr[it_3_0], arr[it_3_0]);

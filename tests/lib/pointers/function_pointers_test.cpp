@@ -151,8 +151,8 @@ TEST(regression, pointerToPointer_test_1)
     }
     int f_symbolic_buffer[10] = {4, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
-    char actual = pointerToPointer(f, 'c');
-    EXPECT_EQ('c', actual);
+    char actual = pointerToPointer(f, 'b');
+    EXPECT_EQ('b', actual);
 }
 
 TEST(regression, pointerToPointer_test_2)
@@ -193,7 +193,7 @@ extern "C" int f_symbolic;
 TEST(regression, structParam_test_1)
 {
     f_symbolic = 0;
-    char s[] = "accccacaca";
+    char s[] = "acccaccbca";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -203,7 +203,7 @@ TEST(regression, structParam_test_1)
 TEST(regression, structParam_test_2)
 {
     f_symbolic = 0;
-    char s[] = "hccccacach";
+    char s[] = "jcccaccbcj";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -213,7 +213,7 @@ TEST(regression, structParam_test_2)
 TEST(regression, structParam_test_3)
 {
     f_symbolic = 0;
-    char s[] = "zccccacacz";
+    char s[] = "zcccaccbcz";
     int f_symbolic_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     memcpy((void *) f_symbolic, f_symbolic_buffer, sizeof(f_symbolic_buffer));
     int actual = structParam(_structParam_f_stub, s);
@@ -321,17 +321,17 @@ TEST(regression, return_op_test_1)
 
 TEST(regression, return_op_test_2)
 {
-    return_op('*');
+    return_op('-');
 }
 
 TEST(regression, return_op_test_3)
 {
-    return_op('-');
+    return_op('+');
 }
 
 TEST(regression, return_op_test_4)
 {
-    return_op('+');
+    return_op('*');
 }
 
 typedef int (*f_chain_functions_arg)(int, int);
@@ -392,6 +392,26 @@ int _get_chain_get_chain_return_stub(int param1, int param2) {
 
 TEST(regression, get_chain_test_1)
 {
+    char c[] = "+********+";
+    *(unsigned char *)get_chain(c);
+    char expected_c[] = {'+', '*', '*', '*', '*', '*', '*', '*', '*', '\0'};
+    for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
+        EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
+    }
+}
+
+TEST(regression, get_chain_test_2)
+{
+    char c[] = "+*-******+";
+    *(unsigned char *)get_chain(c);
+    char expected_c[] = {'+', '*', '-', '*', '*', '*', '*', '*', '*', '\0'};
+    for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
+        EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
+    }
+}
+
+TEST(regression, get_chain_test_3)
+{
     char c[] = "a********a";
     *(unsigned char *)get_chain(c);
     char expected_c[] = {'a', '*', '*', '*', '*', '*', '*', '*', '*', '\0'};
@@ -400,7 +420,7 @@ TEST(regression, get_chain_test_1)
     }
 }
 
-TEST(regression, get_chain_test_2)
+TEST(regression, get_chain_test_4)
 {
     char c[] = "-********-";
     *(unsigned char *)get_chain(c);
@@ -410,11 +430,11 @@ TEST(regression, get_chain_test_2)
     }
 }
 
-TEST(regression, get_chain_test_3)
+TEST(regression, get_chain_test_5)
 {
-    char c[] = "*--*******";
+    char c[] = "*+******+*";
     *(unsigned char *)get_chain(c);
-    char expected_c[] = {'*', '-', '-', '*', '*', '*', '*', '*', '*', '\0'};
+    char expected_c[] = {'*', '+', '*', '*', '*', '*', '*', '*', '+', '\0'};
     for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
         EXPECT_EQ(expected_c[it_1_0], c[it_1_0]);
     }
@@ -432,7 +452,7 @@ TEST(regression, calcFunctionStruct_test_1)
 TEST(regression, calcFunctionStruct_test_2)
 {
     f_symbolic = 0;
-    int actual = calcFunctionStruct({0, FStruct_f_stub}, 2);
+    int actual = calcFunctionStruct({0, FStruct_f_stub}, 1);
     EXPECT_EQ(0, actual);
 }
 

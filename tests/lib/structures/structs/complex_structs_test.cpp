@@ -32,44 +32,44 @@ TEST(regression, struct_has_alphabet_test_3)
 
 TEST(regression, struct_has_alphabet_test_4)
 {
-    int actual = struct_has_alphabet({1, {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'a', 'c'}});
+    int actual = struct_has_alphabet({2, {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'a', 'c'}});
     EXPECT_EQ(0, actual);
 }
 
 
 TEST(regression, arrays_in_inner_structs_test_1)
 {
-    char actual = arrays_in_inner_structs({{'c', 'c'}, 2, {{0, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'c', 'c'}, 1, {{0, 0, 0, 0, 0}}});
     EXPECT_EQ('2', actual);
 }
 
 TEST(regression, arrays_in_inner_structs_test_2)
 {
-    char actual = arrays_in_inner_structs({{'k', 'c'}, 2, {{0, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'k', 'a'}, 1, {{0, 0, 0, 0, 0}}});
     EXPECT_EQ('1', actual);
 }
 
 TEST(regression, arrays_in_inner_structs_test_3)
 {
-    char actual = arrays_in_inner_structs({{'c', 'c'}, 2, {{65, 65, 65, 65, 65}}});
+    char actual = arrays_in_inner_structs({{'c', 'c'}, 1, {{65, 65, 65, 65, 65}}});
     EXPECT_EQ('3', actual);
 }
 
 TEST(regression, arrays_in_inner_structs_test_4)
 {
-    char actual = arrays_in_inner_structs({{'c', 'c'}, 2, {{65, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'c', 'c'}, 1, {{65, 0, 0, 0, 0}}});
     EXPECT_EQ('2', actual);
 }
 
 TEST(regression, arrays_in_inner_structs_test_5)
 {
-    char actual = arrays_in_inner_structs({{'c', 'k'}, 2, {{0, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'c', 'a'}, 1, {{0, 0, 0, 0, 0}}});
     EXPECT_EQ('1', actual);
 }
 
 TEST(regression, arrays_in_inner_structs_test_6)
 {
-    char actual = arrays_in_inner_structs({{'c', 'c'}, 0, {{0, 0, 0, 0, 0}}});
+    char actual = arrays_in_inner_structs({{'c', 'a'}, 0, {{0, 0, 0, 0, 0}}});
     EXPECT_EQ('0', actual);
 }
 
