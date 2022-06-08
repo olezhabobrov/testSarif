@@ -13,10 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 31
+                                                        "startLine": 169
                                                     }
                                                 }
                                             }
@@ -25,38 +25,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
+                                                        "uri": "main.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 9
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 2
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 9
+                                                        "startLine": 10
                                                     }
                                                 }
                                             }
@@ -71,18 +43,187 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "lib/assertion_failures.c"
+                                    "uri": "main.c"
                                 },
                                 "region": {
-                                    "startLine": 9
+                                    "startLine": 10
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "ASSERTION FAIL: a != 42"
+                        "text": "memory error: out of bound pointer"
                     },
-                    "ruleId": "assert.err"
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/main_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 186
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "main.c"
+                                },
+                                "region": {
+                                    "startLine": 10
+                                }
+                            }
+                        },
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "runtime/klee-libc/strtol.c"
+                                },
+                                "region": {
+                                    "startLine": 62
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/main_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 203
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "main.c"
+                                },
+                                "region": {
+                                    "startLine": 10
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/main_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 220
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "main.c"
+                                },
+                                "region": {
+                                    "startLine": 10
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
                 }
             ],
             "tool": {
