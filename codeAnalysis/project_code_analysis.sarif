@@ -34,11 +34,7 @@
                                             }
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
+                                },
                                 {
                                     "locations": [
                                         {
@@ -48,7 +44,7 @@
                                                         "uri": "tests/lib/assertion_failures_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1
+                                                        "startLine": 2
                                                     }
                                                 }
                                             }
