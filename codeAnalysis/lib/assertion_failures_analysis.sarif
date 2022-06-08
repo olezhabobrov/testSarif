@@ -36,38 +36,6 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 1
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/assertion_failures.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 9
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
                         }
                     ],
                     "level": "error",
