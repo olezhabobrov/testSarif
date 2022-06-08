@@ -43,10 +43,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
+                                    "uri": "main.c"
                                 },
                                 "region": {
-                                    "startLine": 105
+                                    "startLine": 10
                                 }
                             }
                         }
@@ -96,10 +96,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
+                                    "uri": "main.c"
                                 },
                                 "region": {
-                                    "startLine": 66
+                                    "startLine": 10
                                 }
                             }
                         }
@@ -149,10 +149,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
+                                    "uri": "main.c"
                                 },
                                 "region": {
-                                    "startLine": 70
+                                    "startLine": 10
                                 }
                             }
                         }
@@ -202,10 +202,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "runtime/klee-libc/strtol.c"
+                                    "uri": "main.c"
                                 },
                                 "region": {
-                                    "startLine": 62
+                                    "startLine": 10
                                 }
                             }
                         }
