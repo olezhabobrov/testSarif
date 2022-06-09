@@ -16,7 +16,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 169
+                                                        "startLine": 151
                                                     }
                                                 }
                                             }
@@ -48,7 +48,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 186
+                                                        "startLine": 168
                                                     }
                                                 }
                                             }
@@ -80,7 +80,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 203
+                                                        "startLine": 185
                                                     }
                                                 }
                                             }
@@ -112,7 +112,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 220
+                                                        "startLine": 202
                                                     }
                                                 }
                                             }
