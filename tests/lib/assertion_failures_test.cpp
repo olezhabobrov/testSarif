@@ -24,33 +24,11 @@ TEST(regression, buggy_function1_test_2)
     EXPECT_EQ(0, actual);
 }
 
-
-TEST(regression, buggy_function3_test_1)
-{
-    int actual = buggy_function3(0, 0);
-    EXPECT_EQ(0, actual);
-}
-
 #pragma endregion
 #pragma region error
 TEST(error, buggy_function1_test_3)
 {
     buggy_function1(42, 0);
-}
-
-TEST(error, buggy_function2_test_1)
-{
-    buggy_function2(7);
-}
-
-TEST(error, buggy_function2_test_2)
-{
-    buggy_function2(0);
-}
-
-TEST(error, buggy_function3_test_2)
-{
-    buggy_function3(1, 0);
 }
 
 #pragma endregion
