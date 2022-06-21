@@ -16,7 +16,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 169
+                                                        "startLine": 151
                                                     }
                                                 }
                                             }
@@ -45,10 +45,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 169
+                                                        "startLine": 151
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 249
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/utbot-AB8X/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
                                                     }
                                                 }
                                             }
@@ -69,7 +93,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/atoi.c"
+                                                        "uri": "runtime/klee-libc/atoi.c"
                                                     },
                                                     "region": {
                                                         "startLine": 36
@@ -81,7 +105,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/strtol.c"
+                                                        "uri": "runtime/klee-libc/strtol.c"
                                                     },
                                                     "region": {
                                                         "startLine": 105
@@ -125,7 +149,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 186
+                                                        "startLine": 168
                                                     }
                                                 }
                                             }
@@ -154,10 +178,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 186
+                                                        "startLine": 168
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 249
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/utbot-AB8X/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
                                                     }
                                                 }
                                             }
@@ -178,7 +226,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/atoi.c"
+                                                        "uri": "runtime/klee-libc/atoi.c"
                                                     },
                                                     "region": {
                                                         "startLine": 36
@@ -190,7 +238,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/strtol.c"
+                                                        "uri": "runtime/klee-libc/strtol.c"
                                                     },
                                                     "region": {
                                                         "startLine": 66
@@ -234,7 +282,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 203
+                                                        "startLine": 185
                                                     }
                                                 }
                                             }
@@ -263,10 +311,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 203
+                                                        "startLine": 185
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 249
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/utbot-AB8X/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
                                                     }
                                                 }
                                             }
@@ -287,7 +359,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/atoi.c"
+                                                        "uri": "runtime/klee-libc/atoi.c"
                                                     },
                                                     "region": {
                                                         "startLine": 36
@@ -299,7 +371,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/strtol.c"
+                                                        "uri": "runtime/klee-libc/strtol.c"
                                                     },
                                                     "region": {
                                                         "startLine": 70
@@ -343,7 +415,7 @@
                                                         "uri": "tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 220
+                                                        "startLine": 202
                                                     }
                                                 }
                                             }
@@ -372,10 +444,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 220
+                                                        "startLine": 202
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 249
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/utbot-AB8X/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
                                                     }
                                                 }
                                             }
@@ -396,7 +492,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/atoi.c"
+                                                        "uri": "runtime/klee-libc/atoi.c"
                                                     },
                                                     "region": {
                                                         "startLine": 36
@@ -408,7 +504,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "/home/utbot/remote/UTBotCpp/submodules/klee/runtime/klee-libc/strtol.c"
+                                                        "uri": "runtime/klee-libc/strtol.c"
                                                     },
                                                     "region": {
                                                         "startLine": 62
