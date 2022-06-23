@@ -13,10 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_test.cpp"
+                                                        "uri": "tests/lib/assertion_failures_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 31
+                                                        "startLine": 29
                                                     }
                                                 }
                                             }

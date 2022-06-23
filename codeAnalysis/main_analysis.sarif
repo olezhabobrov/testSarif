@@ -13,10 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 151
+                                                        "startLine": 149
                                                     }
                                                 }
                                             }
@@ -45,10 +45,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 151
+                                                        "startLine": 149
                                                     }
                                                 }
                                             }
@@ -122,10 +122,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 168
+                                                        "startLine": 160
                                                     }
                                                 }
                                             }
@@ -154,10 +154,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 168
+                                                        "startLine": 160
                                                     }
                                                 }
                                             }
@@ -231,10 +231,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 185
+                                                        "startLine": 171
                                                     }
                                                 }
                                             }
@@ -263,10 +263,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 185
+                                                        "startLine": 171
                                                     }
                                                 }
                                             }
@@ -340,10 +340,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 202
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }
@@ -372,10 +372,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_test.cpp"
+                                                        "uri": "tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 202
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }
