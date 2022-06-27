@@ -13,22 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 167
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -45,22 +33,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 178
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -77,22 +53,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 189
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -109,10 +73,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 200
+                                                        "startLine": 29
                                                     }
                                                 }
                                             }
@@ -121,10 +85,74 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "main.c"
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 10
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 29
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 29
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -139,18 +167,79 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "main.c"
+                                    "uri": "lib/structures/structs/structs_with_pointers.c"
                                 },
                                 "region": {
-                                    "startLine": 10
+                                    "startLine": 22
                                 }
                             }
                         }
                     ],
                     "message": {
-                        "text": "memory error: out of bound pointer"
+                        "text": "invalid usage of null pointer"
                     },
-                    "ruleId": "ptr.err"
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 40
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 40
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/structures/structs/structs_with_pointers.c"
+                                },
+                                "region": {
+                                    "startLine": 40
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
                 }
             ],
             "tool": {

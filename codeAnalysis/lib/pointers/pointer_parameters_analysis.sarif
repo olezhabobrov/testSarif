@@ -13,10 +13,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/pointers/pointer_parameters.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 167
+                                                        "startLine": 24
                                                     }
                                                 }
                                             }
@@ -25,10 +25,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "main.c"
+                                                        "uri": "lib/pointers/pointer_parameters.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 10
+                                                        "startLine": 9
                                                     }
                                                 }
                                             }
@@ -45,10 +45,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "lib/pointers/pointer_parameters.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 178
+                                                        "startLine": 38
                                                     }
                                                 }
                                             }
@@ -57,74 +57,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "main.c"
+                                                        "uri": "lib/pointers/pointer_parameters.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 189
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 200
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
+                                                        "startLine": 9
                                                     }
                                                 }
                                             }
@@ -139,10 +75,51 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "main.c"
+                                    "uri": "lib/pointers/pointer_parameters.c"
                                 },
                                 "region": {
-                                    "startLine": 10
+                                    "startLine": 9
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/pointers/pointer_parameters.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/pointers/pointer_parameters.c"
+                                },
+                                "region": {
+                                    "startLine": 33
                                 }
                             }
                         }
