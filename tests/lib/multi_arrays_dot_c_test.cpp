@@ -16,9 +16,9 @@ TEST(regression, kek_test_1)
     int actual = kek(a);
     EXPECT_EQ(1, actual);
     int expected_a[2][2] = {{0, 0}, {0, 0}};
-    for (int it_130_0 = 0; it_130_0 < 2; it_130_0 ++) {
-        for (int it_130_1 = 0; it_130_1 < 2; it_130_1 ++) {
-            EXPECT_EQ(expected_a[it_130_0][it_130_1], a[it_130_0][it_130_1]);
+    for (int it_129_0 = 0; it_129_0 < 2; it_129_0 ++) {
+        for (int it_129_1 = 0; it_129_1 < 2; it_129_1 ++) {
+            EXPECT_EQ(expected_a[it_129_0][it_129_1], a[it_129_0][it_129_1]);
         }
     }
 }
@@ -29,9 +29,9 @@ TEST(regression, sumSign_test_1)
     int actual = sumSign(a);
     EXPECT_EQ(1, actual);
     int expected_a[2][2] = {{0, 0}, {2, 2}};
-    for (int it_131_0 = 0; it_131_0 < 2; it_131_0 ++) {
-        for (int it_131_1 = 0; it_131_1 < 2; it_131_1 ++) {
-            EXPECT_EQ(expected_a[it_131_0][it_131_1], a[it_131_0][it_131_1]);
+    for (int it_130_0 = 0; it_130_0 < 2; it_130_0 ++) {
+        for (int it_130_1 = 0; it_130_1 < 2; it_130_1 ++) {
+            EXPECT_EQ(expected_a[it_130_0][it_130_1], a[it_130_0][it_130_1]);
         }
     }
 }
@@ -42,9 +42,9 @@ TEST(regression, sumSign_test_2)
     int actual = sumSign(a);
     EXPECT_EQ(-1, actual);
     int expected_a[2][2] = {{0, -8}, {-8, 0}};
-    for (int it_132_0 = 0; it_132_0 < 2; it_132_0 ++) {
-        for (int it_132_1 = 0; it_132_1 < 2; it_132_1 ++) {
-            EXPECT_EQ(expected_a[it_132_0][it_132_1], a[it_132_0][it_132_1]);
+    for (int it_131_0 = 0; it_131_0 < 2; it_131_0 ++) {
+        for (int it_131_1 = 0; it_131_1 < 2; it_131_1 ++) {
+            EXPECT_EQ(expected_a[it_131_0][it_131_1], a[it_131_0][it_131_1]);
         }
     }
 }
@@ -55,9 +55,9 @@ TEST(regression, sumSign_test_3)
     int actual = sumSign(a);
     EXPECT_EQ(0, actual);
     int expected_a[2][2] = {{0, 0}, {0, 0}};
-    for (int it_133_0 = 0; it_133_0 < 2; it_133_0 ++) {
-        for (int it_133_1 = 0; it_133_1 < 2; it_133_1 ++) {
-            EXPECT_EQ(expected_a[it_133_0][it_133_1], a[it_133_0][it_133_1]);
+    for (int it_132_0 = 0; it_132_0 < 2; it_132_0 ++) {
+        for (int it_132_1 = 0; it_132_1 < 2; it_132_1 ++) {
+            EXPECT_EQ(expected_a[it_132_0][it_132_1], a[it_132_0][it_132_1]);
         }
     }
 }
@@ -68,9 +68,9 @@ TEST(regression, value_test_1)
     int actual = value(a);
     EXPECT_EQ(-1, actual);
     int expected_a[2][3] = {{0, 0, 0}, {0, 0, 0}};
-    for (int it_134_0 = 0; it_134_0 < 2; it_134_0 ++) {
-        for (int it_134_1 = 0; it_134_1 < 3; it_134_1 ++) {
-            EXPECT_EQ(expected_a[it_134_0][it_134_1], a[it_134_0][it_134_1]);
+    for (int it_133_0 = 0; it_133_0 < 2; it_133_0 ++) {
+        for (int it_133_1 = 0; it_133_1 < 3; it_133_1 ++) {
+            EXPECT_EQ(expected_a[it_133_0][it_133_1], a[it_133_0][it_133_1]);
         }
     }
 }
@@ -81,9 +81,9 @@ TEST(regression, value_test_2)
     int actual = value(a);
     EXPECT_EQ(1, actual);
     int expected_a[2][3] = {{0, 1, 0}, {0, 0, 0}};
-    for (int it_135_0 = 0; it_135_0 < 2; it_135_0 ++) {
-        for (int it_135_1 = 0; it_135_1 < 3; it_135_1 ++) {
-            EXPECT_EQ(expected_a[it_135_0][it_135_1], a[it_135_0][it_135_1]);
+    for (int it_134_0 = 0; it_134_0 < 2; it_134_0 ++) {
+        for (int it_134_1 = 0; it_134_1 < 3; it_134_1 ++) {
+            EXPECT_EQ(expected_a[it_134_0][it_134_1], a[it_134_0][it_134_1]);
         }
     }
 }
@@ -94,9 +94,9 @@ TEST(regression, value_test_3)
     int actual = value(a);
     EXPECT_EQ(3, actual);
     int expected_a[2][3] = {{0, 0, 0}, {1, 0, 0}};
-    for (int it_136_0 = 0; it_136_0 < 2; it_136_0 ++) {
-        for (int it_136_1 = 0; it_136_1 < 3; it_136_1 ++) {
-            EXPECT_EQ(expected_a[it_136_0][it_136_1], a[it_136_0][it_136_1]);
+    for (int it_135_0 = 0; it_135_0 < 2; it_135_0 ++) {
+        for (int it_135_1 = 0; it_135_1 < 3; it_135_1 ++) {
+            EXPECT_EQ(expected_a[it_135_0][it_135_1], a[it_135_0][it_135_1]);
         }
     }
 }
@@ -107,9 +107,9 @@ TEST(regression, value_test_4)
     int actual = value(a);
     EXPECT_EQ(0, actual);
     int expected_a[2][3] = {{1, 0, 0}, {0, 0, 0}};
-    for (int it_137_0 = 0; it_137_0 < 2; it_137_0 ++) {
-        for (int it_137_1 = 0; it_137_1 < 3; it_137_1 ++) {
-            EXPECT_EQ(expected_a[it_137_0][it_137_1], a[it_137_0][it_137_1]);
+    for (int it_136_0 = 0; it_136_0 < 2; it_136_0 ++) {
+        for (int it_136_1 = 0; it_136_1 < 3; it_136_1 ++) {
+            EXPECT_EQ(expected_a[it_136_0][it_136_1], a[it_136_0][it_136_1]);
         }
     }
 }
@@ -120,9 +120,9 @@ TEST(regression, value2_test_1)
     int actual = value2(a);
     EXPECT_EQ(-1, actual);
     int expected_a[2][3] = {{0, 0, 0}, {0, 0, 0}};
-    for (int it_138_0 = 0; it_138_0 < 2; it_138_0 ++) {
-        for (int it_138_1 = 0; it_138_1 < 3; it_138_1 ++) {
-            EXPECT_EQ(expected_a[it_138_0][it_138_1], a[it_138_0][it_138_1]);
+    for (int it_137_0 = 0; it_137_0 < 2; it_137_0 ++) {
+        for (int it_137_1 = 0; it_137_1 < 3; it_137_1 ++) {
+            EXPECT_EQ(expected_a[it_137_0][it_137_1], a[it_137_0][it_137_1]);
         }
     }
 }
@@ -133,9 +133,9 @@ TEST(regression, value2_test_2)
     int actual = value2(a);
     EXPECT_EQ(1, actual);
     int expected_a[2][3] = {{0, 1, 0}, {0, 0, 0}};
-    for (int it_139_0 = 0; it_139_0 < 2; it_139_0 ++) {
-        for (int it_139_1 = 0; it_139_1 < 3; it_139_1 ++) {
-            EXPECT_EQ(expected_a[it_139_0][it_139_1], a[it_139_0][it_139_1]);
+    for (int it_138_0 = 0; it_138_0 < 2; it_138_0 ++) {
+        for (int it_138_1 = 0; it_138_1 < 3; it_138_1 ++) {
+            EXPECT_EQ(expected_a[it_138_0][it_138_1], a[it_138_0][it_138_1]);
         }
     }
 }
@@ -146,9 +146,9 @@ TEST(regression, value2_test_3)
     int actual = value2(a);
     EXPECT_EQ(3, actual);
     int expected_a[2][3] = {{0, 0, 0}, {1, 0, 0}};
-    for (int it_140_0 = 0; it_140_0 < 2; it_140_0 ++) {
-        for (int it_140_1 = 0; it_140_1 < 3; it_140_1 ++) {
-            EXPECT_EQ(expected_a[it_140_0][it_140_1], a[it_140_0][it_140_1]);
+    for (int it_139_0 = 0; it_139_0 < 2; it_139_0 ++) {
+        for (int it_139_1 = 0; it_139_1 < 3; it_139_1 ++) {
+            EXPECT_EQ(expected_a[it_139_0][it_139_1], a[it_139_0][it_139_1]);
         }
     }
 }
@@ -159,9 +159,9 @@ TEST(regression, value2_test_4)
     int actual = value2(a);
     EXPECT_EQ(0, actual);
     int expected_a[2][3] = {{1, 0, 0}, {0, 0, 0}};
-    for (int it_141_0 = 0; it_141_0 < 2; it_141_0 ++) {
-        for (int it_141_1 = 0; it_141_1 < 3; it_141_1 ++) {
-            EXPECT_EQ(expected_a[it_141_0][it_141_1], a[it_141_0][it_141_1]);
+    for (int it_140_0 = 0; it_140_0 < 2; it_140_0 ++) {
+        for (int it_140_1 = 0; it_140_1 < 3; it_140_1 ++) {
+            EXPECT_EQ(expected_a[it_140_0][it_140_1], a[it_140_0][it_140_1]);
         }
     }
 }
@@ -170,16 +170,16 @@ TEST(regression, some_method_test_1)
 {
     int _pointer2d[2][2] = {{0, 0}, {0, 0}};
     int ** pointer2d = (int **) calloc(3, sizeof(int *));
-    for (int it_142_0 = 0; it_142_0 < 2; it_142_0 ++) {
-        pointer2d[it_142_0] = _pointer2d[it_142_0];
+    for (int it_141_0 = 0; it_141_0 < 2; it_141_0 ++) {
+        pointer2d[it_141_0] = _pointer2d[it_141_0];
     }
     pointer2d[2] = NULL;
     int actual = some_method(pointer2d);
     EXPECT_EQ(-1, actual);
     int expected_pointer2d[2][2] = {{0, 0}, {0, 0}};
-    for (int it_143_0 = 0; it_143_0 < 2; it_143_0 ++) {
-        for (int it_143_1 = 0; it_143_1 < 2; it_143_1 ++) {
-            EXPECT_EQ(expected_pointer2d[it_143_0][it_143_1], _pointer2d[it_143_0][it_143_1]);
+    for (int it_142_0 = 0; it_142_0 < 2; it_142_0 ++) {
+        for (int it_142_1 = 0; it_142_1 < 2; it_142_1 ++) {
+            EXPECT_EQ(expected_pointer2d[it_142_0][it_142_1], _pointer2d[it_142_0][it_142_1]);
         }
     }
 }
@@ -188,16 +188,16 @@ TEST(regression, some_method_test_2)
 {
     int _pointer2d[2][2] = {{0, 1}, {0, 0}};
     int ** pointer2d = (int **) calloc(3, sizeof(int *));
-    for (int it_144_0 = 0; it_144_0 < 2; it_144_0 ++) {
-        pointer2d[it_144_0] = _pointer2d[it_144_0];
+    for (int it_143_0 = 0; it_143_0 < 2; it_143_0 ++) {
+        pointer2d[it_143_0] = _pointer2d[it_143_0];
     }
     pointer2d[2] = NULL;
     int actual = some_method(pointer2d);
     EXPECT_EQ(1, actual);
     int expected_pointer2d[2][2] = {{0, 1}, {0, 0}};
-    for (int it_145_0 = 0; it_145_0 < 2; it_145_0 ++) {
-        for (int it_145_1 = 0; it_145_1 < 2; it_145_1 ++) {
-            EXPECT_EQ(expected_pointer2d[it_145_0][it_145_1], _pointer2d[it_145_0][it_145_1]);
+    for (int it_144_0 = 0; it_144_0 < 2; it_144_0 ++) {
+        for (int it_144_1 = 0; it_144_1 < 2; it_144_1 ++) {
+            EXPECT_EQ(expected_pointer2d[it_144_0][it_144_1], _pointer2d[it_144_0][it_144_1]);
         }
     }
 }
@@ -206,16 +206,16 @@ TEST(regression, some_method_test_3)
 {
     int _pointer2d[2][2] = {{0, 0}, {1, 0}};
     int ** pointer2d = (int **) calloc(3, sizeof(int *));
-    for (int it_146_0 = 0; it_146_0 < 2; it_146_0 ++) {
-        pointer2d[it_146_0] = _pointer2d[it_146_0];
+    for (int it_145_0 = 0; it_145_0 < 2; it_145_0 ++) {
+        pointer2d[it_145_0] = _pointer2d[it_145_0];
     }
     pointer2d[2] = NULL;
     int actual = some_method(pointer2d);
     EXPECT_EQ(2, actual);
     int expected_pointer2d[2][2] = {{0, 0}, {1, 0}};
-    for (int it_147_0 = 0; it_147_0 < 2; it_147_0 ++) {
-        for (int it_147_1 = 0; it_147_1 < 2; it_147_1 ++) {
-            EXPECT_EQ(expected_pointer2d[it_147_0][it_147_1], _pointer2d[it_147_0][it_147_1]);
+    for (int it_146_0 = 0; it_146_0 < 2; it_146_0 ++) {
+        for (int it_146_1 = 0; it_146_1 < 2; it_146_1 ++) {
+            EXPECT_EQ(expected_pointer2d[it_146_0][it_146_1], _pointer2d[it_146_0][it_146_1]);
         }
     }
 }
@@ -224,16 +224,16 @@ TEST(regression, some_method_test_4)
 {
     int _pointer2d[2][2] = {{1, 0}, {0, 0}};
     int ** pointer2d = (int **) calloc(3, sizeof(int *));
-    for (int it_148_0 = 0; it_148_0 < 2; it_148_0 ++) {
-        pointer2d[it_148_0] = _pointer2d[it_148_0];
+    for (int it_147_0 = 0; it_147_0 < 2; it_147_0 ++) {
+        pointer2d[it_147_0] = _pointer2d[it_147_0];
     }
     pointer2d[2] = NULL;
     int actual = some_method(pointer2d);
     EXPECT_EQ(0, actual);
     int expected_pointer2d[2][2] = {{1, 0}, {0, 0}};
-    for (int it_149_0 = 0; it_149_0 < 2; it_149_0 ++) {
-        for (int it_149_1 = 0; it_149_1 < 2; it_149_1 ++) {
-            EXPECT_EQ(expected_pointer2d[it_149_0][it_149_1], _pointer2d[it_149_0][it_149_1]);
+    for (int it_148_0 = 0; it_148_0 < 2; it_148_0 ++) {
+        for (int it_148_1 = 0; it_148_1 < 2; it_148_1 ++) {
+            EXPECT_EQ(expected_pointer2d[it_148_0][it_148_1], _pointer2d[it_148_0][it_148_1]);
         }
     }
 }
@@ -241,15 +241,15 @@ TEST(regression, some_method_test_4)
 TEST(regression, return_sign_sum_test_1)
 {
     int actual = return_sign_sum({
-        .a = {{{0, 0}, {0, 0}, {0, 0}}, {{0, 0}, {0, 0}, {0, 0}}}});
-    EXPECT_EQ(0, actual);
+        .a = {{{-3, 10}, {-9, 1}, {0, -10}}, {{-8, 0}, {0, -9}, {-7, 8}}}});
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, return_sign_sum_test_2)
 {
     int actual = return_sign_sum({
-        .a = {{{0, 0}, {-8, 8}, {9, 8}}, {{-5, -1}, {-1, -9}, {-9, 1}}}});
-    EXPECT_EQ(-1, actual);
+        .a = {{{0, 0}, {0, 0}, {0, 0}}, {{0, 0}, {0, 0}, {0, 0}}}});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, return_sign_sum_test_3)
@@ -281,10 +281,10 @@ TEST(regression, return_sign_sum_of_struct_array_test_1)
         .y = 1}, {
         .x = 1,
         .y = 1}}};
-    for (int it_150_0 = 0; it_150_0 < 2; it_150_0 ++) {
-        for (int it_150_1 = 0; it_150_1 < 2; it_150_1 ++) {
-            EXPECT_EQ(expected_arr[it_150_0][it_150_1].x, arr[it_150_0][it_150_1].x);
-            EXPECT_EQ(expected_arr[it_150_0][it_150_1].y, arr[it_150_0][it_150_1].y);
+    for (int it_149_0 = 0; it_149_0 < 2; it_149_0 ++) {
+        for (int it_149_1 = 0; it_149_1 < 2; it_149_1 ++) {
+            EXPECT_EQ(expected_arr[it_149_0][it_149_1].x, arr[it_149_0][it_149_1].x);
+            EXPECT_EQ(expected_arr[it_149_0][it_149_1].y, arr[it_149_0][it_149_1].y);
         }
     }
 }
@@ -293,11 +293,41 @@ TEST(regression, return_sign_sum_of_struct_array_test_2)
 {
     struct PointStruct arr[2][2] = {{{
         .x = 1,
-        .y = 1}, {
+        .y = 0}, {
         .x = 1,
         .y = 1}}, {{
         .x = 1,
+        .y = 1}, {
+        .x = 1,
+        .y = 1}}};
+    long long actual = return_sign_sum_of_struct_array(arr);
+    EXPECT_EQ(7LL, actual);
+    struct PointStruct expected_arr[2][2] = {{{
+        .x = 1,
         .y = 0}, {
+        .x = 1,
+        .y = 1}}, {{
+        .x = 1,
+        .y = 1}, {
+        .x = 1,
+        .y = 1}}};
+    for (int it_150_0 = 0; it_150_0 < 2; it_150_0 ++) {
+        for (int it_150_1 = 0; it_150_1 < 2; it_150_1 ++) {
+            EXPECT_EQ(expected_arr[it_150_0][it_150_1].x, arr[it_150_0][it_150_1].x);
+            EXPECT_EQ(expected_arr[it_150_0][it_150_1].y, arr[it_150_0][it_150_1].y);
+        }
+    }
+}
+
+TEST(regression, return_sign_sum_of_struct_array_test_3)
+{
+    struct PointStruct arr[2][2] = {{{
+        .x = 1,
+        .y = 1}, {
+        .x = 1,
+        .y = 1}}, {{
+        .x = 0,
+        .y = 1}, {
         .x = 1,
         .y = 1}}};
     long long actual = return_sign_sum_of_struct_array(arr);
@@ -307,8 +337,8 @@ TEST(regression, return_sign_sum_of_struct_array_test_2)
         .y = 1}, {
         .x = 1,
         .y = 1}}, {{
-        .x = 1,
-        .y = 0}, {
+        .x = 0,
+        .y = 1}, {
         .x = 1,
         .y = 1}}};
     for (int it_151_0 = 0; it_151_0 < 2; it_151_0 ++) {
@@ -514,25 +544,25 @@ TEST(regression, sum_matrix_test_2)
 {
     int matrix_c_buffer[3][2] = {{0, 0}, {0, 0}, {0, 0}};
     memcpy((void *) matrix_c, matrix_c_buffer, sizeof(matrix_c_buffer));
-    int matrix_a_buffer[3][2] = {{3, -2}, {-2, -1}, {-1, 8}};
+    int matrix_a_buffer[3][2] = {{4, -5}, {-1, -1}, {-5, 9}};
     memcpy((void *) matrix_a, matrix_a_buffer, sizeof(matrix_a_buffer));
-    int matrix_b_buffer[3][2] = {{-3, 5}, {-4, 0}, {0, -2}};
+    int matrix_b_buffer[3][2] = {{-8, 0}, {-1, -1}, {10, 7}};
     memcpy((void *) matrix_b, matrix_b_buffer, sizeof(matrix_b_buffer));
     int actual = sum_matrix();
-    EXPECT_EQ(1, actual);
-    int expected_matrix_c[3][2] = {{0, 3}, {-6, -1}, {-1, 6}};
+    EXPECT_EQ(8, actual);
+    int expected_matrix_c[3][2] = {{-4, -5}, {-2, -2}, {5, 16}};
     for (int it_163_0 = 0; it_163_0 < 3; it_163_0 ++) {
         for (int it_163_1 = 0; it_163_1 < 2; it_163_1 ++) {
             EXPECT_EQ(expected_matrix_c[it_163_0][it_163_1], matrix_c[it_163_0][it_163_1]);
         }
     }
-    int expected_matrix_a[3][2] = {{3, -2}, {-2, -1}, {-1, 8}};
+    int expected_matrix_a[3][2] = {{4, -5}, {-1, -1}, {-5, 9}};
     for (int it_164_0 = 0; it_164_0 < 3; it_164_0 ++) {
         for (int it_164_1 = 0; it_164_1 < 2; it_164_1 ++) {
             EXPECT_EQ(expected_matrix_a[it_164_0][it_164_1], matrix_a[it_164_0][it_164_1]);
         }
     }
-    int expected_matrix_b[3][2] = {{-3, 5}, {-4, 0}, {0, -2}};
+    int expected_matrix_b[3][2] = {{-8, 0}, {-1, -1}, {10, 7}};
     for (int it_165_0 = 0; it_165_0 < 3; it_165_0 ++) {
         for (int it_165_1 = 0; it_165_1 < 2; it_165_1 ++) {
             EXPECT_EQ(expected_matrix_b[it_165_0][it_165_1], matrix_b[it_165_0][it_165_1]);
@@ -572,20 +602,7 @@ TEST(regression, sum_matrix_test_3)
 
 TEST(regression, count_dashes_test_1)
 {
-    char argv_buffer[2][2] = {{'c', 'c'}, {'b', 'b'}};
-    memcpy((void *) argv, argv_buffer, sizeof(argv_buffer));
-    argc = 0;
-    int actual = count_dashes();
-    EXPECT_EQ(-1, actual);
-    char expected_argv = 'c';
-    EXPECT_EQ(expected_argv, (**argv));
-    int expected_argc = -1;
-    EXPECT_EQ(expected_argc, argc);
-}
-
-TEST(regression, count_dashes_test_2)
-{
-    char argv_buffer[2][2] = {{'-', 'c'}, {'b', 'b'}};
+    char argv_buffer[2][2] = {{'-', 'c'}, {'c', 'c'}};
     memcpy((void *) argv, argv_buffer, sizeof(argv_buffer));
     argc = 1;
     int actual = count_dashes();
@@ -596,13 +613,26 @@ TEST(regression, count_dashes_test_2)
     EXPECT_EQ(expected_argc, argc);
 }
 
+TEST(regression, count_dashes_test_2)
+{
+    char argv_buffer[2][2] = {{'a', 'c'}, {'c', 'c'}};
+    memcpy((void *) argv, argv_buffer, sizeof(argv_buffer));
+    argc = 0;
+    int actual = count_dashes();
+    EXPECT_EQ(-1, actual);
+    char expected_argv = 'a';
+    EXPECT_EQ(expected_argv, (**argv));
+    int expected_argc = -1;
+    EXPECT_EQ(expected_argc, argc);
+}
+
 #pragma endregion
 #pragma region error
 TEST(error, count_dashes_test_3)
 {
-    char argv_buffer[2][2] = {{'-', 'c'}, {'-', 'b'}};
+    char argv_buffer[2][2] = {{'c', 'c'}, {'-', 'c'}};
     memcpy((void *) argv, argv_buffer, sizeof(argv_buffer));
-    argc = 5;
+    argc = 10;
     count_dashes();
 }
 

@@ -22,6 +22,6 @@ int buggy_function2(int a) {
 
 int buggy_function3(int a, int b) {
     assert(a < 1);
-    assert(a < 10); // Can't generate test that fails assertion since if a >= 10 then the first assertion fails
+    assert(a < 10);
     return a;
 }

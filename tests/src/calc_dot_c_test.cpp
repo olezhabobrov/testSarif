@@ -12,26 +12,26 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, calc_two_numbers_test_1)
 {
-    int actual = calc_two_numbers('*', 0, 0);
+    int actual = calc_two_numbers('-', 0, 0);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, calc_two_numbers_test_2)
 {
-    int actual = calc_two_numbers('+', 0, 0);
-    EXPECT_EQ(0, actual);
+    int actual = calc_two_numbers('b', 0, 0);
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, calc_two_numbers_test_3)
 {
-    int actual = calc_two_numbers('-', 0, 0);
+    int actual = calc_two_numbers('+', 0, 0);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, calc_two_numbers_test_4)
 {
-    int actual = calc_two_numbers('a', 0, 0);
-    EXPECT_EQ(-1, actual);
+    int actual = calc_two_numbers('*', 0, 0);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, f_test_1)

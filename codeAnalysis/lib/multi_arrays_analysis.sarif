@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/multi_arrays_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 636
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/multi_arrays.c"
                                                     },
                                                     "region": {

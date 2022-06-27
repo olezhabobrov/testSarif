@@ -13,22 +13,14 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "lib/linked-list/tree.c"
+                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 11
+                                                        "startLine": 122
                                                     }
                                                 }
                                             }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -53,6 +45,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 134
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
@@ -69,6 +73,50 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 146
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/tree.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 11
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 154
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {

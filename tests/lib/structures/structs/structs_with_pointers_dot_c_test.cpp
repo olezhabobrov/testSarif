@@ -33,17 +33,17 @@ TEST(regression, handle_struct_with_char_ptr_test_2)
 TEST(regression, handle_struct_with_char_ptr_test_3)
 {
     int actual = handle_struct_with_char_ptr({
-        .a = 0,
-        .str = (char*) 0xff});
-    EXPECT_EQ(0, actual);
+        .a = 1,
+        .str = NULL});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, handle_struct_with_char_ptr_test_4)
 {
     int actual = handle_struct_with_char_ptr({
-        .a = 2,
-        .str = NULL});
-    EXPECT_EQ(1, actual);
+        .a = 0,
+        .str = (char*) 0xff});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, list_sum_test_1)

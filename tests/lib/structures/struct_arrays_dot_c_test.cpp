@@ -23,7 +23,7 @@ TEST(regression, index_of_needed_struct_test_1)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -31,7 +31,7 @@ TEST(regression, index_of_needed_struct_test_1)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -46,7 +46,7 @@ TEST(regression, index_of_needed_struct_test_1)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -54,7 +54,7 @@ TEST(regression, index_of_needed_struct_test_1)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -75,7 +75,7 @@ TEST(regression, index_of_needed_struct_test_2)
         .x = 0}, {
         .c = 'c',
         .x = 128}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -83,7 +83,7 @@ TEST(regression, index_of_needed_struct_test_2)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -98,7 +98,7 @@ TEST(regression, index_of_needed_struct_test_2)
         .x = 0}, {
         .c = 'c',
         .x = 128}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -106,7 +106,7 @@ TEST(regression, index_of_needed_struct_test_2)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -127,7 +127,7 @@ TEST(regression, index_of_needed_struct_test_3)
         .x = 128}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -135,7 +135,7 @@ TEST(regression, index_of_needed_struct_test_3)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -150,7 +150,7 @@ TEST(regression, index_of_needed_struct_test_3)
         .x = 128}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'a',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
@@ -158,7 +158,7 @@ TEST(regression, index_of_needed_struct_test_3)
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'b',
+        .c = 'c',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {

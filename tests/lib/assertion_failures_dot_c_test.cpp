@@ -12,13 +12,13 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, buggy_function1_test_1)
 {
-    int actual = buggy_function1(0, -1);
+    int actual = buggy_function1(0, 0);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, buggy_function1_test_2)
 {
-    int actual = buggy_function1(0, 0);
+    int actual = buggy_function1(0, -1);
     EXPECT_EQ(0, actual);
 }
 

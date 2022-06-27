@@ -22,7 +22,7 @@ TEST(regression, struct_has_alphabet_test_2)
 {
     int actual = struct_has_alphabet({
         .a = 0,
-        .str = {'c', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c'}});
+        .str = {'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'a'}});
     EXPECT_EQ(0, actual);
 }
 
@@ -30,7 +30,7 @@ TEST(regression, struct_has_alphabet_test_3)
 {
     int actual = struct_has_alphabet({
         .a = 0,
-        .str = {'A', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c'}});
+        .str = {'A', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'a'}});
     EXPECT_EQ(0, actual);
 }
 
@@ -38,7 +38,7 @@ TEST(regression, struct_has_alphabet_test_4)
 {
     int actual = struct_has_alphabet({
         .a = 2,
-        .str = {'c', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c'}});
+        .str = {'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'a'}});
     EXPECT_EQ(0, actual);
 }
 

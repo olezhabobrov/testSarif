@@ -14,19 +14,19 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, static_simple_test_1)
 {
-    x = -10;
-    int actual = static_simple(-10);
+    x = 0;
+    int actual = static_simple(0);
     EXPECT_EQ(0, actual);
-    int expected_x = -10;
+    int expected_x = 0;
     EXPECT_EQ(expected_x, x);
 }
 
 TEST(regression, static_simple_test_2)
 {
-    x = 0;
-    int actual = static_simple(0);
+    x = -10;
+    int actual = static_simple(-10);
     EXPECT_EQ(0, actual);
-    int expected_x = 0;
+    int expected_x = -10;
     EXPECT_EQ(expected_x, x);
 }
 

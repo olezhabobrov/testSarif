@@ -18,13 +18,13 @@ TEST(regression, a_or_b_test_1)
 
 TEST(regression, a_or_b_test_2)
 {
-    char actual = a_or_b('c', 'b');
+    char actual = a_or_b('p', 'b');
     EXPECT_EQ('b', actual);
 }
 
 TEST(regression, a_or_b_test_3)
 {
-    char actual = a_or_b('b', 'n');
+    char actual = a_or_b('i', 'n');
     EXPECT_EQ('n', actual);
 }
 

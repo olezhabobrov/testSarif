@@ -22,7 +22,7 @@ TEST(regression, get_sign_struct_test_2)
 {
     int actual = get_sign_struct({
         .x = 0,
-        .a = 2});
+        .a = 1});
     EXPECT_EQ(1, actual);
 }
 

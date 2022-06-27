@@ -12,7 +12,7 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, check_password_test_1)
 {
-    int actual = check_password(2);
+    int actual = check_password(1);
     EXPECT_EQ(0, actual);
 }
 
@@ -25,7 +25,7 @@ TEST(regression, check_password_test_2)
 TEST(regression, check_password_test_3)
 {
     int actual = check_password(0);
-    EXPECT_EQ(1, actual);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, check_password_test_4)
@@ -37,7 +37,7 @@ TEST(regression, check_password_test_4)
 TEST(regression, check_password_test_5)
 {
     int actual = check_password(0);
-    EXPECT_EQ(0, actual);
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, check_password_test_6)

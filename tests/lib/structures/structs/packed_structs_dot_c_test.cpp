@@ -22,7 +22,7 @@ TEST(regression, get_sign_packedStruct1_test_2)
 {
     int actual = get_sign_packedStruct1({
         .s = 0,
-        .i = -10});
+        .i = -7});
     EXPECT_EQ(-1, actual);
 }
 

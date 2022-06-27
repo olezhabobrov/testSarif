@@ -59,11 +59,11 @@ TEST(regression, use_globals_test_3)
 
 TEST(regression, use_global_array_test_1)
 {
-    int global_array_buffer[3] = {1, 0, 0};
+    int global_array_buffer[3] = {-1, -1, 0};
     memcpy((void *) global_array, global_array_buffer, sizeof(global_array_buffer));
     int actual = use_global_array(0);
-    EXPECT_EQ(1, actual);
-    int expected_global_array[3] = {1, 0, 0};
+    EXPECT_EQ(3, actual);
+    int expected_global_array[3] = {-1, -1, 0};
     for (int it_251_0 = 0; it_251_0 < 3; it_251_0 ++) {
         EXPECT_EQ(expected_global_array[it_251_0], global_array[it_251_0]);
     }
@@ -83,11 +83,11 @@ TEST(regression, use_global_array_test_2)
 
 TEST(regression, use_global_array_test_3)
 {
-    int global_array_buffer[3] = {6, -5, 0};
+    int global_array_buffer[3] = {1, 0, 0};
     memcpy((void *) global_array, global_array_buffer, sizeof(global_array_buffer));
     int actual = use_global_array(0);
-    EXPECT_EQ(4, actual);
-    int expected_global_array[3] = {6, -5, 0};
+    EXPECT_EQ(1, actual);
+    int expected_global_array[3] = {1, 0, 0};
     for (int it_253_0 = 0; it_253_0 < 3; it_253_0 ++) {
         EXPECT_EQ(expected_global_array[it_253_0], global_array[it_253_0]);
     }
@@ -140,22 +140,6 @@ TEST(regression, use_global_arrays_test_1)
     int global_mutable_int_array_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     global_mutable_int_array = (int *) calloc(10, sizeof(int));
     memcpy((void *) global_mutable_int_array, global_mutable_int_array_buffer, sizeof(global_mutable_int_array_buffer));
-    int global_const_int_array_buffer[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    global_const_int_array = (const int *) calloc(10, sizeof(int));
-    memcpy((void *) global_const_int_array, global_const_int_array_buffer, sizeof(global_const_int_array_buffer));
-    int actual = use_global_arrays();
-    EXPECT_EQ(1, actual);
-    int expected_global_mutable_int_array = 1;
-    EXPECT_EQ(expected_global_mutable_int_array, (*global_mutable_int_array));
-    int expected_global_const_int_array = -1;
-    EXPECT_EQ(expected_global_const_int_array, (*global_const_int_array));
-}
-
-TEST(regression, use_global_arrays_test_2)
-{
-    int global_mutable_int_array_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    global_mutable_int_array = (int *) calloc(10, sizeof(int));
-    memcpy((void *) global_mutable_int_array, global_mutable_int_array_buffer, sizeof(global_mutable_int_array_buffer));
     int global_const_int_array_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     global_const_int_array = (const int *) calloc(10, sizeof(int));
     memcpy((void *) global_const_int_array, global_const_int_array_buffer, sizeof(global_const_int_array_buffer));
@@ -164,6 +148,22 @@ TEST(regression, use_global_arrays_test_2)
     int expected_global_mutable_int_array = 0;
     EXPECT_EQ(expected_global_mutable_int_array, (*global_mutable_int_array));
     int expected_global_const_int_array = 0;
+    EXPECT_EQ(expected_global_const_int_array, (*global_const_int_array));
+}
+
+TEST(regression, use_global_arrays_test_2)
+{
+    int global_mutable_int_array_buffer[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    global_mutable_int_array = (int *) calloc(10, sizeof(int));
+    memcpy((void *) global_mutable_int_array, global_mutable_int_array_buffer, sizeof(global_mutable_int_array_buffer));
+    int global_const_int_array_buffer[10] = {-1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    global_const_int_array = (const int *) calloc(10, sizeof(int));
+    memcpy((void *) global_const_int_array, global_const_int_array_buffer, sizeof(global_const_int_array_buffer));
+    int actual = use_global_arrays();
+    EXPECT_EQ(1, actual);
+    int expected_global_mutable_int_array = 1;
+    EXPECT_EQ(expected_global_mutable_int_array, (*global_mutable_int_array));
+    int expected_global_const_int_array = -1;
     EXPECT_EQ(expected_global_const_int_array, (*global_const_int_array));
 }
 

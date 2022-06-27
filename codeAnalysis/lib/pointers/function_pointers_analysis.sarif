@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/pointers/function_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 367
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/pointers/function_pointers.c"
                                                     },
                                                     "region": {

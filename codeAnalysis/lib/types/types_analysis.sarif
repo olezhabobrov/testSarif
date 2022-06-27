@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/types/types_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 270
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/types/types.c"
                                                     },
                                                     "region": {

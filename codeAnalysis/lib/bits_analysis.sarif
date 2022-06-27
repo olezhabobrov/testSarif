@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/bits_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 191
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/bits.c"
                                                     },
                                                     "region": {

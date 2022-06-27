@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 101
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/pointers/pointer_parameters.c"
                                                     },
                                                     "region": {
@@ -41,6 +53,18 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 113
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -94,6 +118,18 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 107
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {

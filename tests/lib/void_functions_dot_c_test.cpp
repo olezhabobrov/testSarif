@@ -12,12 +12,12 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, print_sign_test_1)
 {
-    print_sign(0);
+    print_sign(2);
 }
 
 TEST(regression, print_sign_test_2)
 {
-    print_sign(1);
+    print_sign(0);
 }
 
 TEST(regression, print_sign_test_3)

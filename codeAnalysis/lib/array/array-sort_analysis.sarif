@@ -13,6 +13,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/array/array-sort_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 140
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/array/array-sort.c"
                                                     },
                                                     "region": {
@@ -50,6 +62,18 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/array/array-sort_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 146
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {

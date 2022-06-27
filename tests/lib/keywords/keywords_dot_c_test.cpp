@@ -20,7 +20,7 @@ TEST(regression, get_size_of_data_test_1)
 {
     int actual = get_size_of_data({
         .x = 'c',
-        .cacheline = {'a', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'a', 'c', 'a', 'b', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'}});
+        .cacheline = {'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'b', 'b', 'c', 'a', 'c', 'c', 'c', 'a', 'c', 'a', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'b', 'b', 'c', 'c', 'b', 'c', 'b', 'a', 'c'}});
     EXPECT_EQ(256, actual);
 }
 

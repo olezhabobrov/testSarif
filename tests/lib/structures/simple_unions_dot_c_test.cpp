@@ -12,13 +12,13 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, get_sign_union_test_1)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 97, 98, -128}));
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 104, 97, -128}));
     EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, get_sign_union_test_2)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({112, 98, 104, 112}));
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 112, 97, 104}));
     EXPECT_EQ(1, actual);
 }
 
@@ -178,11 +178,11 @@ TEST(regression, sumOfUnionArray_test_1)
     int actual = sumOfUnionArray(u);
     EXPECT_EQ(351207157, actual);
     union IntBytesUnion expected_u[10] = {from_bytes<IntBytesUnion>({98, 98, 104, 112}), from_bytes<IntBytesUnion>({97, 98, 97, 112}), from_bytes<IntBytesUnion>({97, 104, 98, 98}), from_bytes<IntBytesUnion>({112, 112, 97, 112}), from_bytes<IntBytesUnion>({97, 97, 97, 97}), from_bytes<IntBytesUnion>({112, 112, 98, 98}), from_bytes<IntBytesUnion>({112, 97, 104, 97}), from_bytes<IntBytesUnion>({112, 99, 97, 112}), from_bytes<IntBytesUnion>({97, 99, 112, 98}), from_bytes<IntBytesUnion>({104, 98, 104, 97})};
-    for (int it_124_0 = 0; it_124_0 < 10; it_124_0 ++) {
-        for (int it_125_0 = 0; it_125_0 < 4; it_125_0 ++) {
-            EXPECT_EQ(expected_u[it_124_0].bytes[it_125_0], u[it_124_0].bytes[it_125_0]);
+    for (int it_123_0 = 0; it_123_0 < 10; it_123_0 ++) {
+        for (int it_124_0 = 0; it_124_0 < 4; it_124_0 ++) {
+            EXPECT_EQ(expected_u[it_123_0].bytes[it_124_0], u[it_123_0].bytes[it_124_0]);
         }
-        EXPECT_EQ(expected_u[it_124_0].number, u[it_124_0].number);
+        EXPECT_EQ(expected_u[it_123_0].number, u[it_123_0].number);
     }
 }
 

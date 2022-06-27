@@ -13,22 +13,14 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 22
+                                                        "startLine": 233
                                                     }
                                                 }
                                             }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -53,6 +45,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
@@ -69,6 +73,50 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 253
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 261
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -105,6 +153,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 273
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
@@ -133,6 +193,18 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 281
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
@@ -190,6 +262,18 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 289
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/structures/structs/structs_with_pointers.c"
                                                     },
                                                     "region": {
@@ -206,6 +290,18 @@
                             "threadFlows": [
                                 {
                                     "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 297
+                                                    }
+                                                }
+                                            }
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {

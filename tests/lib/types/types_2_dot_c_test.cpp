@@ -12,14 +12,14 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, foo_test_1)
 {
-    unsigned long actual = foo(0);
-    EXPECT_EQ(1UL, actual);
+    unsigned long actual = foo(-1);
+    EXPECT_EQ(0UL, actual);
 }
 
 TEST(regression, foo_test_2)
 {
-    unsigned long actual = foo(-1);
-    EXPECT_EQ(0UL, actual);
+    unsigned long actual = foo(0);
+    EXPECT_EQ(1UL, actual);
 }
 
 TEST(regression, bar_test_1)

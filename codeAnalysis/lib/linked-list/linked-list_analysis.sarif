@@ -16,7 +16,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 936
+                                                        "startLine": 949
                                                     }
                                                 }
                                             }
@@ -48,7 +48,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 956
+                                                        "startLine": 961
                                                     }
                                                 }
                                             }
@@ -80,7 +80,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 968
+                                                        "startLine": 973
                                                     }
                                                 }
                                             }
@@ -133,7 +133,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 944
+                                                        "startLine": 981
                                                     }
                                                 }
                                             }
@@ -165,7 +165,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 976
+                                                        "startLine": 989
                                                     }
                                                 }
                                             }
@@ -218,7 +218,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 984
+                                                        "startLine": 997
                                                     }
                                                 }
                                             }
@@ -250,7 +250,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 992
+                                                        "startLine": 1005
                                                     }
                                                 }
                                             }
@@ -303,104 +303,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1004
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 43
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 1036
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 49
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 43
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 43
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "invalid usage of null pointer"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 1016
+                                                        "startLine": 1017
                                                     }
                                                 }
                                             }
@@ -432,7 +335,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1024
+                                                        "startLine": 1037
                                                     }
                                                 }
                                             }
@@ -464,7 +367,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1048
+                                                        "startLine": 1061
                                                     }
                                                 }
                                             }
@@ -508,7 +411,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1056
+                                                        "startLine": 1069
                                                     }
                                                 }
                                             }
@@ -573,7 +476,104 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1070
+                                                        "startLine": 1029
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 43
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1049
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 49
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 43
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 43
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1083
                                                     }
                                                 }
                                             }
@@ -605,7 +605,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1084
+                                                        "startLine": 1097
                                                     }
                                                 }
                                             }
@@ -658,7 +658,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1094
+                                                        "startLine": 1107
                                                     }
                                                 }
                                             }
@@ -711,7 +711,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1102
+                                                        "startLine": 1115
                                                     }
                                                 }
                                             }
@@ -743,7 +743,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1146
+                                                        "startLine": 1159
                                                     }
                                                 }
                                             }
@@ -796,7 +796,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1114
+                                                        "startLine": 1127
                                                     }
                                                 }
                                             }
@@ -828,7 +828,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1126
+                                                        "startLine": 1139
                                                     }
                                                 }
                                             }
@@ -860,7 +860,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1138
+                                                        "startLine": 1151
                                                     }
                                                 }
                                             }
@@ -896,7 +896,7 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xffffffffffffffff or invalid usage of address 0xffffffffffffffff with insufficient space"
+                        "text": "either misaligned address for 0xfffffffdffffffff or invalid usage of address 0xfffffffdffffffff with insufficient space"
                     },
                     "ruleId": "undefined_behavior.err"
                 },
@@ -913,7 +913,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1158
+                                                        "startLine": 1167
                                                     }
                                                 }
                                             }
@@ -945,7 +945,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1170
+                                                        "startLine": 1175
                                                     }
                                                 }
                                             }
@@ -977,7 +977,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1178
+                                                        "startLine": 1187
                                                     }
                                                 }
                                             }
@@ -1009,7 +1009,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1186
+                                                        "startLine": 1199
                                                     }
                                                 }
                                             }
@@ -1041,7 +1041,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1198
+                                                        "startLine": 1211
                                                     }
                                                 }
                                             }
@@ -1085,7 +1085,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1206
+                                                        "startLine": 1219
                                                     }
                                                 }
                                             }
@@ -1129,7 +1129,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1214
+                                                        "startLine": 1235
                                                     }
                                                 }
                                             }
@@ -1173,7 +1173,51 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1222
+                                                        "startLine": 1243
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 132
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1255
                                                     }
                                                 }
                                             }
@@ -1217,7 +1261,7 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1234
+                                                        "startLine": 1263
                                                     }
                                                 }
                                             }
@@ -1261,7 +1305,51 @@
                                                         "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1242
+                                                        "startLine": 1279
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 163
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1287
                                                     }
                                                 }
                                             }
@@ -1309,9 +1397,9 @@
                         }
                     ],
                     "message": {
-                        "text": "memory error: out of bound pointer"
+                        "text": "invalid usage of null pointer"
                     },
-                    "ruleId": "ptr.err"
+                    "ruleId": "undefined_behavior.err"
                 }
             ],
             "tool": {

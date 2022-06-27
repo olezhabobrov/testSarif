@@ -20,13 +20,13 @@ TEST(regression, variadic_function_test_1)
 #pragma region error
 TEST(error, variadic_function_test_2)
 {
-    char fmt[] = "dcacbcccc";
+    char fmt[] = "dccccccac";
     variadic_function(fmt);
 }
 
 TEST(error, variadic_function_test_3)
 {
-    char fmt[] = "ccacbcccc";
+    char fmt[] = "cccccccac";
     variadic_function(fmt);
 }
 

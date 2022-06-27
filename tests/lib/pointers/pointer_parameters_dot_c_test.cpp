@@ -12,8 +12,8 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, c_strcmp_test_1)
 {
-    char a[] = "caccccccc";
-    char b[] = "cqacacccc";
+    char a[] = "cbccccccc";
+    char b[] = "ccccccccc";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(0, actual);
 }
@@ -28,8 +28,8 @@ TEST(regression, c_strcmp_test_2)
 
 TEST(regression, c_strcmp_test_3)
 {
-    char a[] = "jaccccccc";
-    char b[] = "bcacacccc";
+    char a[] = "bcccccccc";
+    char b[] = "ccccccccc";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(0, actual);
 }
@@ -85,8 +85,8 @@ TEST(regression, accept_const_void_ptr_ptr_test_1)
 {
     unsigned char _p[2][2] = {{0, 0}, {0, 0}};
     unsigned char ** p = (unsigned char **) calloc(3, sizeof(unsigned char *));
-    for (int it_126_0 = 0; it_126_0 < 2; it_126_0 ++) {
-        p[it_126_0] = _p[it_126_0];
+    for (int it_125_0 = 0; it_125_0 < 2; it_125_0 ++) {
+        p[it_125_0] = _p[it_125_0];
     }
     p[2] = NULL;
     int actual = accept_const_void_ptr_ptr((const void **) p);
