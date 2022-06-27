@@ -12,7 +12,7 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, main_test_1)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'\v', 'i'}};
+    char _argv[2][2] = {{'c', 'c'}, {' ', 's'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_4_0 = 0; it_4_0 < 2; it_4_0 ++) {
         argv[it_4_0] = _argv[it_4_0];
@@ -20,7 +20,7 @@ TEST(regression, main_test_1)
     argv[2] = NULL;
     int actual = main(2, argv);
     EXPECT_EQ(2, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'\v', 'i'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {' ', 's'}};
     for (int it_5_0 = 0; it_5_0 < 2; it_5_0 ++) {
         for (int it_5_1 = 0; it_5_1 < 2; it_5_1 ++) {
             EXPECT_EQ(expected_argv[it_5_0][it_5_1], _argv[it_5_0][it_5_1]);
@@ -30,7 +30,7 @@ TEST(regression, main_test_1)
 
 TEST(regression, main_test_2)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'\v', '\0'}};
+    char _argv[2][2] = {{'c', 'c'}, {' ', '\0'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_6_0 = 0; it_6_0 < 2; it_6_0 ++) {
         argv[it_6_0] = _argv[it_6_0];
@@ -38,7 +38,7 @@ TEST(regression, main_test_2)
     argv[2] = NULL;
     int actual = main(2, argv);
     EXPECT_EQ(2, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'\v', '\0'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {' ', '\0'}};
     for (int it_7_0 = 0; it_7_0 < 2; it_7_0 ++) {
         for (int it_7_1 = 0; it_7_1 < 2; it_7_1 ++) {
             EXPECT_EQ(expected_argv[it_7_0][it_7_1], _argv[it_7_0][it_7_1]);
@@ -48,7 +48,7 @@ TEST(regression, main_test_2)
 
 TEST(regression, main_test_3)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'1', '\0'}};
+    char _argv[2][2] = {{'c', 'c'}, {'1', '\0'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_8_0 = 0; it_8_0 < 2; it_8_0 ++) {
         argv[it_8_0] = _argv[it_8_0];
@@ -56,7 +56,7 @@ TEST(regression, main_test_3)
     argv[2] = NULL;
     int actual = main(2, argv);
     EXPECT_EQ(3, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'1', '\0'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {'1', '\0'}};
     for (int it_9_0 = 0; it_9_0 < 2; it_9_0 ++) {
         for (int it_9_1 = 0; it_9_1 < 2; it_9_1 ++) {
             EXPECT_EQ(expected_argv[it_9_0][it_9_1], _argv[it_9_0][it_9_1]);
@@ -66,7 +66,7 @@ TEST(regression, main_test_3)
 
 TEST(regression, main_test_4)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'\v', '}'}};
+    char _argv[2][2] = {{'c', 'c'}, {' ', '{'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_10_0 = 0; it_10_0 < 2; it_10_0 ++) {
         argv[it_10_0] = _argv[it_10_0];
@@ -74,7 +74,7 @@ TEST(regression, main_test_4)
     argv[2] = NULL;
     int actual = main(2, argv);
     EXPECT_EQ(2, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'\v', '}'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {' ', '{'}};
     for (int it_11_0 = 0; it_11_0 < 2; it_11_0 ++) {
         for (int it_11_1 = 0; it_11_1 < 2; it_11_1 ++) {
             EXPECT_EQ(expected_argv[it_11_0][it_11_1], _argv[it_11_0][it_11_1]);
@@ -84,15 +84,15 @@ TEST(regression, main_test_4)
 
 TEST(regression, main_test_5)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'5', '\0'}};
+    char _argv[2][2] = {{'c', 'c'}, {'6', '\0'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_12_0 = 0; it_12_0 < 2; it_12_0 ++) {
         argv[it_12_0] = _argv[it_12_0];
     }
     argv[2] = NULL;
     int actual = main(2, argv);
-    EXPECT_EQ(5, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'5', '\0'}};
+    EXPECT_EQ(6, actual);
+    char expected_argv[2][2] = {{'c', 'c'}, {'6', '\0'}};
     for (int it_13_0 = 0; it_13_0 < 2; it_13_0 ++) {
         for (int it_13_1 = 0; it_13_1 < 2; it_13_1 ++) {
             EXPECT_EQ(expected_argv[it_13_0][it_13_1], _argv[it_13_0][it_13_1]);
@@ -102,7 +102,7 @@ TEST(regression, main_test_5)
 
 TEST(regression, main_test_6)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'\v', 'I'}};
+    char _argv[2][2] = {{'c', 'c'}, {' ', 'J'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_14_0 = 0; it_14_0 < 2; it_14_0 ++) {
         argv[it_14_0] = _argv[it_14_0];
@@ -110,7 +110,7 @@ TEST(regression, main_test_6)
     argv[2] = NULL;
     int actual = main(2, argv);
     EXPECT_EQ(2, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'\v', 'I'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {' ', 'J'}};
     for (int it_15_0 = 0; it_15_0 < 2; it_15_0 ++) {
         for (int it_15_1 = 0; it_15_1 < 2; it_15_1 ++) {
             EXPECT_EQ(expected_argv[it_15_0][it_15_1], _argv[it_15_0][it_15_1]);
@@ -120,7 +120,7 @@ TEST(regression, main_test_6)
 
 TEST(regression, main_test_7)
 {
-    char _argv[2][2] = {{'c', 'b'}, {'c', 'c'}};
+    char _argv[2][2] = {{'c', 'c'}, {'c', 'c'}};
     char ** argv = (char **) calloc(3, sizeof(char *));
     for (int it_16_0 = 0; it_16_0 < 2; it_16_0 ++) {
         argv[it_16_0] = _argv[it_16_0];
@@ -128,7 +128,7 @@ TEST(regression, main_test_7)
     argv[2] = NULL;
     int actual = main(0, argv);
     EXPECT_EQ(1, actual);
-    char expected_argv[2][2] = {{'c', 'b'}, {'c', 'c'}};
+    char expected_argv[2][2] = {{'c', 'c'}, {'c', 'c'}};
     for (int it_17_0 = 0; it_17_0 < 2; it_17_0 ++) {
         for (int it_17_1 = 0; it_17_1 < 2; it_17_1 ++) {
             EXPECT_EQ(expected_argv[it_17_0][it_17_1], _argv[it_17_0][it_17_1]);
