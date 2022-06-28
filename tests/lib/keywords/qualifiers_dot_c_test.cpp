@@ -12,125 +12,152 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, c_strcmp_2_test_1)
 {
-    char a[] = "cbccccccc";
-    char b[] = "ccccccccc";
-    int actual = c_strcmp_2(a, b);
-    EXPECT_EQ(0, actual);
-}
-
-TEST(regression, c_strcmp_2_test_2)
-{
     char a[] = "";
     char b[] = "";
     int actual = c_strcmp_2(a, b);
     EXPECT_EQ(1, actual);
 }
 
+TEST(regression, c_strcmp_2_test_2)
+{
+    char a[] = "c";
+    char b[] = "c";
+    int actual = c_strcmp_2(a, b);
+    EXPECT_EQ(1, actual);
+}
+
 TEST(regression, c_strcmp_2_test_3)
 {
-    char a[] = "bcccccccc";
-    char b[] = "ccccccccc";
+    char a[] = "pccccbccb";
+    char b[] = "tccacccbc";
     int actual = c_strcmp_2(a, b);
     EXPECT_EQ(0, actual);
 }
 
+TEST(regression, c_strcmp_2_test_4)
+{
+    char a[] = "cacccbccb";
+    char b[] = "cqcacccbc";
+    int actual = c_strcmp_2(a, b);
+    EXPECT_EQ(0, actual);
+}
+
+TEST(regression, c_strcmp_2_test_5)
+{
+    char a[] = "ccbcbcccc";
+    char b[] = "ccbcbcccc";
+    int actual = c_strcmp_2(a, b);
+    EXPECT_EQ(1, actual);
+}
+
 TEST(regression, ishello_2_test_1)
 {
-    char a[] = "hbcccacac";
+    char a[] = "aacaccccc";
     int actual = ishello_2(a);
     EXPECT_EQ(0, actual);
-    char expected_a[] = {'h', 'b', 'c', 'c', 'c', 'a', 'c', 'a', 'c', '\0'};
-    for (int it_228_0 = 0; it_228_0 < 10; it_228_0 ++) {
-        EXPECT_EQ(expected_a[it_228_0], a[it_228_0]);
+    char expected_a[] = {'a', 'a', 'c', 'a', 'c', 'c', 'c', 'c', 'c', '\0'};
+    for (int it_215_0 = 0; it_215_0 < 10; it_215_0 ++) {
+        EXPECT_EQ(expected_a[it_215_0], a[it_215_0]);
     }
 }
 
 TEST(regression, ishello_2_test_2)
 {
-    char a[] = "hello";
+    char a[] = "hellocccc";
     int actual = ishello_2(a);
-    EXPECT_EQ(1, actual);
-    char expected_a[] = {'h', 'e', 'l', 'l', 'o', '\0', 'c', 'a', 'c', '\0'};
-    for (int it_229_0 = 0; it_229_0 < 10; it_229_0 ++) {
-        EXPECT_EQ(expected_a[it_229_0], a[it_229_0]);
+    EXPECT_EQ(0, actual);
+    char expected_a[] = {'h', 'e', 'l', 'l', 'o', 'c', 'c', 'c', 'c', '\0'};
+    for (int it_216_0 = 0; it_216_0 < 10; it_216_0 ++) {
+        EXPECT_EQ(expected_a[it_216_0], a[it_216_0]);
     }
 }
 
 TEST(regression, ishello_2_test_3)
 {
-    char a[] = "abcccacac";
+    char a[] = "hccaccccc";
     int actual = ishello_2(a);
     EXPECT_EQ(0, actual);
-    char expected_a[] = {'a', 'b', 'c', 'c', 'c', 'a', 'c', 'a', 'c', '\0'};
-    for (int it_230_0 = 0; it_230_0 < 10; it_230_0 ++) {
-        EXPECT_EQ(expected_a[it_230_0], a[it_230_0]);
+    char expected_a[] = {'h', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', '\0'};
+    for (int it_217_0 = 0; it_217_0 < 10; it_217_0 ++) {
+        EXPECT_EQ(expected_a[it_217_0], a[it_217_0]);
+    }
+}
+
+TEST(regression, ishello_2_test_4)
+{
+    char a[] = "hello";
+    int actual = ishello_2(a);
+    EXPECT_EQ(1, actual);
+    char expected_a[] = {'h', 'e', 'l', 'l', 'o', '\0', 'c', 'c', 'c', '\0'};
+    for (int it_218_0 = 0; it_218_0 < 10; it_218_0 ++) {
+        EXPECT_EQ(expected_a[it_218_0], a[it_218_0]);
     }
 }
 
 TEST(regression, returns_pointer_with_min_modifier_test_1)
 {
-    const long long actual = *returns_pointer_with_min_modifier(0LL, 0LL);
+    const long long actual = *returns_pointer_with_min_modifier(0LL, 1LL);
     EXPECT_EQ(0LL, actual);
 }
 
 TEST(regression, returns_pointer_with_min_modifier_test_2)
 {
-    const long long actual = *returns_pointer_with_min_modifier(0LL, 1LL);
+    const long long actual = *returns_pointer_with_min_modifier(0LL, 0LL);
     EXPECT_EQ(0LL, actual);
 }
 
 TEST(regression, foo___test_1)
 {
-    char actual = *foo__(2);
-    EXPECT_EQ('1', actual);
-}
-
-TEST(regression, foo___test_2)
-{
     char actual = *foo__(0);
     EXPECT_EQ('0', actual);
 }
 
-TEST(regression, foo___test_3)
+TEST(regression, foo___test_2)
 {
     char actual = *foo__(-1);
     EXPECT_EQ('-', actual);
 }
 
-TEST(regression, foo_bar_test_1)
+TEST(regression, foo___test_3)
 {
-    const char actual = *foo_bar(2);
+    char actual = *foo__(2);
     EXPECT_EQ('1', actual);
 }
 
-TEST(regression, foo_bar_test_2)
+TEST(regression, foo_bar_test_1)
 {
     const char actual = *foo_bar(0);
     EXPECT_EQ('0', actual);
 }
 
-TEST(regression, foo_bar_test_3)
+TEST(regression, foo_bar_test_2)
 {
     const char actual = *foo_bar(-1);
     EXPECT_EQ('-', actual);
 }
 
-TEST(regression, returns_struct_with_min_max_Q_test_1)
+TEST(regression, foo_bar_test_3)
 {
-    const struct MinMaxQ actual = *returns_struct_with_min_max_Q(0, 0);
-    struct MinMaxQ expected = {
-        .a = 0,
-        .b = 0,
-        .chars = {'b', 'a', '\0'}};
+    const char actual = *foo_bar(2);
+    EXPECT_EQ('1', actual);
 }
 
-TEST(regression, returns_struct_with_min_max_Q_test_2)
+TEST(regression, returns_struct_with_min_max_Q_test_1)
 {
     const struct MinMaxQ actual = *returns_struct_with_min_max_Q(0, 1);
     struct MinMaxQ expected = {
         .a = 0,
         .b = 1,
         .chars = {'a', 'b', '\0'}};
+}
+
+TEST(regression, returns_struct_with_min_max_Q_test_2)
+{
+    const struct MinMaxQ actual = *returns_struct_with_min_max_Q(0, 0);
+    struct MinMaxQ expected = {
+        .a = 0,
+        .b = 0,
+        .chars = {'b', 'a', '\0'}};
 }
 
 #pragma endregion

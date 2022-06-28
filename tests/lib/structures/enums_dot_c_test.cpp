@@ -18,32 +18,32 @@ TEST(regression, enumSignToInt_test_1)
 
 TEST(regression, enumSignToInt_test_2)
 {
-    int actual = enumSignToInt(POSITIVE);
-    EXPECT_EQ(1, actual);
-}
-
-TEST(regression, enumSignToInt_test_3)
-{
     int actual = enumSignToInt(ZERO);
     EXPECT_EQ(0, actual);
 }
 
+TEST(regression, enumSignToInt_test_3)
+{
+    int actual = enumSignToInt(POSITIVE);
+    EXPECT_EQ(1, actual);
+}
+
 TEST(regression, intToSign_test_1)
 {
-    enum Sign actual = intToSign(-9);
-    EXPECT_EQ(NEGATIVE, actual);
+    enum Sign actual = intToSign(1);
+    EXPECT_EQ(POSITIVE, actual);
 }
 
 TEST(regression, intToSign_test_2)
 {
-    enum Sign actual = intToSign(2);
-    EXPECT_EQ(POSITIVE, actual);
+    enum Sign actual = intToSign(0);
+    EXPECT_EQ(ZERO, actual);
 }
 
 TEST(regression, intToSign_test_3)
 {
-    enum Sign actual = intToSign(0);
-    EXPECT_EQ(ZERO, actual);
+    enum Sign actual = intToSign(-9);
+    EXPECT_EQ(NEGATIVE, actual);
 }
 
 TEST(regression, structWithSignToInt_test_1)
@@ -56,55 +56,60 @@ TEST(regression, structWithSignToInt_test_1)
 TEST(regression, structWithSignToInt_test_2)
 {
     int actual = structWithSignToInt({
-        .s = POSITIVE});
-    EXPECT_EQ(1, actual);
+        .s = ZERO});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, structWithSignToInt_test_3)
 {
     int actual = structWithSignToInt({
-        .s = ZERO});
-    EXPECT_EQ(0, actual);
+        .s = POSITIVE});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, sumSignArray_test_1)
-{
-    int actual = sumSignArray({
-        .signs = {NEGATIVE, ZERO, ZERO, ZERO, ZERO}});
-    EXPECT_EQ(-1, actual);
-}
-
-TEST(regression, sumSignArray_test_2)
 {
     int actual = sumSignArray({
         .signs = {POSITIVE, ZERO, ZERO, ZERO, ZERO}});
     EXPECT_EQ(1, actual);
 }
 
-TEST(regression, sumSignArray_test_3)
+TEST(regression, sumSignArray_test_2)
 {
     int actual = sumSignArray({
-        .signs = {ZERO, ZERO, ZERO, ZERO, POSITIVE}});
+        .signs = {POSITIVE, POSITIVE, NEGATIVE, ZERO, ZERO}});
     EXPECT_EQ(1, actual);
 }
 
-TEST(regression, sumSignArray_test_4)
+TEST(regression, sumSignArray_test_3)
 {
     int actual = sumSignArray({
         .signs = {ZERO, ZERO, ZERO, ZERO, ZERO}});
     EXPECT_EQ(0, actual);
 }
 
-TEST(regression, enumSignPointerToInt_test_1)
+TEST(regression, sumSignArray_test_4)
 {
-    enum Sign s = POSITIVE;
-    int actual = enumSignPointerToInt(&s);
-    EXPECT_EQ(1, actual);
-    enum Sign expected_s = POSITIVE;
-    EXPECT_EQ(expected_s, s);
+    int actual = sumSignArray({
+        .signs = {NEGATIVE, ZERO, ZERO, ZERO, ZERO}});
+    EXPECT_EQ(-1, actual);
 }
 
-TEST(regression, enumSignPointerToInt_test_2)
+TEST(regression, sumSignArray_test_5)
+{
+    int actual = sumSignArray({
+        .signs = {POSITIVE, POSITIVE, ZERO, ZERO, ZERO}});
+    EXPECT_EQ(2, actual);
+}
+
+TEST(regression, sumSignArray_test_6)
+{
+    int actual = sumSignArray({
+        .signs = {POSITIVE, POSITIVE, ZERO, ZERO, POSITIVE}});
+    EXPECT_EQ(3, actual);
+}
+
+TEST(regression, enumSignPointerToInt_test_1)
 {
     enum Sign s = NEGATIVE;
     int actual = enumSignPointerToInt(&s);
@@ -113,7 +118,7 @@ TEST(regression, enumSignPointerToInt_test_2)
     EXPECT_EQ(expected_s, s);
 }
 
-TEST(regression, enumSignPointerToInt_test_3)
+TEST(regression, enumSignPointerToInt_test_2)
 {
     enum Sign s = ZERO;
     int actual = enumSignPointerToInt(&s);
@@ -122,34 +127,43 @@ TEST(regression, enumSignPointerToInt_test_3)
     EXPECT_EQ(expected_s, s);
 }
 
-TEST(regression, intToSignPointer_test_1)
+TEST(regression, enumSignPointerToInt_test_3)
 {
-    enum Sign actual = *intToSignPointer(-6);
-    EXPECT_EQ(NEGATIVE, actual);
+    enum Sign s = POSITIVE;
+    int actual = enumSignPointerToInt(&s);
+    EXPECT_EQ(1, actual);
+    enum Sign expected_s = POSITIVE;
+    EXPECT_EQ(expected_s, s);
 }
 
-TEST(regression, intToSignPointer_test_2)
+TEST(regression, intToSignPointer_test_1)
 {
-    enum Sign actual = *intToSignPointer(2);
+    enum Sign actual = *intToSignPointer(1);
     EXPECT_EQ(POSITIVE, actual);
 }
 
-TEST(regression, intToSignPointer_test_3)
+TEST(regression, intToSignPointer_test_2)
 {
     enum Sign actual = *intToSignPointer(0);
     EXPECT_EQ(ZERO, actual);
 }
 
+TEST(regression, intToSignPointer_test_3)
+{
+    enum Sign actual = *intToSignPointer(-5);
+    EXPECT_EQ(NEGATIVE, actual);
+}
+
 TEST(regression, getSignValue_test_1)
 {
-    int actual = getSignValue(NEGATIVE);
-    EXPECT_EQ(0, actual);
+    int actual = getSignValue(ZERO);
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, getSignValue_test_2)
 {
-    int actual = getSignValue(ZERO);
-    EXPECT_EQ(1, actual);
+    int actual = getSignValue(NEGATIVE);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, getSignValue_test_3)
@@ -168,15 +182,15 @@ TEST(regression, enumWithinRecord_test_1)
 TEST(regression, enumWithinRecord_test_2)
 {
     int actual = enumWithinRecord({
-        .e = EnumWithinRecord::FF_FOUND});
-    EXPECT_EQ(0, actual);
+        .e = EnumWithinRecord::OPEN});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, enumWithinRecord_test_3)
 {
     int actual = enumWithinRecord({
-        .e = EnumWithinRecord::OPEN});
-    EXPECT_EQ(1, actual);
+        .e = EnumWithinRecord::FF_FOUND});
+    EXPECT_EQ(0, actual);
 }
 
 #pragma endregion

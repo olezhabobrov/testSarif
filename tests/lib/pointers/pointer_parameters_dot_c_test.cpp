@@ -12,47 +12,70 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, c_strcmp_test_1)
 {
-    char a[] = "cbccccccc";
-    char b[] = "ccccccccc";
-    int actual = c_strcmp(a, b);
-    EXPECT_EQ(0, actual);
-}
-
-TEST(regression, c_strcmp_test_2)
-{
     char a[] = "";
     char b[] = "";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(1, actual);
 }
 
+TEST(regression, c_strcmp_test_2)
+{
+    char a[] = "c";
+    char b[] = "c";
+    int actual = c_strcmp(a, b);
+    EXPECT_EQ(1, actual);
+}
+
 TEST(regression, c_strcmp_test_3)
 {
-    char a[] = "bcccccccc";
-    char b[] = "ccccccccc";
+    char a[] = "pccccbccb";
+    char b[] = "tccacccbc";
     int actual = c_strcmp(a, b);
     EXPECT_EQ(0, actual);
 }
 
+TEST(regression, c_strcmp_test_4)
+{
+    char a[] = "cacccbccb";
+    char b[] = "cqcacccbc";
+    int actual = c_strcmp(a, b);
+    EXPECT_EQ(0, actual);
+}
+
+TEST(regression, c_strcmp_test_5)
+{
+    char a[] = "ccbcbcccc";
+    char b[] = "ccbcbcccc";
+    int actual = c_strcmp(a, b);
+    EXPECT_EQ(1, actual);
+}
+
 TEST(regression, ishello_test_1)
 {
-    char a[] = "hcccccccc";
+    char a[] = "baccbccca";
     int actual = ishello(a);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, ishello_test_2)
 {
-    char a[] = "hello";
+    char a[] = "helloccca";
     int actual = ishello(a);
-    EXPECT_EQ(1, actual);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, ishello_test_3)
 {
-    char a[] = "ccccccccc";
+    char a[] = "hcccbccca";
     int actual = ishello(a);
     EXPECT_EQ(0, actual);
+}
+
+TEST(regression, ishello_test_4)
+{
+    char a[] = "hello";
+    int actual = ishello(a);
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, isworld_test_1)
@@ -85,8 +108,8 @@ TEST(regression, accept_const_void_ptr_ptr_test_1)
 {
     unsigned char _p[2][2] = {{0, 0}, {0, 0}};
     unsigned char ** p = (unsigned char **) calloc(3, sizeof(unsigned char *));
-    for (int it_125_0 = 0; it_125_0 < 2; it_125_0 ++) {
-        p[it_125_0] = _p[it_125_0];
+    for (int it_119_0 = 0; it_119_0 < 2; it_119_0 ++) {
+        p[it_119_0] = _p[it_119_0];
     }
     p[2] = NULL;
     int actual = accept_const_void_ptr_ptr((const void **) p);

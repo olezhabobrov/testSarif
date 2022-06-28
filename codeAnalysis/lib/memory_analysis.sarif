@@ -13,10 +13,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 52
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 21
                                                     }
                                                 }
                                             }
@@ -66,10 +90,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 57
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 32
                                                     }
                                                 }
                                             }
@@ -119,10 +155,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 64
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 49
                                                     }
                                                 }
                                             }
@@ -172,10 +220,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 69
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 59
                                                     }
                                                 }
                                             }
@@ -225,10 +285,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 74
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 96
                                                     }
                                                 }
                                             }
@@ -243,10 +315,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "tests/lib/memory_dot_c_test.cpp"
+                                    "uri": "tmp/UnitTestBot/lib/memory_klee.c"
                                 },
                                 "region": {
-                                    "startLine": 74
+                                    "startLine": 96
                                 }
                             }
                         }
@@ -266,10 +338,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 79
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 103
                                                     }
                                                 }
                                             }
@@ -319,10 +403,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 84
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 115
                                                     }
                                                 }
                                             }
@@ -372,10 +468,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/memory_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/memory_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 89
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/memory_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 121
                                                     }
                                                 }
                                             }

@@ -13,10 +13,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 101
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/pointers/pointer_parameters_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 65
                                                     }
                                                 }
                                             }
@@ -57,10 +69,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 113
+                                                        "startLine": 136
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/pointers/pointer_parameters_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 108
                                                     }
                                                 }
                                             }
@@ -122,10 +146,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/pointers/pointer_parameters_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 107
+                                                        "startLine": 130
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/pointers/pointer_parameters_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 97
                                                     }
                                                 }
                                             }

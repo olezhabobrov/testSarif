@@ -13,10 +13,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 949
+                                                        "startLine": 1027
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 23
                                                     }
                                                 }
                                             }
@@ -45,10 +69,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 961
+                                                        "startLine": 1047
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 23
                                                     }
                                                 }
                                             }
@@ -77,10 +125,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 973
+                                                        "startLine": 1059
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 23
                                                     }
                                                 }
                                             }
@@ -116,7 +188,7 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                        "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
                 },
@@ -130,10 +202,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 981
+                                                        "startLine": 1035
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 23
                                                     }
                                                 }
                                             }
@@ -162,10 +258,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 989
+                                                        "startLine": 1067
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 23
                                                     }
                                                 }
                                             }
@@ -215,10 +335,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 997
+                                                        "startLine": 1075
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 37
                                                     }
                                                 }
                                             }
@@ -247,10 +379,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1005
+                                                        "startLine": 1083
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 37
                                                     }
                                                 }
                                             }
@@ -286,7 +430,7 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xfffffffbffff or invalid usage of address 0xfffffffbffff with insufficient space"
+                        "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
                 },
@@ -300,10 +444,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1017
+                                                        "startLine": 1095
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 51
                                                     }
                                                 }
                                             }
@@ -332,10 +488,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1037
+                                                        "startLine": 1103
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 51
                                                     }
                                                 }
                                             }
@@ -364,10 +532,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1061
+                                                        "startLine": 1123
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 65
                                                     }
                                                 }
                                             }
@@ -408,10 +588,78 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1069
+                                                        "startLine": 1135
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 65
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 49
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 42
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1147
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 65
                                                     }
                                                 }
                                             }
@@ -473,10 +721,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1029
+                                                        "startLine": 1115
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 51
                                                     }
                                                 }
                                             }
@@ -505,10 +765,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1049
+                                                        "startLine": 1159
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 65
                                                     }
                                                 }
                                             }
@@ -570,10 +842,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1083
+                                                        "startLine": 1173
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 82
                                                     }
                                                 }
                                             }
@@ -602,10 +886,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1097
+                                                        "startLine": 1187
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 82
                                                     }
                                                 }
                                             }
@@ -655,10 +951,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1107
+                                                        "startLine": 1197
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 100
                                                     }
                                                 }
                                             }
@@ -708,10 +1016,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1115
+                                                        "startLine": 1209
                                                     }
                                                 }
                                             }
@@ -720,83 +1028,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 95
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 1159
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "lib/linked-list/linked-list.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 95
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "level": "error",
-                    "locations": [
-                        {
-                            "physicalLocation": {
-                                "artifactLocation": {
-                                    "uri": "lib/linked-list/linked-list.c"
-                                },
-                                "region": {
-                                    "startLine": 95
-                                }
-                            }
-                        }
-                    ],
-                    "message": {
-                        "text": "either misaligned address for 0xfffffffbffff or invalid usage of address 0xfffffffbffff with insufficient space"
-                    },
-                    "ruleId": "undefined_behavior.err"
-                },
-                {
-                    "codeFlows": [
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 1127
+                                                        "startLine": 115
                                                     }
                                                 }
                                             }
@@ -825,10 +1060,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1139
+                                                        "startLine": 1229
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 115
                                                     }
                                                 }
                                             }
@@ -857,10 +1104,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1151
+                                                        "startLine": 1241
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 115
                                                     }
                                                 }
                                             }
@@ -896,7 +1155,7 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xfffffffdffffffff or invalid usage of address 0xfffffffdffffffff with insufficient space"
+                        "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
                 },
@@ -910,10 +1169,131 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1167
+                                                        "startLine": 1217
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 115
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 95
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1249
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 115
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 95
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "lib/linked-list/linked-list.c"
+                                },
+                                "region": {
+                                    "startLine": 95
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "invalid usage of null pointer"
+                    },
+                    "ruleId": "undefined_behavior.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1257
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 133
                                                     }
                                                 }
                                             }
@@ -942,10 +1322,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1175
+                                                        "startLine": 1265
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 133
                                                     }
                                                 }
                                             }
@@ -974,10 +1366,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1187
+                                                        "startLine": 1277
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 133
                                                     }
                                                 }
                                             }
@@ -1006,10 +1410,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1199
+                                                        "startLine": 1289
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 133
                                                     }
                                                 }
                                             }
@@ -1038,10 +1454,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1211
+                                                        "startLine": 1301
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 147
                                                     }
                                                 }
                                             }
@@ -1082,10 +1510,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1219
+                                                        "startLine": 1309
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 147
                                                     }
                                                 }
                                             }
@@ -1126,10 +1566,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1235
+                                                        "startLine": 1325
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 147
                                                     }
                                                 }
                                             }
@@ -1170,10 +1622,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1243
+                                                        "startLine": 1337
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 147
                                                     }
                                                 }
                                             }
@@ -1214,10 +1678,78 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1255
+                                                        "startLine": 1345
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 147
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 132
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1357
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }
@@ -1258,10 +1790,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1263
+                                                        "startLine": 1365
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }
@@ -1302,10 +1846,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1279
+                                                        "startLine": 1381
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }
@@ -1346,10 +1902,78 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 1287
+                                                        "startLine": 1393
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 182
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 163
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/linked-list.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 124
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/linked-list_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 1401
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/linked-list_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 182
                                                     }
                                                 }
                                             }

@@ -13,10 +13,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/variadic_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/variadic_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 24
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/variadic_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 25
                                                     }
                                                 }
                                             }
@@ -66,10 +90,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/variadic_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/variadic_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 30
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/variadic_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 25
                                                     }
                                                 }
                                             }

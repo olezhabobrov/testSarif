@@ -12,20 +12,20 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, get_sign_union_test_1)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 104, 97, -128}));
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 98, 98, -128}));
     EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, get_sign_union_test_2)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 112, 97, 104}));
-    EXPECT_EQ(1, actual);
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({0, 0, 0, 0}));
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, get_sign_union_test_3)
 {
-    int actual = get_sign_union(from_bytes<IntBytesUnion>({0, 0, 0, 0}));
-    EXPECT_EQ(0, actual);
+    int actual = get_sign_union(from_bytes<IntBytesUnion>({97, 99, 97, 98}));
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, extract_bit_test_1)
@@ -36,14 +36,14 @@ TEST(regression, extract_bit_test_1)
 
 TEST(regression, extract_bit_test_2)
 {
-    int actual = extract_bit(from_bytes<ShortBytesUnion>({0, 0}));
-    EXPECT_EQ(-1, actual);
+    int actual = extract_bit(from_bytes<ShortBytesUnion>({99, 99}));
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, extract_bit_test_3)
 {
-    int actual = extract_bit(from_bytes<ShortBytesUnion>({98, 99}));
-    EXPECT_EQ(0, actual);
+    int actual = extract_bit(from_bytes<ShortBytesUnion>({0, 0}));
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, calculate_something_union_test_1)
@@ -54,19 +54,19 @@ TEST(regression, calculate_something_union_test_1)
 
 TEST(regression, calculate_something_union_test_2)
 {
-    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 16, 0, 0, 0, 0, 0}));
+    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 0, 0, -66, -49, -5, -20}));
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, calculate_something_union_test_3)
 {
-    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = calculate_something_union(from_bytes<Heterogeneous>({1, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, calculate_something_union_test_4)
 {
-    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 0, 0, -66, -49, -5, -20}));
+    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 16, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
@@ -78,7 +78,7 @@ TEST(regression, calculate_something_union_test_5)
 
 TEST(regression, calculate_something_union_test_6)
 {
-    int actual = calculate_something_union(from_bytes<Heterogeneous>({1, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = calculate_something_union(from_bytes<Heterogeneous>({0, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
@@ -108,50 +108,50 @@ TEST(regression, get_coordinate_test_3)
 
 TEST(regression, operate_with_inner_unions_test_1)
 {
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({102, 0, 0, 0, 0, 0, 0, 0}));
-    EXPECT_EQ('f', actual);
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({15, 0, 0, 0, 0, 0, 0, 0}));
+    EXPECT_EQ('\x0f', actual);
 }
 
 TEST(regression, operate_with_inner_unions_test_2)
-{
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({53, 0, 0, 0, 0, 0, 0, 0}));
-    EXPECT_EQ('5', actual);
-}
-
-TEST(regression, operate_with_inner_unions_test_3)
 {
     signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({99, 0, 0, 0, 0, 0, 0, -128}));
     EXPECT_EQ('g', actual);
 }
 
+TEST(regression, operate_with_inner_unions_test_3)
+{
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({5, 0, 0, 0, 0, 0, 0, 0}));
+    EXPECT_EQ('5', actual);
+}
+
 TEST(regression, operate_with_inner_unions_test_4)
-{
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({15, 0, 0, 0, 0, 0, 0, 0}));
-    EXPECT_EQ('\x0f', actual);
-}
-
-TEST(regression, operate_with_inner_unions_test_5)
-{
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({97, 0, 0, 0, 0, 0, 0, 2}));
-    EXPECT_EQ('o', actual);
-}
-
-TEST(regression, operate_with_inner_unions_test_6)
-{
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({112, 0, 0, 0, 0, 0, 0, 0}));
-    EXPECT_EQ('e', actual);
-}
-
-TEST(regression, operate_with_inner_unions_test_7)
 {
     signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({5, 0, -1, 0, 0, 0, 0, 0}));
     EXPECT_EQ('5', actual);
 }
 
+TEST(regression, operate_with_inner_unions_test_5)
+{
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({53, 0, 0, 0, 0, 0, 0, 0}));
+    EXPECT_EQ('5', actual);
+}
+
+TEST(regression, operate_with_inner_unions_test_6)
+{
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({102, 0, 0, 0, 0, 0, 0, 0}));
+    EXPECT_EQ('f', actual);
+}
+
+TEST(regression, operate_with_inner_unions_test_7)
+{
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({98, 0, 0, 0, 0, 0, 0, 0}));
+    EXPECT_EQ('e', actual);
+}
+
 TEST(regression, operate_with_inner_unions_test_8)
 {
-    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({5, 0, 0, 0, 0, 0, 0, 0}));
-    EXPECT_EQ('5', actual);
+    signed char actual = operate_with_inner_unions(from_bytes<MainUnion>({112, 0, 0, 0, 0, 0, 1, 0}));
+    EXPECT_EQ('o', actual);
 }
 
 TEST(regression, union_as_return_type_test_1)
@@ -162,14 +162,14 @@ TEST(regression, union_as_return_type_test_1)
 
 TEST(regression, union_as_return_type_test_2)
 {
-    union MainUnion actual = union_as_return_type(4);
-    union MainUnion expected = from_bytes<MainUnion>({2, 0, 0, 0, 0, 0, 0, 0});
+    union MainUnion actual = union_as_return_type(0);
+    union MainUnion expected = from_bytes<MainUnion>({48, 0, 0, 0, 0, 0, 0, 0});
 }
 
 TEST(regression, union_as_return_type_test_3)
 {
-    union MainUnion actual = union_as_return_type(0);
-    union MainUnion expected = from_bytes<MainUnion>({48, 0, 0, 0, 0, 0, 0, 0});
+    union MainUnion actual = union_as_return_type(4);
+    union MainUnion expected = from_bytes<MainUnion>({2, 0, 0, 0, 0, 0, 0, 0});
 }
 
 TEST(regression, sumOfUnionArray_test_1)
@@ -178,11 +178,11 @@ TEST(regression, sumOfUnionArray_test_1)
     int actual = sumOfUnionArray(u);
     EXPECT_EQ(351207157, actual);
     union IntBytesUnion expected_u[10] = {from_bytes<IntBytesUnion>({98, 98, 104, 112}), from_bytes<IntBytesUnion>({97, 98, 97, 112}), from_bytes<IntBytesUnion>({97, 104, 98, 98}), from_bytes<IntBytesUnion>({112, 112, 97, 112}), from_bytes<IntBytesUnion>({97, 97, 97, 97}), from_bytes<IntBytesUnion>({112, 112, 98, 98}), from_bytes<IntBytesUnion>({112, 97, 104, 97}), from_bytes<IntBytesUnion>({112, 99, 97, 112}), from_bytes<IntBytesUnion>({97, 99, 112, 98}), from_bytes<IntBytesUnion>({104, 98, 104, 97})};
-    for (int it_123_0 = 0; it_123_0 < 10; it_123_0 ++) {
-        for (int it_124_0 = 0; it_124_0 < 4; it_124_0 ++) {
-            EXPECT_EQ(expected_u[it_123_0].bytes[it_124_0], u[it_123_0].bytes[it_124_0]);
+    for (int it_117_0 = 0; it_117_0 < 10; it_117_0 ++) {
+        for (int it_118_0 = 0; it_118_0 < 4; it_118_0 ++) {
+            EXPECT_EQ(expected_u[it_117_0].bytes[it_118_0], u[it_117_0].bytes[it_118_0]);
         }
-        EXPECT_EQ(expected_u[it_123_0].number, u[it_123_0].number);
+        EXPECT_EQ(expected_u[it_117_0].number, u[it_117_0].number);
     }
 }
 

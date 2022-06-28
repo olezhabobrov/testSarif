@@ -12,12 +12,12 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, passthrough_test_1)
 {
-    __attribute__ ((aligned(32768))) char x[] = "ccccccbca";
+    __attribute__ ((aligned(32768))) char x[] = "ccccccccc";
     char actual = *passthrough(x);
     EXPECT_EQ('c', actual);
-    char expected_x[] = {'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'a', '\0'};
-    for (int it_201_0 = 0; it_201_0 < 10; it_201_0 ++) {
-        EXPECT_EQ(expected_x[it_201_0], x[it_201_0]);
+    char expected_x[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', '\0'};
+    for (int it_188_0 = 0; it_188_0 < 10; it_188_0 ++) {
+        EXPECT_EQ(expected_x[it_188_0], x[it_188_0]);
     }
 }
 

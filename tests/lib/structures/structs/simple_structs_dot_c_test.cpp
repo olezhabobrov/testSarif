@@ -22,64 +22,28 @@ TEST(regression, get_sign_struct_test_2)
 {
     int actual = get_sign_struct({
         .x = 0,
-        .a = 1});
-    EXPECT_EQ(1, actual);
+        .a = 0});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, get_sign_struct_test_3)
 {
     int actual = get_sign_struct({
         .x = 0,
-        .a = 0});
-    EXPECT_EQ(0, actual);
+        .a = 1});
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, calculate_something_test_1)
 {
     int actual = calculate_something({
-        .a = 1,
-        .c = 1,
+        .a = 7,
+        .c = 2,
         .b = 0LL});
-    EXPECT_EQ(1, actual);
+    EXPECT_EQ(2, actual);
 }
 
 TEST(regression, calculate_something_test_2)
-{
-    int actual = calculate_something({
-        .a = 7,
-        .c = 1,
-        .b = 2020LL});
-    EXPECT_EQ(1, actual);
-}
-
-TEST(regression, calculate_something_test_3)
-{
-    int actual = calculate_something({
-        .a = 0,
-        .c = 0,
-        .b = 0LL});
-    EXPECT_EQ(0, actual);
-}
-
-TEST(regression, calculate_something_test_4)
-{
-    int actual = calculate_something({
-        .a = 7,
-        .c = 1,
-        .b = 0LL});
-    EXPECT_EQ(1, actual);
-}
-
-TEST(regression, calculate_something_test_5)
-{
-    int actual = calculate_something({
-        .a = 0,
-        .c = 1,
-        .b = 0LL});
-    EXPECT_EQ(1, actual);
-}
-
-TEST(regression, calculate_something_test_6)
 {
     int actual = calculate_something({
         .a = 0,
@@ -88,7 +52,16 @@ TEST(regression, calculate_something_test_6)
     EXPECT_EQ(0, actual);
 }
 
-TEST(regression, calculate_something_test_7)
+TEST(regression, calculate_something_test_3)
+{
+    int actual = calculate_something({
+        .a = 1,
+        .c = 2,
+        .b = 0LL});
+    EXPECT_EQ(2, actual);
+}
+
+TEST(regression, calculate_something_test_4)
 {
     int actual = calculate_something({
         .a = 1,
@@ -97,54 +70,81 @@ TEST(regression, calculate_something_test_7)
     EXPECT_EQ(0, actual);
 }
 
+TEST(regression, calculate_something_test_5)
+{
+    int actual = calculate_something({
+        .a = 7,
+        .c = 2,
+        .b = 2020LL});
+    EXPECT_EQ(1, actual);
+}
+
+TEST(regression, calculate_something_test_6)
+{
+    int actual = calculate_something({
+        .a = 0,
+        .c = 2,
+        .b = 0LL});
+    EXPECT_EQ(2, actual);
+}
+
+TEST(regression, calculate_something_test_7)
+{
+    int actual = calculate_something({
+        .a = 0,
+        .c = 0,
+        .b = 0LL});
+    EXPECT_EQ(0, actual);
+}
+
 TEST(regression, get_symbol_by_struct_test_1)
 {
     char actual = get_symbol_by_struct({
         .a = 'b',
-        .c = 'a',
-        .u = 117,
+        .c = 'c',
+        .u = 97,
         .b = 0});
-    EXPECT_EQ('u', actual);
+    EXPECT_EQ('c', actual);
 }
 
 TEST(regression, get_symbol_by_struct_test_2)
 {
     char actual = get_symbol_by_struct({
         .a = 'b',
-        .c = 'c',
-        .u = 99,
-        .b = 0});
-    EXPECT_EQ('c', actual);
+        .c = 'h',
+        .u = 97,
+        .b = 1});
+    EXPECT_EQ('1', actual);
 }
 
 TEST(regression, get_symbol_by_struct_test_3)
 {
     char actual = get_symbol_by_struct({
-        .a = 'b',
-        .c = 'a',
-        .u = 99,
+        .a = 'a',
+        .c = 'c',
+        .u = 97,
         .b = 0});
-    EXPECT_EQ('0', actual);
+    EXPECT_EQ('a', actual);
 }
 
 TEST(regression, get_symbol_by_struct_test_4)
 {
     char actual = get_symbol_by_struct({
         .a = 'b',
-        .c = 'a',
-        .u = 99,
-        .b = 1});
-    EXPECT_EQ('1', actual);
+        .c = 'h',
+        .u = 117,
+        .b = 0});
+    EXPECT_EQ('u', actual);
 }
 
 TEST(regression, get_symbol_by_struct_test_5)
 {
     char actual = get_symbol_by_struct({
-        .a = 'a',
-        .c = 'c',
-        .u = 99,
+        .a = 'b',
+        .c = 'h',
+        .u = 97,
         .b = 0});
-    EXPECT_EQ('a', actual);
+    EXPECT_EQ('0', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_1)
@@ -154,28 +154,84 @@ TEST(regression, operate_with_inner_structs_test_1)
             .c = 'c',
             .ininner = {
                 .u = 0U,
-                .l = 4LL},
+                .l = 0LL},
             .s = 0},
-        .x = 0,
+        .x = 5,
         .y = 0LL});
-    EXPECT_EQ('o', actual);
+    EXPECT_EQ('e', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_2)
 {
     signed char actual = operate_with_inner_structs({
         .inner = {
-            .c = 'a',
+            .c = 'c',
+            .ininner = {
+                .u = 2U,
+                .l = 0LL},
+            .s = 0},
+        .x = 0,
+        .y = 0LL});
+    EXPECT_EQ('g', actual);
+}
+
+TEST(regression, operate_with_inner_structs_test_3)
+{
+    signed char actual = operate_with_inner_structs({
+        .inner = {
+            .c = '5',
+            .ininner = {
+                .u = 0U,
+                .l = 0LL},
+            .s = 0},
+        .x = 5,
+        .y = 5LL});
+    EXPECT_EQ('e', actual);
+}
+
+TEST(regression, operate_with_inner_structs_test_4)
+{
+    signed char actual = operate_with_inner_structs({
+        .inner = {
+            .c = 'c',
             .ininner = {
                 .u = 0U,
                 .l = 0LL},
             .s = 15},
         .x = 5,
         .y = 101LL});
-    EXPECT_EQ('a', actual);
+    EXPECT_EQ('c', actual);
 }
 
-TEST(regression, operate_with_inner_structs_test_3)
+TEST(regression, operate_with_inner_structs_test_5)
+{
+    signed char actual = operate_with_inner_structs({
+        .inner = {
+            .c = '5',
+            .ininner = {
+                .u = 8U,
+                .l = 5LL},
+            .s = 5},
+        .x = 5,
+        .y = 5LL});
+    EXPECT_EQ('g', actual);
+}
+
+TEST(regression, operate_with_inner_structs_test_6)
+{
+    signed char actual = operate_with_inner_structs({
+        .inner = {
+            .c = '5',
+            .ininner = {
+                .u = 0U,
+                .l = 0LL},
+            .s = 5},
+        .x = 5,
+        .y = 5LL});
+    EXPECT_EQ('e', actual);
+}
+
+TEST(regression, operate_with_inner_structs_test_7)
 {
     signed char actual = operate_with_inner_structs({
         .inner = {
@@ -189,62 +245,6 @@ TEST(regression, operate_with_inner_structs_test_3)
     EXPECT_EQ('5', actual);
 }
 
-TEST(regression, operate_with_inner_structs_test_4)
-{
-    signed char actual = operate_with_inner_structs({
-        .inner = {
-            .c = 'c',
-            .ininner = {
-                .u = 0U,
-                .l = 0LL},
-            .s = 0},
-        .x = 5,
-        .y = 5LL});
-    EXPECT_EQ('e', actual);
-}
-
-TEST(regression, operate_with_inner_structs_test_5)
-{
-    signed char actual = operate_with_inner_structs({
-        .inner = {
-            .c = '5',
-            .ininner = {
-                .u = 0U,
-                .l = 0LL},
-            .s = 5},
-        .x = 5,
-        .y = 5LL});
-    EXPECT_EQ('e', actual);
-}
-
-TEST(regression, operate_with_inner_structs_test_6)
-{
-    signed char actual = operate_with_inner_structs({
-        .inner = {
-            .c = '5',
-            .ininner = {
-                .u = 0U,
-                .l = 0LL},
-            .s = 0},
-        .x = 5,
-        .y = 5LL});
-    EXPECT_EQ('e', actual);
-}
-
-TEST(regression, operate_with_inner_structs_test_7)
-{
-    signed char actual = operate_with_inner_structs({
-        .inner = {
-            .c = '5',
-            .ininner = {
-                .u = 6U,
-                .l = 5LL},
-            .s = 5},
-        .x = 5,
-        .y = 5LL});
-    EXPECT_EQ('g', actual);
-}
-
 TEST(regression, operate_with_inner_structs_test_8)
 {
     signed char actual = operate_with_inner_structs({
@@ -255,7 +255,7 @@ TEST(regression, operate_with_inner_structs_test_8)
                 .l = 0LL},
             .s = 0},
         .x = 5,
-        .y = 101LL});
+        .y = 5LL});
     EXPECT_EQ('e', actual);
 }
 
@@ -269,25 +269,11 @@ TEST(regression, operate_with_inner_structs_test_9)
                 .l = 0LL},
             .s = 0},
         .x = 5,
-        .y = 0LL});
+        .y = 101LL});
     EXPECT_EQ('e', actual);
 }
 
 TEST(regression, operate_with_inner_structs_test_10)
-{
-    signed char actual = operate_with_inner_structs({
-        .inner = {
-            .c = 'c',
-            .ininner = {
-                .u = 1U,
-                .l = 0LL},
-            .s = 0},
-        .x = 0,
-        .y = 0LL});
-    EXPECT_EQ('g', actual);
-}
-
-TEST(regression, operate_with_inner_structs_test_11)
 {
     signed char actual = operate_with_inner_structs({
         .inner = {
@@ -299,6 +285,20 @@ TEST(regression, operate_with_inner_structs_test_11)
         .x = 0,
         .y = 0LL});
     EXPECT_EQ('e', actual);
+}
+
+TEST(regression, operate_with_inner_structs_test_11)
+{
+    signed char actual = operate_with_inner_structs({
+        .inner = {
+            .c = 'c',
+            .ininner = {
+                .u = 1U,
+                .l = 8LL},
+            .s = 0},
+        .x = 0,
+        .y = 0LL});
+    EXPECT_EQ('o', actual);
 }
 
 TEST(regression, struct_as_return_type_test_1)
@@ -317,20 +317,6 @@ TEST(regression, struct_as_return_type_test_1)
 
 TEST(regression, struct_as_return_type_test_2)
 {
-    struct MainStruct actual = struct_as_return_type(4);
-    struct MainStruct expected = {
-        .inner = {
-            .c = '2',
-            .ininner = {
-                .u = 2U,
-                .l = 2LL},
-            .s = 2},
-        .x = 2,
-        .y = 2LL};
-}
-
-TEST(regression, struct_as_return_type_test_3)
-{
     struct MainStruct actual = struct_as_return_type(0);
     struct MainStruct expected = {
         .inner = {
@@ -343,17 +329,21 @@ TEST(regression, struct_as_return_type_test_3)
         .y = 0LL};
 }
 
-TEST(regression, struct_with_union_as_return_type_test_1)
+TEST(regression, struct_as_return_type_test_3)
 {
-    struct StructWithUnion actual = struct_with_union_as_return_type(1);
-    struct StructWithUnion expected = {
-        .un = from_bytes<StructWithUnion::InnerUnion>({17, 0, 0, 0}),
-        .is = {
-            .un2 = from_bytes<StructWithUnion::InnerStructWithUnion::Inner2Union>({48, -85, -85, -85})},
-        .x = -108};
+    struct MainStruct actual = struct_as_return_type(4);
+    struct MainStruct expected = {
+        .inner = {
+            .c = '2',
+            .ininner = {
+                .u = 2U,
+                .l = 2LL},
+            .s = 2},
+        .x = 2,
+        .y = 2LL};
 }
 
-TEST(regression, struct_with_union_as_return_type_test_2)
+TEST(regression, struct_with_union_as_return_type_test_1)
 {
     struct StructWithUnion actual = struct_with_union_as_return_type(0);
     struct StructWithUnion expected = {
@@ -363,18 +353,28 @@ TEST(regression, struct_with_union_as_return_type_test_2)
         .x = 155};
 }
 
-TEST(regression, complex_struct_with_union_as_return_type_test_1)
+TEST(regression, struct_with_union_as_return_type_test_2)
 {
-    struct A actual = complex_struct_with_union_as_return_type(0);
-    struct A expected = {
-        .a = from_bytes<A::B>({31, -123, -21, 81, -72, 30, 9, 64})};
+    struct StructWithUnion actual = struct_with_union_as_return_type(1);
+    struct StructWithUnion expected = {
+        .un = from_bytes<StructWithUnion::InnerUnion>({17, 0, 0, 0}),
+        .is = {
+            .un2 = from_bytes<StructWithUnion::InnerStructWithUnion::Inner2Union>({48, -85, -85, -85})},
+        .x = -108};
 }
 
-TEST(regression, complex_struct_with_union_as_return_type_test_2)
+TEST(regression, complex_struct_with_union_as_return_type_test_1)
 {
     struct A actual = complex_struct_with_union_as_return_type(5);
     struct A expected = {
         .a = from_bytes<A::B>({117, -85, -85, -85, -85, -85, -85, -85})};
+}
+
+TEST(regression, complex_struct_with_union_as_return_type_test_2)
+{
+    struct A actual = complex_struct_with_union_as_return_type(0);
+    struct A expected = {
+        .a = from_bytes<A::B>({31, -123, -21, 81, -72, 30, 9, 64})};
 }
 
 TEST(regression, struct_with_union_in_union_as_return_type_test_1)
@@ -386,16 +386,16 @@ TEST(regression, struct_with_union_in_union_as_return_type_test_1)
 
 TEST(regression, struct_with_union_in_union_as_return_type_test_2)
 {
-    struct StructWithUnionInUnion actual = struct_with_union_in_union_as_return_type(0, 0);
+    struct StructWithUnionInUnion actual = struct_with_union_in_union_as_return_type(7, 10);
     struct StructWithUnionInUnion expected = {
-        .un = from_bytes<StructWithUnionInUnion::Union1>({-113, -62, -11, 40, 92, -113, -10, 63})};
+        .un = from_bytes<StructWithUnionInUnion::Union1>({-5, -1, -1, -1, -85, -85, -85, -85})};
 }
 
 TEST(regression, struct_with_union_in_union_as_return_type_test_3)
 {
-    struct StructWithUnionInUnion actual = struct_with_union_in_union_as_return_type(10, 7);
+    struct StructWithUnionInUnion actual = struct_with_union_in_union_as_return_type(0, 0);
     struct StructWithUnionInUnion expected = {
-        .un = from_bytes<StructWithUnionInUnion::Union1>({-5, -1, -1, -1, -85, -85, -85, -85})};
+        .un = from_bytes<StructWithUnionInUnion::Union1>({-113, -62, -11, 40, 92, -113, -10, 63})};
 }
 
 TEST(regression, struct_with_struct_in_union_as_return_type_test_1)
@@ -407,16 +407,16 @@ TEST(regression, struct_with_struct_in_union_as_return_type_test_1)
 
 TEST(regression, struct_with_struct_in_union_as_return_type_test_2)
 {
-    struct StructWithStructInUnion actual = struct_with_struct_in_union_as_return_type(0, 0);
+    struct StructWithStructInUnion actual = struct_with_struct_in_union_as_return_type(0, -1);
     struct StructWithStructInUnion expected = {
-        .un = from_bytes<StructWithStructInUnion::DeepUnion>({107, -85, -85, -85, -85, -85, -85, -85, -102, 8, 27, -98, 94, 41, -16, 63})};
+        .un = from_bytes<StructWithStructInUnion::DeepUnion>({0, 0, 0, 0, 0, 0, 0, 0, -85, -85, -85, -85, -85, -85, -85, -85})};
 }
 
 TEST(regression, struct_with_struct_in_union_as_return_type_test_3)
 {
-    struct StructWithStructInUnion actual = struct_with_struct_in_union_as_return_type(0, -1);
+    struct StructWithStructInUnion actual = struct_with_struct_in_union_as_return_type(0, 0);
     struct StructWithStructInUnion expected = {
-        .un = from_bytes<StructWithStructInUnion::DeepUnion>({0, 0, 0, 0, 0, 0, 0, 0, -85, -85, -85, -85, -85, -85, -85, -85})};
+        .un = from_bytes<StructWithStructInUnion::DeepUnion>({107, -85, -85, -85, -85, -85, -85, -85, -102, 8, 27, -98, 94, 41, -16, 63})};
 }
 
 #pragma endregion

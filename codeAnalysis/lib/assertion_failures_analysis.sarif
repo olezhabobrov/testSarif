@@ -13,10 +13,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/assertion_failures_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 35
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/assertion_failures_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 25
                                                     }
                                                 }
                                             }
@@ -66,10 +90,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/assertion_failures_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 40
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/assertion_failures_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
                                                     }
                                                 }
                                             }
@@ -119,10 +155,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/assertion_failures_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 45
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/assertion_failures_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
                                                     }
                                                 }
                                             }
@@ -172,10 +220,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/assertion_failures_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/assertion_failures_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 50
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/assertion_failures_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 51
                                                     }
                                                 }
                                             }

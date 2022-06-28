@@ -27,7 +27,7 @@ TEST(regression, foo1_test_1)
     struct tagFOO_ATTRIBUTE attrib[10] = {{
         .offset = 0U,
         .len = 0U,
-        .id = 8U}, {
+        .id = 0U}, {
         .offset = 0U,
         .len = 0U,
         .id = 0U}, {
@@ -73,7 +73,7 @@ TEST(regression, foo1_test_2)
         .id = 0U}, {
         .offset = 0U,
         .len = 0U,
-        .id = 0U}, {
+        .id = 2U}, {
         .offset = 0U,
         .len = 0U,
         .id = 0U}, {
@@ -100,7 +100,7 @@ TEST(regression, foo1_test_2)
         .id = 0U}};
     unsigned int offset = 0U;
     unsigned int len = 0U;
-    unsigned int actual = foo1(attrib, 1U, 0U, &offset, &len);
+    unsigned int actual = foo1(attrib, 2U, 2U, &offset, &len);
     EXPECT_EQ(0U, actual);
     unsigned int expected_offset = 0U;
     EXPECT_EQ(expected_offset, offset);

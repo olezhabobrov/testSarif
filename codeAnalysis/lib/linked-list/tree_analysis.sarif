@@ -13,7 +13,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/tree_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 122
@@ -25,6 +25,30 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/tree_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
                                                         "uri": "lib/linked-list/tree.c"
                                                     },
                                                     "region": {
@@ -45,7 +69,7 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/tree_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 134
@@ -57,30 +81,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "lib/linked-list/tree.c"
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 11
+                                                        "startLine": 245
                                                     }
                                                 }
                                             }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/tree_klee.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 146
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -109,10 +125,90 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/tree_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 146
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/tree_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/linked-list/tree.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 11
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/linked-list/tree_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 154
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/linked-list/tree_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
                                                     }
                                                 }
                                             }
@@ -148,7 +244,7 @@
                         }
                     ],
                     "message": {
-                        "text": "either misaligned address for 0xff or invalid usage of address 0xff with insufficient space"
+                        "text": "invalid usage of null pointer"
                     },
                     "ruleId": "undefined_behavior.err"
                 }

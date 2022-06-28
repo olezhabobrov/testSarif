@@ -12,34 +12,34 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, returns_pointer_with_min_test_1)
 {
-    long long actual = *returns_pointer_with_min(0LL, 0LL);
+    long long actual = *returns_pointer_with_min(0LL, 1LL);
     EXPECT_EQ(0LL, actual);
 }
 
 TEST(regression, returns_pointer_with_min_test_2)
 {
-    long long actual = *returns_pointer_with_min(0LL, 1LL);
+    long long actual = *returns_pointer_with_min(0LL, 0LL);
     EXPECT_EQ(0LL, actual);
 }
 
 TEST(regression, returns_pointer_with_max_test_1)
 {
-    unsigned int actual = *returns_pointer_with_max(0U, 0U);
-    EXPECT_EQ(0U, actual);
+    unsigned int actual = *returns_pointer_with_max(1U, 0U);
+    EXPECT_EQ(1U, actual);
 }
 
 TEST(regression, returns_pointer_with_max_test_2)
 {
-    unsigned int actual = *returns_pointer_with_max(1U, 0U);
-    EXPECT_EQ(1U, actual);
+    unsigned int actual = *returns_pointer_with_max(0U, 0U);
+    EXPECT_EQ(0U, actual);
 }
 
 TEST(regression, five_square_numbers_test_1)
 {
     int * actual = five_square_numbers(0);
     int expected[1] = {0};
-    for (int it_254_0 = 0; it_254_0 < 1; it_254_0 ++) {
-        EXPECT_EQ(actual[it_254_0], expected[it_254_0]);
+    for (int it_250_0 = 0; it_250_0 < 1; it_250_0 ++) {
+        EXPECT_EQ(actual[it_250_0], expected[it_250_0]);
     }
 }
 
@@ -61,26 +61,26 @@ TEST(regression, returns_struct_with_min_max_test_2)
 
 TEST(regression, return_const_char_test_1)
 {
-    const char actual = *return_const_char(1);
-    EXPECT_EQ('b', actual);
-}
-
-TEST(regression, return_const_char_test_2)
-{
     const char actual = *return_const_char(0);
     EXPECT_EQ('a', actual);
 }
 
+TEST(regression, return_const_char_test_2)
+{
+    const char actual = *return_const_char(2);
+    EXPECT_EQ('b', actual);
+}
+
 TEST(regression, return_char_const_pointer_test_1)
 {
-    const char actual = *return_char_const_pointer(1);
-    EXPECT_EQ('b', actual);
+    const char actual = *return_char_const_pointer(0);
+    EXPECT_EQ('a', actual);
 }
 
 TEST(regression, return_char_const_pointer_test_2)
 {
-    const char actual = *return_char_const_pointer(0);
-    EXPECT_EQ('a', actual);
+    const char actual = *return_char_const_pointer(2);
+    EXPECT_EQ('b', actual);
 }
 
 TEST(regression, returns_const_struct_with_min_max_test_1)
@@ -101,14 +101,14 @@ TEST(regression, returns_const_struct_with_min_max_test_2)
 
 TEST(regression, void_pointer_return_int_usage_test_1)
 {
-    unsigned char actual = *(unsigned char *)void_pointer_return_int_usage(-3, -3);
-    EXPECT_EQ(253, actual);
+    unsigned char actual = *(unsigned char *)void_pointer_return_int_usage(0, -1);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, void_pointer_return_int_usage_test_2)
 {
-    unsigned char actual = *(unsigned char *)void_pointer_return_int_usage(0, -1);
-    EXPECT_EQ(0, actual);
+    unsigned char actual = *(unsigned char *)void_pointer_return_int_usage(-3, -3);
+    EXPECT_EQ(253, actual);
 }
 
 TEST(regression, void_pointer_return_char_usage_test_1)
@@ -117,8 +117,8 @@ TEST(regression, void_pointer_return_char_usage_test_1)
     unsigned char actual = *(unsigned char *)void_pointer_return_char_usage(a);
     EXPECT_EQ(99, actual);
     char expected_a[] = {'c', 'a', 'c', 'c', 'c', 'c', 'c', 'a', 'c', '\0'};
-    for (int it_255_0 = 0; it_255_0 < 10; it_255_0 ++) {
-        EXPECT_EQ(expected_a[it_255_0], a[it_255_0]);
+    for (int it_251_0 = 0; it_251_0 < 10; it_251_0 ++) {
+        EXPECT_EQ(expected_a[it_251_0], a[it_251_0]);
     }
 }
 
@@ -136,18 +136,18 @@ TEST(regression, returns_2d_pointer_for_int_test_2)
 
 TEST(regression, returns_2d_pointer_for_struct_test_1)
 {
-    const struct MinMax actual = **returns_2d_pointer_for_struct(0, 0);
-    struct MinMax expected = {
-        .a = 0,
-        .b = 0};
-}
-
-TEST(regression, returns_2d_pointer_for_struct_test_2)
-{
     const struct MinMax actual = **returns_2d_pointer_for_struct(0, 1);
     struct MinMax expected = {
         .a = 0,
         .b = 1};
+}
+
+TEST(regression, returns_2d_pointer_for_struct_test_2)
+{
+    const struct MinMax actual = **returns_2d_pointer_for_struct(0, 0);
+    struct MinMax expected = {
+        .a = 0,
+        .b = 0};
 }
 
 TEST(regression, return_array_like_void_ptr_test_1)
@@ -158,19 +158,19 @@ TEST(regression, return_array_like_void_ptr_test_1)
 
 TEST(regression, return_nullptr_test_1)
 {
-    int actual = *return_nullptr(11);
-    EXPECT_EQ(9, actual);
+    EXPECT_TRUE(return_nullptr(0) == NULL);
 }
 
 TEST(regression, return_nullptr_test_2)
 {
-    int actual = *return_nullptr(1);
-    EXPECT_EQ(5, actual);
+    int actual = *return_nullptr(11);
+    EXPECT_EQ(9, actual);
 }
 
 TEST(regression, return_nullptr_test_3)
 {
-    EXPECT_TRUE(return_nullptr(0) == NULL);
+    int actual = *return_nullptr(2);
+    EXPECT_EQ(5, actual);
 }
 
 #pragma endregion

@@ -17,156 +17,52 @@ static const float utbot_abs_error = 1e-6;
 TEST(regression, index_of_needed_struct_test_1)
 {
     struct CharAndInt arr[10] = {{
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
         .c = 'b',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'c',
+        .c = 'k',
         .x = 0}, {
-        .c = 'c',
+        .c = 'g',
         .x = 0}, {
-        .c = 'c',
+        .c = 'k',
+        .x = 0}, {
+        .c = 'h',
+        .x = 0}, {
+        .c = 'p',
+        .x = 0}, {
+        .c = 'g',
+        .x = 0}, {
+        .c = 'k',
+        .x = 0}, {
+        .c = 'h',
         .x = 0}};
     int actual = index_of_needed_struct(arr);
-    EXPECT_EQ(0, actual);
+    EXPECT_EQ(-1, actual);
     struct CharAndInt expected_arr[10] = {{
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
         .c = 'b',
         .x = 0}, {
         .c = 'c',
         .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}};
-    for (int it_215_0 = 0; it_215_0 < 10; it_215_0 ++) {
-        EXPECT_EQ(expected_arr[it_215_0].c, arr[it_215_0].c);
-        EXPECT_EQ(expected_arr[it_215_0].x, arr[it_215_0].x);
-    }
-}
-
-TEST(regression, index_of_needed_struct_test_2)
-{
-    struct CharAndInt arr[10] = {{
         .c = 'k',
         .x = 0}, {
-        .c = 'c',
+        .c = 'g',
         .x = 0}, {
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'b',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}};
-    int actual = index_of_needed_struct(arr);
-    EXPECT_EQ(2, actual);
-    struct CharAndInt expected_arr[10] = {{
         .c = 'k',
         .x = 0}, {
-        .c = 'c',
+        .c = 'h',
         .x = 0}, {
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
+        .c = 'p',
         .x = 0}, {
-        .c = 'c',
+        .c = 'g',
         .x = 0}, {
-        .c = 'b',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}};
-    for (int it_216_0 = 0; it_216_0 < 10; it_216_0 ++) {
-        EXPECT_EQ(expected_arr[it_216_0].c, arr[it_216_0].c);
-        EXPECT_EQ(expected_arr[it_216_0].x, arr[it_216_0].x);
-    }
-}
-
-TEST(regression, index_of_needed_struct_test_3)
-{
-    struct CharAndInt arr[10] = {{
         .c = 'k',
         .x = 0}, {
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'b',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
+        .c = 'h',
         .x = 0}};
-    int actual = index_of_needed_struct(arr);
-    EXPECT_EQ(1, actual);
-    struct CharAndInt expected_arr[10] = {{
-        .c = 'k',
-        .x = 0}, {
-        .c = 'c',
-        .x = 128}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'b',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}, {
-        .c = 'c',
-        .x = 0}};
-    for (int it_217_0 = 0; it_217_0 < 10; it_217_0 ++) {
-        EXPECT_EQ(expected_arr[it_217_0].c, arr[it_217_0].c);
-        EXPECT_EQ(expected_arr[it_217_0].x, arr[it_217_0].x);
+    for (int it_206_0 = 0; it_206_0 < 10; it_206_0 ++) {
+        EXPECT_EQ(expected_arr[it_206_0].c, arr[it_206_0].c);
+        EXPECT_EQ(expected_arr[it_206_0].x, arr[it_206_0].x);
     }
 }
 
@@ -177,215 +73,69 @@ TEST(regression, index_of_struct_with_equal_fields_test_1)
         .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}};
-    int actual = index_of_struct_with_equal_fields(arr);
-    EXPECT_EQ(1, actual);
-    struct Trio expected_arr[10] = {{
         .a = 0,
         .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}};
-    for (int it_218_0 = 0; it_218_0 < 10; it_218_0 ++) {
-        EXPECT_EQ(expected_arr[it_218_0].a, arr[it_218_0].a);
-        EXPECT_EQ(expected_arr[it_218_0].b, arr[it_218_0].b);
-        EXPECT_EQ(expected_arr[it_218_0].c, arr[it_218_0].c);
-    }
-}
-
-TEST(regression, index_of_struct_with_equal_fields_test_2)
-{
-    struct Trio arr[10] = {{
-        .a = 0,
-        .b = 8LL,
-        .c = 0}, {
-        .a = 1,
         .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 2LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}};
     int actual = index_of_struct_with_equal_fields(arr);
-    EXPECT_EQ(2, actual);
+    EXPECT_EQ(-1, actual);
     struct Trio expected_arr[10] = {{
         .a = 0,
         .b = 8LL,
         .c = 0}, {
-        .a = 1,
+        .a = 0,
+        .b = 8LL,
+        .c = 0}, {
+        .a = 0,
+        .b = 8LL,
+        .c = 0}, {
+        .a = 0,
         .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 2LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
+        .b = 1LL,
         .c = 0}, {
         .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
+        .b = 8LL,
         .c = 0}};
-    for (int it_219_0 = 0; it_219_0 < 10; it_219_0 ++) {
-        EXPECT_EQ(expected_arr[it_219_0].a, arr[it_219_0].a);
-        EXPECT_EQ(expected_arr[it_219_0].b, arr[it_219_0].b);
-        EXPECT_EQ(expected_arr[it_219_0].c, arr[it_219_0].c);
-    }
-}
-
-TEST(regression, index_of_struct_with_equal_fields_test_3)
-{
-    struct Trio arr[10] = {{
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}};
-    int actual = index_of_struct_with_equal_fields(arr);
-    EXPECT_EQ(0, actual);
-    struct Trio expected_arr[10] = {{
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}, {
-        .a = 0,
-        .b = 0LL,
-        .c = 0}};
-    for (int it_220_0 = 0; it_220_0 < 10; it_220_0 ++) {
-        EXPECT_EQ(expected_arr[it_220_0].a, arr[it_220_0].a);
-        EXPECT_EQ(expected_arr[it_220_0].b, arr[it_220_0].b);
-        EXPECT_EQ(expected_arr[it_220_0].c, arr[it_220_0].c);
+    for (int it_207_0 = 0; it_207_0 < 10; it_207_0 ++) {
+        EXPECT_EQ(expected_arr[it_207_0].a, arr[it_207_0].a);
+        EXPECT_EQ(expected_arr[it_207_0].b, arr[it_207_0].b);
+        EXPECT_EQ(expected_arr[it_207_0].c, arr[it_207_0].c);
     }
 }
 

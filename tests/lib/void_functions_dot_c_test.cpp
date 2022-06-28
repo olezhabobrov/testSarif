@@ -17,12 +17,12 @@ TEST(regression, print_sign_test_1)
 
 TEST(regression, print_sign_test_2)
 {
-    print_sign(0);
+    print_sign(-1);
 }
 
 TEST(regression, print_sign_test_3)
 {
-    print_sign(-1);
+    print_sign(0);
 }
 
 TEST(regression, print_signs_for_two_structs_test_1)
@@ -35,15 +35,15 @@ TEST(regression, print_signs_for_two_structs_test_1)
 TEST(regression, print_signs_for_two_structs_test_2)
 {
     print_signs_for_two_structs({
-        .a = 0}, {
-        .a = 0});
+        .a = 1}, {
+        .a = 1});
 }
 
 TEST(regression, print_signs_for_two_structs_test_3)
 {
     print_signs_for_two_structs({
-        .a = 1}, {
-        .a = 1});
+        .a = 0}, {
+        .a = 0});
 }
 
 TEST(regression, print_value_test_1)
@@ -58,12 +58,12 @@ TEST(regression, print_value_test_2)
 
 TEST(regression, print_value_test_3)
 {
-    print_value(31);
+    print_value(42);
 }
 
 TEST(regression, print_value_test_4)
 {
-    print_value(42);
+    print_value(31);
 }
 
 TEST(regression, print_value_test_5)

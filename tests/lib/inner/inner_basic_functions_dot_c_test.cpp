@@ -20,20 +20,20 @@ TEST(regression, sum_up_to_test_1)
 
 TEST(regression, median_test_1)
 {
-    int actual = median(0, 0, 0);
+    int actual = median(1, 0, 0);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, median_test_2)
 {
-    int actual = median(8, -1, 0);
+    int actual = median(-1, 0, 9);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, median_test_3)
 {
-    int actual = median(0, 9, 10);
-    EXPECT_EQ(9, actual);
+    int actual = median(0, 0, 0);
+    EXPECT_EQ(0, actual);
 }
 
 #pragma endregion

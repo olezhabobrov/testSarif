@@ -9,8 +9,6 @@ namespace UTBot {
 static const float utbot_abs_error = 1e-6;
 // Some tests for function 'get_chain' were skipped, as execution of function is out of timeout.
 
-// Tests for get_chain were not generated. Maybe the function is too complex.
-
 int FStruct_f_symbolic[10];
 static int FStruct_f_stub(int param1, int param2) {
     static int firstTimeCall = 1;
@@ -45,8 +43,8 @@ int _receiver_f_stub(int param1, int param2) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&receiver_f_symbolic, sizeof(receiver_f_symbolic), "receiver_f_symbolic");
-            for (int it_202_0 = 0; it_202_0 < 10; it_202_0 ++) {
-                klee_prefer_cex(receiver_f_symbolic, receiver_f_symbolic[it_202_0] >= -10  & receiver_f_symbolic[it_202_0] <= 10);
+            for (int it_189_0 = 0; it_189_0 < 10; it_189_0 ++) {
+                klee_prefer_cex(receiver_f_symbolic, receiver_f_symbolic[it_189_0] >= -10  & receiver_f_symbolic[it_189_0] <= 10);
             }
         }
     #endif
@@ -73,8 +71,8 @@ int _pointerToPointer_f_stub(int param1) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&pointerToPointer_f_symbolic, sizeof(pointerToPointer_f_symbolic), "pointerToPointer_f_symbolic");
-            for (int it_203_0 = 0; it_203_0 < 10; it_203_0 ++) {
-                klee_prefer_cex(pointerToPointer_f_symbolic, pointerToPointer_f_symbolic[it_203_0] >= -10  & pointerToPointer_f_symbolic[it_203_0] <= 10);
+            for (int it_190_0 = 0; it_190_0 < 10; it_190_0 ++) {
+                klee_prefer_cex(pointerToPointer_f_symbolic, pointerToPointer_f_symbolic[it_190_0] >= -10  & pointerToPointer_f_symbolic[it_190_0] <= 10);
             }
         }
     #endif
@@ -94,8 +92,8 @@ int _structParam_f_stub(struct MyStruct param1) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&structParam_f_symbolic, sizeof(structParam_f_symbolic), "structParam_f_symbolic");
-            for (int it_204_0 = 0; it_204_0 < 10; it_204_0 ++) {
-                klee_prefer_cex(structParam_f_symbolic, structParam_f_symbolic[it_204_0] >= -10  & structParam_f_symbolic[it_204_0] <= 10);
+            for (int it_191_0 = 0; it_191_0 < 10; it_191_0 ++) {
+                klee_prefer_cex(structParam_f_symbolic, structParam_f_symbolic[it_191_0] >= -10  & structParam_f_symbolic[it_191_0] <= 10);
             }
         }
     #endif
@@ -115,8 +113,8 @@ int _structPointerParam_f_stub(struct MyStruct * param1) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&structPointerParam_f_symbolic, sizeof(structPointerParam_f_symbolic), "structPointerParam_f_symbolic");
-            for (int it_205_0 = 0; it_205_0 < 10; it_205_0 ++) {
-                klee_prefer_cex(structPointerParam_f_symbolic, structPointerParam_f_symbolic[it_205_0] >= -10  & structPointerParam_f_symbolic[it_205_0] <= 10);
+            for (int it_192_0 = 0; it_192_0 < 10; it_192_0 ++) {
+                klee_prefer_cex(structPointerParam_f_symbolic, structPointerParam_f_symbolic[it_192_0] >= -10  & structPointerParam_f_symbolic[it_192_0] <= 10);
             }
         }
     #endif
@@ -136,8 +134,8 @@ int _return_op_return_op_return_stub(int param1, int param2) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&return_op_return_op_return_symbolic, sizeof(return_op_return_op_return_symbolic), "return_op_return_op_return_symbolic");
-            for (int it_206_0 = 0; it_206_0 < 10; it_206_0 ++) {
-                klee_prefer_cex(return_op_return_op_return_symbolic, return_op_return_op_return_symbolic[it_206_0] >= -10  & return_op_return_op_return_symbolic[it_206_0] <= 10);
+            for (int it_193_0 = 0; it_193_0 < 10; it_193_0 ++) {
+                klee_prefer_cex(return_op_return_op_return_symbolic, return_op_return_op_return_symbolic[it_193_0] >= -10  & return_op_return_op_return_symbolic[it_193_0] <= 10);
             }
         }
     #endif
@@ -158,8 +156,8 @@ int _f_chain_functions_stub(int param1, int param2) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&f_chain_functions_symbolic, sizeof(f_chain_functions_symbolic), "f_chain_functions_symbolic");
-            for (int it_207_0 = 0; it_207_0 < 10; it_207_0 ++) {
-                klee_prefer_cex(f_chain_functions_symbolic, f_chain_functions_symbolic[it_207_0] >= -10  & f_chain_functions_symbolic[it_207_0] <= 10);
+            for (int it_194_0 = 0; it_194_0 < 10; it_194_0 ++) {
+                klee_prefer_cex(f_chain_functions_symbolic, f_chain_functions_symbolic[it_194_0] >= -10  & f_chain_functions_symbolic[it_194_0] <= 10);
             }
         }
     #endif
@@ -167,6 +165,28 @@ int _f_chain_functions_stub(int param1, int param2) {
         cntCall--;
     }
     return f_chain_functions_symbolic[cntCall++];
+}
+
+
+typedef int (*get_chain_get_chain_return_arg)(int, int);
+typedef int (**get_chain_get_chain_return_arg_arr)(int, int);
+int get_chain_get_chain_return_symbolic[10];
+int _get_chain_get_chain_return_stub(int param1, int param2) {
+    static int firstTimeCall = 1;
+    static int cntCall = 0;
+    #ifdef KLEE_MODE
+        if (firstTimeCall == 1) {
+            firstTimeCall = 0;
+            klee_make_symbolic(&get_chain_get_chain_return_symbolic, sizeof(get_chain_get_chain_return_symbolic), "get_chain_get_chain_return_symbolic");
+            for (int it_195_0 = 0; it_195_0 < 10; it_195_0 ++) {
+                klee_prefer_cex(get_chain_get_chain_return_symbolic, get_chain_get_chain_return_symbolic[it_195_0] >= -10  & get_chain_get_chain_return_symbolic[it_195_0] <= 10);
+            }
+        }
+    #endif
+    if (cntCall == 10) {
+        cntCall--;
+    }
+    return get_chain_get_chain_return_symbolic[cntCall++];
 }
 
 
@@ -180,14 +200,14 @@ TEST(regression, worker_test_1)
 
 TEST(regression, receiver_test_1)
 {
-    int actual = receiver(_receiver_f_stub, 'a');
-    EXPECT_EQ(0, actual);
+    int actual = receiver(_receiver_f_stub, 'b');
+    EXPECT_EQ(8, actual);
 }
 
 TEST(regression, receiver_test_2)
 {
-    int actual = receiver(_receiver_f_stub, 'b');
-    EXPECT_EQ(8, actual);
+    int actual = receiver(_receiver_f_stub, 'a');
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, receiver_test_3)
@@ -203,19 +223,19 @@ TEST(regression, entry_point_func_test_1)
 
 TEST(regression, pointerParam_test_1)
 {
-    int x = 0;
+    int x = 1;
     char actual = *pointerParam(_pointerParam_f_stub, &x);
     EXPECT_EQ('\0', actual);
-    int expected_x = 0;
+    int expected_x = 1;
     EXPECT_EQ(expected_x, x);
 }
 
 TEST(regression, pointerParam_test_2)
 {
-    int x = 1;
+    int x = 0;
     char actual = *pointerParam(_pointerParam_f_stub, &x);
     EXPECT_EQ('\0', actual);
-    int expected_x = 1;
+    int expected_x = 0;
     EXPECT_EQ(expected_x, x);
 }
 
@@ -225,8 +245,8 @@ TEST(regression, pointerToPointer_test_1)
     for (int i = 0; i < 10; i ++) {
         f[i] = *_pointerToPointer_f_stub;
     }
-    char actual = pointerToPointer(f, 'c');
-    EXPECT_EQ('z', actual);
+    char actual = pointerToPointer(f, 'b');
+    EXPECT_EQ('b', actual);
 }
 
 TEST(regression, pointerToPointer_test_2)
@@ -236,26 +256,26 @@ TEST(regression, pointerToPointer_test_2)
         f[i] = *_pointerToPointer_f_stub;
     }
     char actual = pointerToPointer(f, 'c');
-    EXPECT_EQ('c', actual);
+    EXPECT_EQ('z', actual);
 }
 
 TEST(regression, structParam_test_1)
 {
-    char s[] = "acccccccc";
+    char s[] = "accccacca";
     int actual = structParam(_structParam_f_stub, s);
     EXPECT_EQ(6, actual);
 }
 
 TEST(regression, structParam_test_2)
 {
-    char s[] = "icccccccc";
+    char s[] = "zccccacca";
     int actual = structParam(_structParam_f_stub, s);
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, structParam_test_3)
 {
-    char s[] = "zcccccccc";
+    char s[] = "xccccacca";
     int actual = structParam(_structParam_f_stub, s);
     EXPECT_EQ(0, actual);
 }
@@ -269,16 +289,16 @@ TEST(regression, structPointerParam_test_1)
 
 TEST(regression, structPointerParam_test_2)
 {
-    int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int arr[10] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int actual = structPointerParam(_structPointerParam_f_stub, arr);
-    EXPECT_EQ(0, actual);
+    EXPECT_EQ(12, actual);
 }
 
 TEST(regression, structPointerParam_test_3)
 {
-    int arr[10] = {1, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    int arr[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     int actual = structPointerParam(_structPointerParam_f_stub, arr);
-    EXPECT_EQ(12, actual);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, f_add_test_1)
@@ -301,22 +321,22 @@ TEST(regression, f_mul_test_1)
 
 TEST(regression, return_op_test_1)
 {
-    return_op('-');
+    return_op('*');
 }
 
 TEST(regression, return_op_test_2)
 {
-    return_op('c');
+    return_op('-');
 }
 
 TEST(regression, return_op_test_3)
 {
-    return_op('*');
+    return_op('+');
 }
 
 TEST(regression, return_op_test_4)
 {
-    return_op('+');
+    return_op('c');
 }
 
 TEST(regression, f_chain_test_1)
@@ -329,11 +349,41 @@ TEST(regression, f_chain_test_1)
     EXPECT_EQ(0, actual);
 }
 
+TEST(regression, get_chain_test_1)
+{
+    char c[] = "c*******-";
+    *(unsigned char *)get_chain(c);
+    char expected_c[] = {'c', '*', '*', '*', '*', '*', '*', '*', '-', '\0'};
+    for (int it_196_0 = 0; it_196_0 < 10; it_196_0 ++) {
+        EXPECT_EQ(expected_c[it_196_0], c[it_196_0]);
+    }
+}
+
+TEST(regression, get_chain_test_2)
+{
+    char c[] = "c*******+";
+    *(unsigned char *)get_chain(c);
+    char expected_c[] = {'c', '*', '*', '*', '*', '*', '*', '*', '+', '\0'};
+    for (int it_197_0 = 0; it_197_0 < 10; it_197_0 ++) {
+        EXPECT_EQ(expected_c[it_197_0], c[it_197_0]);
+    }
+}
+
+TEST(regression, get_chain_test_3)
+{
+    char c[] = "c*******c";
+    *(unsigned char *)get_chain(c);
+    char expected_c[] = {'c', '*', '*', '*', '*', '*', '*', '*', 'c', '\0'};
+    for (int it_198_0 = 0; it_198_0 < 10; it_198_0 ++) {
+        EXPECT_EQ(expected_c[it_198_0], c[it_198_0]);
+    }
+}
+
 TEST(regression, calcFunctionStruct_test_1)
 {
     int actual = calcFunctionStruct({
         .a = 0,
-        .f = FStruct_f_stub}, 0);
+        .f = FStruct_f_stub}, 2);
     EXPECT_EQ(0, actual);
 }
 
@@ -341,7 +391,7 @@ TEST(regression, calcFunctionStruct_test_2)
 {
     int actual = calcFunctionStruct({
         .a = 0,
-        .f = FStruct_f_stub}, 2);
+        .f = FStruct_f_stub}, 0);
     EXPECT_EQ(0, actual);
 }
 

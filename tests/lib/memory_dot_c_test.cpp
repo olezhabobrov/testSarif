@@ -23,8 +23,8 @@ TEST(regression, out_of_bound_access_to_globals_test_1)
     int actual = out_of_bound_access_to_globals(0);
     EXPECT_EQ(0, actual);
     int expected_g[5] = {0, 0, 0, 0, 0};
-    for (int it_213_0 = 0; it_213_0 < 5; it_213_0 ++) {
-        EXPECT_EQ(expected_g[it_213_0], g[it_213_0]);
+    for (int it_204_0 = 0; it_204_0 < 5; it_204_0 ++) {
+        EXPECT_EQ(expected_g[it_204_0], g[it_204_0]);
     }
 }
 
@@ -34,8 +34,8 @@ TEST(regression, passthrough_test_1)
     char actual = *passthrough(p);
     EXPECT_EQ('b', actual);
     char expected_p[] = {'b', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', '\0'};
-    for (int it_214_0 = 0; it_214_0 < 10; it_214_0 ++) {
-        EXPECT_EQ(expected_p[it_214_0], p[it_214_0]);
+    for (int it_205_0 = 0; it_205_0 < 10; it_205_0 ++) {
+        EXPECT_EQ(expected_p[it_205_0], p[it_205_0]);
     }
 }
 

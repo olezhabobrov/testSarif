@@ -20,7 +20,7 @@ TEST(regression, get_size_of_data_test_1)
 {
     int actual = get_size_of_data({
         .x = 'c',
-        .cacheline = {'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'b', 'b', 'c', 'a', 'c', 'c', 'c', 'a', 'c', 'a', 'c', 'c', 'b', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'b', 'b', 'c', 'c', 'b', 'c', 'b', 'a', 'c'}});
+        .cacheline = {'b', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'b', 'a', 'c', 'a', 'c', 'c', 'b', 'c', 'b', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'a', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c'}});
     EXPECT_EQ(256, actual);
 }
 
@@ -48,12 +48,12 @@ TEST(regression, different_test_1)
     _Bool actual = different(old, new_);
     EXPECT_EQ(true, actual);
     char expected_old[] = {'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', 'c', '\0'};
-    for (int it_226_0 = 0; it_226_0 < 10; it_226_0 ++) {
-        EXPECT_EQ(expected_old[it_226_0], old[it_226_0]);
+    for (int it_213_0 = 0; it_213_0 < 10; it_213_0 ++) {
+        EXPECT_EQ(expected_old[it_213_0], old[it_213_0]);
     }
     char expected_new_[] = {'c', 'c', 'b', 'a', 'c', 'c', 'b', 'c', 'c', '\0'};
-    for (int it_227_0 = 0; it_227_0 < 10; it_227_0 ++) {
-        EXPECT_EQ(expected_new_[it_227_0], new_[it_227_0]);
+    for (int it_214_0 = 0; it_214_0 < 10; it_214_0 ++) {
+        EXPECT_EQ(expected_new_[it_214_0], new_[it_214_0]);
     }
 }
 
@@ -96,14 +96,14 @@ TEST(regression, access_to_int_test_1)
 
 TEST(regression, access_to_int_test_2)
 {
-    int actual = access_to_int(public_);
-    EXPECT_EQ(2, actual);
+    int actual = access_to_int(private_);
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, access_to_int_test_3)
 {
-    int actual = access_to_int(private_);
-    EXPECT_EQ(0, actual);
+    int actual = access_to_int(public_);
+    EXPECT_EQ(2, actual);
 }
 
 #pragma endregion

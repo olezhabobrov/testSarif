@@ -13,10 +13,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/pointers/function_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/pointers/function_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 367
+                                                        "startLine": 417
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/pointers/function_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 399
                                                     }
                                                 }
                                             }

@@ -25,3 +25,4 @@ int buggy_function3(int a, int b) {
     assert(a < 10);
     return a;
 }
+

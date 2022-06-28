@@ -12,68 +12,68 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, a_or_b_test_1)
 {
-    char actual = a_or_b('p', 'j');
-    EXPECT_EQ('p', actual);
+    char actual = a_or_b('a', 'c');
+    EXPECT_EQ('a', actual);
 }
 
 TEST(regression, a_or_b_test_2)
 {
-    char actual = a_or_b('p', 'b');
-    EXPECT_EQ('b', actual);
+    char actual = a_or_b('p', 'n');
+    EXPECT_EQ('p', actual);
 }
 
 TEST(regression, a_or_b_test_3)
+{
+    char actual = a_or_b('c', 'b');
+    EXPECT_EQ('b', actual);
+}
+
+TEST(regression, a_or_b_test_4)
 {
     char actual = a_or_b('i', 'n');
     EXPECT_EQ('n', actual);
 }
 
-TEST(regression, a_or_b_test_4)
-{
-    char actual = a_or_b('a', 'c');
-    EXPECT_EQ('a', actual);
-}
-
 TEST(regression, max_long_test_1)
-{
-    long long actual = max_long(0LL, 0LL);
-    EXPECT_EQ(0LL, actual);
-}
-
-TEST(regression, max_long_test_2)
 {
     long long actual = max_long(0LL, -1LL);
     EXPECT_EQ(0LL, actual);
 }
 
-TEST(regression, min_short_test_1)
+TEST(regression, max_long_test_2)
 {
-    short actual = min_short(0, 0);
-    EXPECT_EQ(0, actual);
+    long long actual = max_long(0LL, 0LL);
+    EXPECT_EQ(0LL, actual);
 }
 
-TEST(regression, min_short_test_2)
+TEST(regression, min_short_test_1)
 {
     short actual = min_short(-2, 0);
     EXPECT_EQ(-2, actual);
 }
 
-TEST(regression, min_divided_by_2_test_1)
+TEST(regression, min_short_test_2)
 {
-    short actual = min_divided_by_2(0, 0);
+    short actual = min_short(0, 0);
     EXPECT_EQ(0, actual);
 }
 
-TEST(regression, min_divided_by_2_test_2)
+TEST(regression, min_divided_by_2_test_1)
 {
     short actual = min_divided_by_2(-2, 0);
     EXPECT_EQ(-1, actual);
 }
 
+TEST(regression, min_divided_by_2_test_2)
+{
+    short actual = min_divided_by_2(0, 0);
+    EXPECT_EQ(0, actual);
+}
+
 TEST(regression, some_func_test_1)
 {
-    signed char actual = some_func('a', 122);
-    EXPECT_EQ('0', actual);
+    signed char actual = some_func('{', 122);
+    EXPECT_EQ('{', actual);
 }
 
 TEST(regression, some_func_test_2)
@@ -84,44 +84,44 @@ TEST(regression, some_func_test_2)
 
 TEST(regression, some_func_test_3)
 {
-    signed char actual = some_func('{', 122);
-    EXPECT_EQ('{', actual);
+    signed char actual = some_func('a', 122);
+    EXPECT_EQ('0', actual);
 }
 
 TEST(regression, fun_that_accept_bools_test_1)
-{
-    int actual = fun_that_accept_bools(false, true);
-    EXPECT_EQ(3, actual);
-}
-
-TEST(regression, fun_that_accept_bools_test_2)
-{
-    int actual = fun_that_accept_bools(true, false);
-    EXPECT_EQ(2, actual);
-}
-
-TEST(regression, fun_that_accept_bools_test_3)
-{
-    int actual = fun_that_accept_bools(false, false);
-    EXPECT_EQ(4, actual);
-}
-
-TEST(regression, fun_that_accept_bools_test_4)
 {
     int actual = fun_that_accept_bools(true, true);
     EXPECT_EQ(1, actual);
 }
 
+TEST(regression, fun_that_accept_bools_test_2)
+{
+    int actual = fun_that_accept_bools(false, true);
+    EXPECT_EQ(3, actual);
+}
+
+TEST(regression, fun_that_accept_bools_test_3)
+{
+    int actual = fun_that_accept_bools(true, false);
+    EXPECT_EQ(2, actual);
+}
+
+TEST(regression, fun_that_accept_bools_test_4)
+{
+    int actual = fun_that_accept_bools(false, false);
+    EXPECT_EQ(4, actual);
+}
+
 TEST(regression, is_positive_test_1)
 {
-    _Bool actual = is_positive(0);
-    EXPECT_EQ(false, actual);
+    _Bool actual = is_positive(1);
+    EXPECT_EQ(true, actual);
 }
 
 TEST(regression, is_positive_test_2)
 {
-    _Bool actual = is_positive(1);
-    EXPECT_EQ(true, actual);
+    _Bool actual = is_positive(0);
+    EXPECT_EQ(false, actual);
 }
 
 TEST(regression, supported_parameter_1_test_1)
@@ -143,15 +143,15 @@ TEST(regression, pointer_to_pointer_test_1)
 {
     int _a[2][2] = {{1, 0}, {0, 0}};
     int ** a = (int **) calloc(3, sizeof(int *));
-    for (int it_208_0 = 0; it_208_0 < 2; it_208_0 ++) {
-        a[it_208_0] = _a[it_208_0];
+    for (int it_199_0 = 0; it_199_0 < 2; it_199_0 ++) {
+        a[it_199_0] = _a[it_199_0];
     }
     a[2] = NULL;
     pointer_to_pointer(a);
     int expected_a[2][2] = {{1, 0}, {0, 2}};
-    for (int it_209_0 = 0; it_209_0 < 2; it_209_0 ++) {
-        for (int it_209_1 = 0; it_209_1 < 2; it_209_1 ++) {
-            EXPECT_EQ(expected_a[it_209_0][it_209_1], _a[it_209_0][it_209_1]);
+    for (int it_200_0 = 0; it_200_0 < 2; it_200_0 ++) {
+        for (int it_200_1 = 0; it_200_1 < 2; it_200_1 ++) {
+            EXPECT_EQ(expected_a[it_200_0][it_200_1], _a[it_200_0][it_200_1]);
         }
     }
 }
@@ -160,15 +160,15 @@ TEST(regression, pointer_to_pointer_test_2)
 {
     int _a[2][2] = {{0, 0}, {0, 0}};
     int ** a = (int **) calloc(3, sizeof(int *));
-    for (int it_210_0 = 0; it_210_0 < 2; it_210_0 ++) {
-        a[it_210_0] = _a[it_210_0];
+    for (int it_201_0 = 0; it_201_0 < 2; it_201_0 ++) {
+        a[it_201_0] = _a[it_201_0];
     }
     a[2] = NULL;
     pointer_to_pointer(a);
     int expected_a[2][2] = {{0, 0}, {0, 0}};
-    for (int it_211_0 = 0; it_211_0 < 2; it_211_0 ++) {
-        for (int it_211_1 = 0; it_211_1 < 2; it_211_1 ++) {
-            EXPECT_EQ(expected_a[it_211_0][it_211_1], _a[it_211_0][it_211_1]);
+    for (int it_202_0 = 0; it_202_0 < 2; it_202_0 ++) {
+        for (int it_202_1 = 0; it_202_1 < 2; it_202_1 ++) {
+            EXPECT_EQ(expected_a[it_202_0][it_202_1], _a[it_202_0][it_202_1]);
         }
     }
 }
@@ -186,49 +186,49 @@ TEST(regression, bool_array_head_test_1)
     _Bool actual = bool_array_head(b);
     EXPECT_EQ(false, actual);
     _Bool expected_b[10] = {false, false, false, false, false, false, false, false, false, false};
-    for (int it_212_0 = 0; it_212_0 < 10; it_212_0 ++) {
-        EXPECT_EQ(expected_b[it_212_0], b[it_212_0]);
+    for (int it_203_0 = 0; it_203_0 < 10; it_203_0 ++) {
+        EXPECT_EQ(expected_b[it_203_0], b[it_203_0]);
     }
 }
 
 TEST(regression, structWithConstPointerReturn_test_1)
-{
-    const struct SupportedStruct4 actual = structWithConstPointerReturn(1);
-    struct SupportedStruct4 expected = {
-        .c = NULL};
-}
-
-TEST(regression, structWithConstPointerReturn_test_2)
 {
     const struct SupportedStruct4 actual = structWithConstPointerReturn(0);
     struct SupportedStruct4 expected = {
         .c = NULL};
 }
 
-TEST(regression, structWithUnion_test_1)
+TEST(regression, structWithConstPointerReturn_test_2)
 {
-    struct UnsupportedStruct3 actual = structWithUnion(0);
-    struct UnsupportedStruct3 expected = {
-        .u = from_bytes<UnsupportedStruct3::U>({50, -85, -85, -85})};
+    const struct SupportedStruct4 actual = structWithConstPointerReturn(1);
+    struct SupportedStruct4 expected = {
+        .c = NULL};
 }
 
-TEST(regression, structWithUnion_test_2)
+TEST(regression, structWithUnion_test_1)
 {
     struct UnsupportedStruct3 actual = structWithUnion(-1);
     struct UnsupportedStruct3 expected = {
         .u = from_bytes<UnsupportedStruct3::U>({-1, -1, -1, -1})};
 }
 
+TEST(regression, structWithUnion_test_2)
+{
+    struct UnsupportedStruct3 actual = structWithUnion(0);
+    struct UnsupportedStruct3 expected = {
+        .u = from_bytes<UnsupportedStruct3::U>({50, -85, -85, -85})};
+}
+
 TEST(regression, structWithConstPointerReturnPointer_test_1)
 {
-    const struct SupportedStruct4 actual = *structWithConstPointerReturnPointer(2);
-    struct SupportedStruct4 expected = {
-        .c = NULL};
+    EXPECT_TRUE(structWithConstPointerReturnPointer(0) == NULL);
 }
 
 TEST(regression, structWithConstPointerReturnPointer_test_2)
 {
-    EXPECT_TRUE(structWithConstPointerReturnPointer(0) == NULL);
+    const struct SupportedStruct4 actual = *structWithConstPointerReturnPointer(2);
+    struct SupportedStruct4 expected = {
+        .c = NULL};
 }
 
 TEST(regression, structWithConstPointerParam_test_1)

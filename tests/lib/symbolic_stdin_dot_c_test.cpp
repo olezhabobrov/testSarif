@@ -18,7 +18,7 @@ TEST(regression, check_password_test_1)
 
 TEST(regression, check_password_test_2)
 {
-    int actual = check_password(1024);
+    int actual = check_password(268435456);
     EXPECT_EQ(0, actual);
 }
 

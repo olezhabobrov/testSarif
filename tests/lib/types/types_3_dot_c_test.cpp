@@ -22,37 +22,37 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, extract_value_2_test_1)
 {
-    int actual = extract_value_2(from_bytes<UnnamedTypeStructField>({-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = extract_value_2(from_bytes<UnnamedTypeStructField>({0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, extract_value_2_test_2)
 {
-    int actual = extract_value_2(from_bytes<UnnamedTypeStructField>({0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = extract_value_2(from_bytes<UnnamedTypeStructField>({-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, extract_value_3_test_1)
 {
-    int actual = extract_value_3(from_bytes<AnonymousUnionField>({0, 0, 0, 0}));
-    EXPECT_EQ(0, actual);
-}
-
-TEST(regression, extract_value_3_test_2)
-{
     int actual = extract_value_3(from_bytes<AnonymousUnionField>({1, 0, 0, 0}));
     EXPECT_EQ(1, actual);
 }
 
+TEST(regression, extract_value_3_test_2)
+{
+    int actual = extract_value_3(from_bytes<AnonymousUnionField>({0, 0, 0, 0}));
+    EXPECT_EQ(0, actual);
+}
+
 TEST(regression, extract_value_4_test_1)
 {
-    int actual = extract_value_4(from_bytes<AnonymousStructField>({-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = extract_value_4(from_bytes<AnonymousStructField>({0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 
 TEST(regression, extract_value_4_test_2)
 {
-    int actual = extract_value_4(from_bytes<AnonymousStructField>({0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
+    int actual = extract_value_4(from_bytes<AnonymousStructField>({-1, -1, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}));
     EXPECT_EQ(0, actual);
 }
 

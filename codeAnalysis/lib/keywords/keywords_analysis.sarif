@@ -13,10 +13,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/keywords/keywords_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/keywords/keywords_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 113
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/keywords/keywords_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 33
                                                     }
                                                 }
                                             }
@@ -31,10 +43,10 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "tests/lib/keywords/keywords_dot_c_test.cpp"
+                                    "uri": "tmp/UnitTestBot/lib/keywords/keywords_klee.c"
                                 },
                                 "region": {
-                                    "startLine": 113
+                                    "startLine": 33
                                 }
                             }
                         }

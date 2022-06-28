@@ -13,10 +13,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/types/types_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/types/types_dot_c_test.cpp"
                                                     },
                                                     "region": {
                                                         "startLine": 270
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/types/types_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 85
                                                     }
                                                 }
                                             }

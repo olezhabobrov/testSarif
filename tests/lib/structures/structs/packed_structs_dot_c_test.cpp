@@ -14,7 +14,7 @@ TEST(regression, get_sign_packedStruct1_test_1)
 {
     int actual = get_sign_packedStruct1({
         .s = 0,
-        .i = 1});
+        .i = 2});
     EXPECT_EQ(1, actual);
 }
 
@@ -22,16 +22,16 @@ TEST(regression, get_sign_packedStruct1_test_2)
 {
     int actual = get_sign_packedStruct1({
         .s = 0,
-        .i = -7});
-    EXPECT_EQ(-1, actual);
+        .i = 0});
+    EXPECT_EQ(0, actual);
 }
 
 TEST(regression, get_sign_packedStruct1_test_3)
 {
     int actual = get_sign_packedStruct1({
         .s = 0,
-        .i = 0});
-    EXPECT_EQ(0, actual);
+        .i = -3});
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, get_val_by_packedStruct2_test_1)
@@ -51,7 +51,7 @@ TEST(regression, get_val_by_packedStruct2_test_2)
         .c = 'b',
         .i = 0,
         .s = {
-            .c = 'r',
+            .c = 'c',
             .i = 0}});
     EXPECT_EQ('3', actual);
 }
@@ -73,7 +73,7 @@ TEST(regression, get_val_by_packedStruct2_test_4)
         .c = 'b',
         .i = 0,
         .s = {
-            .c = 'r',
+            .c = 'c',
             .i = 1}});
     EXPECT_EQ('4', actual);
 }
@@ -96,6 +96,21 @@ TEST(regression, get_val_by_otherPackedStruct_test_1)
 TEST(regression, get_val_by_otherPackedStruct_test_2)
 {
     short actual = get_val_by_otherPackedStruct({
+        .a = 'a',
+        .str = {
+            .c = 'S',
+            .i = 0,
+            .s = {
+                .c = 'c',
+                .i = 0}},
+        .b = 'q',
+        .s = 0});
+    EXPECT_EQ(5, actual);
+}
+
+TEST(regression, get_val_by_otherPackedStruct_test_3)
+{
+    short actual = get_val_by_otherPackedStruct({
         .a = 'c',
         .str = {
             .c = 'c',
@@ -108,12 +123,12 @@ TEST(regression, get_val_by_otherPackedStruct_test_2)
     EXPECT_EQ(0, actual);
 }
 
-TEST(regression, get_val_by_otherPackedStruct_test_3)
+TEST(regression, get_val_by_otherPackedStruct_test_4)
 {
     short actual = get_val_by_otherPackedStruct({
         .a = 'a',
         .str = {
-            .c = 'c',
+            .c = 'a',
             .i = 0,
             .s = {
                 .c = 'c',
@@ -121,21 +136,6 @@ TEST(regression, get_val_by_otherPackedStruct_test_3)
         .b = 'q',
         .s = 0});
     EXPECT_EQ(-1, actual);
-}
-
-TEST(regression, get_val_by_otherPackedStruct_test_4)
-{
-    short actual = get_val_by_otherPackedStruct({
-        .a = 'a',
-        .str = {
-            .c = 'S',
-            .i = 0,
-            .s = {
-                .c = 'c',
-                .i = 0}},
-        .b = 'q',
-        .s = 0});
-    EXPECT_EQ(5, actual);
 }
 
 #pragma endregion

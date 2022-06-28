@@ -13,10 +13,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 233
+                                                        "startLine": 250
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 34
                                                     }
                                                 }
                                             }
@@ -45,10 +57,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 245
+                                                        "startLine": 258
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 34
                                                     }
                                                 }
                                             }
@@ -77,10 +101,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 253
+                                                        "startLine": 274
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 34
                                                     }
                                                 }
                                             }
@@ -109,10 +145,66 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 261
+                                                        "startLine": 282
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 34
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "lib/structures/structs/structs_with_pointers.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 22
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 290
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 48
                                                     }
                                                 }
                                             }
@@ -153,10 +245,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 273
+                                                        "startLine": 302
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 48
                                                     }
                                                 }
                                             }
@@ -197,10 +301,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 281
+                                                        "startLine": 310
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 48
                                                     }
                                                 }
                                             }
@@ -248,9 +364,9 @@
                         }
                     ],
                     "message": {
-                        "text": "invalid usage of null pointer"
+                        "text": "memory error: out of bound pointer"
                     },
-                    "ruleId": "undefined_behavior.err"
+                    "ruleId": "ptr.err"
                 },
                 {
                     "codeFlows": [
@@ -262,10 +378,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 289
+                                                        "startLine": 318
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 62
                                                     }
                                                 }
                                             }
@@ -294,10 +422,22 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/lib/structures/structs/structs_with_pointers_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 297
+                                                        "startLine": 326
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/lib/structures/structs/structs_with_pointers_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 62
                                                     }
                                                 }
                                             }

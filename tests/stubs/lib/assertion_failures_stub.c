@@ -1,4 +1,4 @@
-// 1656369670000000000
+// 1656436367000000000
 // Please, do not change the line above
 
 /*
@@ -21,8 +21,8 @@ int buggy_function1(int a, int b) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&_buggy_function1_symbolic, sizeof(_buggy_function1_symbolic), "_buggy_function1_symbolic");
-            for (int it_1_0 = 0; it_1_0 < 10; it_1_0 ++) {
-                klee_prefer_cex(_buggy_function1_symbolic, _buggy_function1_symbolic[it_1_0] >= -10  & _buggy_function1_symbolic[it_1_0] <= 10);
+            for (int it_31_0 = 0; it_31_0 < 10; it_31_0 ++) {
+                klee_prefer_cex(_buggy_function1_symbolic, _buggy_function1_symbolic[it_31_0] >= -10  & _buggy_function1_symbolic[it_31_0] <= 10);
             }
         }
     #endif
@@ -42,8 +42,8 @@ int buggy_function2(int a) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&_buggy_function2_symbolic, sizeof(_buggy_function2_symbolic), "_buggy_function2_symbolic");
-            for (int it_2_0 = 0; it_2_0 < 10; it_2_0 ++) {
-                klee_prefer_cex(_buggy_function2_symbolic, _buggy_function2_symbolic[it_2_0] >= -10  & _buggy_function2_symbolic[it_2_0] <= 10);
+            for (int it_32_0 = 0; it_32_0 < 10; it_32_0 ++) {
+                klee_prefer_cex(_buggy_function2_symbolic, _buggy_function2_symbolic[it_32_0] >= -10  & _buggy_function2_symbolic[it_32_0] <= 10);
             }
         }
     #endif
@@ -63,8 +63,8 @@ int buggy_function3(int a, int b) {
         if (firstTimeCall == 1) {
             firstTimeCall = 0;
             klee_make_symbolic(&_buggy_function3_symbolic, sizeof(_buggy_function3_symbolic), "_buggy_function3_symbolic");
-            for (int it_3_0 = 0; it_3_0 < 10; it_3_0 ++) {
-                klee_prefer_cex(_buggy_function3_symbolic, _buggy_function3_symbolic[it_3_0] >= -10  & _buggy_function3_symbolic[it_3_0] <= 10);
+            for (int it_33_0 = 0; it_33_0 < 10; it_33_0 ++) {
+                klee_prefer_cex(_buggy_function3_symbolic, _buggy_function3_symbolic[it_33_0] >= -10  & _buggy_function3_symbolic[it_33_0] <= 10);
             }
         }
     #endif

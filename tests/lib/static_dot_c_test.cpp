@@ -14,15 +14,6 @@ static const float utbot_abs_error = 1e-6;
 #pragma region regression
 TEST(regression, static_simple_test_1)
 {
-    x = 0;
-    int actual = static_simple(0);
-    EXPECT_EQ(0, actual);
-    int expected_x = 0;
-    EXPECT_EQ(expected_x, x);
-}
-
-TEST(regression, static_simple_test_2)
-{
     x = -10;
     int actual = static_simple(-10);
     EXPECT_EQ(0, actual);
@@ -30,7 +21,7 @@ TEST(regression, static_simple_test_2)
     EXPECT_EQ(expected_x, x);
 }
 
-TEST(regression, static_simple_test_3)
+TEST(regression, static_simple_test_2)
 {
     x = 1;
     int actual = static_simple(-1);
@@ -39,15 +30,16 @@ TEST(regression, static_simple_test_3)
     EXPECT_EQ(expected_x, x);
 }
 
-TEST(regression, static_accept_local_struct_test_1)
+TEST(regression, static_simple_test_3)
 {
-    int actual = static_accept_local_struct({
-        .x = 0,
-        .y = 0}, 2);
+    x = 0;
+    int actual = static_simple(0);
     EXPECT_EQ(0, actual);
+    int expected_x = 0;
+    EXPECT_EQ(expected_x, x);
 }
 
-TEST(regression, static_accept_local_struct_test_2)
+TEST(regression, static_accept_local_struct_test_1)
 {
     int actual = static_accept_local_struct({
         .x = 0,
@@ -55,11 +47,19 @@ TEST(regression, static_accept_local_struct_test_2)
     EXPECT_EQ(0, actual);
 }
 
-TEST(regression, static_accept_local_struct_test_3)
+TEST(regression, static_accept_local_struct_test_2)
 {
     int actual = static_accept_local_struct({
         .x = 0,
         .y = 0}, 0);
+    EXPECT_EQ(0, actual);
+}
+
+TEST(regression, static_accept_local_struct_test_3)
+{
+    int actual = static_accept_local_struct({
+        .x = 0,
+        .y = 0}, 2);
     EXPECT_EQ(0, actual);
 }
 

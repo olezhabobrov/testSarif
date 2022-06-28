@@ -30,14 +30,14 @@ TEST(regression, bar_test_1)
 
 TEST(regression, bar_test_2)
 {
-    int actual = bar(1UL, -1);
-    EXPECT_EQ(1, actual);
+    int actual = bar(0UL, 0);
+    EXPECT_EQ(-1, actual);
 }
 
 TEST(regression, bar_test_3)
 {
-    int actual = bar(0UL, 0);
-    EXPECT_EQ(-1, actual);
+    int actual = bar(1UL, -1);
+    EXPECT_EQ(1, actual);
 }
 
 TEST(regression, diff_test_1)

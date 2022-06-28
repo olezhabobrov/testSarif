@@ -13,10 +13,34 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_dot_c_test.cpp"
                                                     },
                                                     "region": {
-                                                        "startLine": 167
+                                                        "startLine": 239
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
                                                     }
                                                 }
                                             }
@@ -32,23 +56,15 @@
                                                     }
                                                 }
                                             }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
+                                        },
                                         {
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
+                                                        "uri": "runtime/klee-libc/atoi.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 178
+                                                        "startLine": 36
                                                     }
                                                 }
                                             }
@@ -57,74 +73,10 @@
                                             "location": {
                                                 "physicalLocation": {
                                                     "artifactLocation": {
-                                                        "uri": "main.c"
+                                                        "uri": "runtime/klee-libc/strtol.c"
                                                     },
                                                     "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 189
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "threadFlows": [
-                                {
-                                    "locations": [
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "tests/main_dot_c_test.cpp"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 200
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "location": {
-                                                "physicalLocation": {
-                                                    "artifactLocation": {
-                                                        "uri": "main.c"
-                                                    },
-                                                    "region": {
-                                                        "startLine": 10
+                                                        "startLine": 70
                                                     }
                                                 }
                                             }
@@ -139,10 +91,313 @@
                         {
                             "physicalLocation": {
                                 "artifactLocation": {
-                                    "uri": "main.c"
+                                    "uri": "runtime/klee-libc/strtol.c"
                                 },
                                 "region": {
-                                    "startLine": 10
+                                    "startLine": 70
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 250
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/atoi.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/strtol.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 105
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "runtime/klee-libc/strtol.c"
+                                },
+                                "region": {
+                                    "startLine": 105
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 261
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/atoi.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/strtol.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 66
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "runtime/klee-libc/strtol.c"
+                                },
+                                "region": {
+                                    "startLine": 66
+                                }
+                            }
+                        }
+                    ],
+                    "message": {
+                        "text": "memory error: out of bound pointer"
+                    },
+                    "ruleId": "ptr.err"
+                },
+                {
+                    "codeFlows": [
+                        {
+                            "threadFlows": [
+                                {
+                                    "locations": [
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "/home/utbot/example/testSarif/tests/main_dot_c_test.cpp"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 272
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/POSIX/klee_init_env.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 245
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "tmp/UnitTestBot/main_klee.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "main.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 10
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/atoi.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 36
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "location": {
+                                                "physicalLocation": {
+                                                    "artifactLocation": {
+                                                        "uri": "runtime/klee-libc/strtol.c"
+                                                    },
+                                                    "region": {
+                                                        "startLine": 62
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "level": "error",
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "runtime/klee-libc/strtol.c"
+                                },
+                                "region": {
+                                    "startLine": 62
                                 }
                             }
                         }
